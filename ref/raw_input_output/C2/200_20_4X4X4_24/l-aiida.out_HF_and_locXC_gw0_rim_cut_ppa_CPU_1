@@ -1,0 +1,211 @@
+
+
+ __    __ ______           ____     _____
+/\ \  /\ \\  _  \  /"\_/`\/\  _`\ /\  __`\
+\ `\`\\/"/ \ \L\ \/\      \ \ \L\ \ \ \/\ \
+ `\ `\ /" \ \  __ \ \ \__\ \ \  _ <" \ \ \ \
+   `\ \ \  \ \ \/\ \ \ \_/\ \ \ \L\ \ \ \_\ \
+     \ \_\  \ \_\ \_\ \_\\ \_\ \____/\ \_____\
+      \/_/   \/_/\/_/\/_/ \/_/\/___/  \/_____/
+
+
+ <---> P1: [01] MPI/OPENMP structure, Files & I/O Directories
+ <---> P1-s3node40: MPI Cores-Threads   : 64(CPU)-1(threads)
+ <---> P1-s3node40: MPI Cores-Threads   : DIP(environment)-1 16 4(CPUs)-k c v(ROLEs)
+ <---> P1-s3node40: MPI Cores-Threads   : X_and_IO(environment)-1 1 1 16 4(CPUs)-q k g c v(ROLEs)
+ <---> P1-s3node40: MPI Cores-Threads   : SE(environment)-1 1 64 1(CPUs)-q qp b g(ROLEs)
+ <---> P1-s3node40: [02] CORE Variables Setup
+ <---> P1-s3node40: [02.01] Unit cells
+ <---> P1-s3node40: [02.02] Symmetries
+ <---> P1-s3node40: [02.03] Reciprocal space
+ <---> P1-s3node40: [02.04] K-grid lattice
+ <---> P1-s3node40: Grid dimensions      :   4   4   4
+ <---> P1-s3node40: [02.05] Energies & Occupations
+ <---> P1-s3node40: [03] Transferred momenta grid and indexing
+ <---> P1-s3node40: [04] Coloumb potential Random Integration (RIM)
+ <---> P1-s3node40: [MEMORY] Alloc qr( 58.59400 [Mb]) TOTAL:  61.55600 [Mb] (traced)  7.708000 [Mb] (memstat)
+ <---> P1-s3node40: [04.01] RIM initialization
+ <---> P1-s3node40: Random points |                                        | [000%] --(E) --(X)
+ <04s> P1-s3node40: Random points |########################################| [100%] 03s(E) 03s(X)
+ <04s> P1-s3node40: [04.02] RIM integrals
+ <04s> P1-s3node40: Momenta loop |                                        | [000%] --(E) --(X)
+ <21s> P1-s3node40: Momenta loop |########################################| [100%] 17s(E) 17s(X)
+ <21s> P1-s3node40: [MEMORY]  Free qr( 58.59400 [Mb]) TOTAL:  3.614000 [Mb] (traced)  7.708000 [Mb] (memstat)
+ <21s> P1-s3node40: [05] Dipoles
+ <21s> P1-s3node40: [PARALLEL DIPOLES for K(ibz) on 1 CPU] Loaded/Total (Percentual):13/13(100%)
+ <21s> P1-s3node40: [PARALLEL DIPOLES for CON bands on 16 CPU] Loaded/Total (Percentual):13/196(7%)
+ <21s> P1-s3node40: [PARALLEL DIPOLES for VAL bands on 4 CPU] Loaded/Total (Percentual):1/4(25%)
+ <21s> P1-s3node40: [DIP] Checking dipoles header
+ <22s> P1-s3node40: [WARNING][DIP] Database not correct or missing. To be computed
+ <22s> P1-s3node40: [x,Vnl] computed using 16 projectors
+ <23s> P1-s3node40: Dipoles: P, V and iR (T) |                                        | [000%] --(E) --(X)
+ <23s> P1-s3node40: [PARALLEL distribution for Wave-Function states] Loaded/Total(Percentual):14/200(7%)
+ <24s> P1-s3node40: Dipoles: P, V and iR (T) |########################################| [100%] --(E) --(X)
+ <24s> P1-s3node40: [DIP] Writing dipoles header
+ <25s> P1-s3node40: [06] Dynamic Dielectric Matrix (PPA)
+ <25s> P1-s3node40: [PARALLEL Response_G_space_and_IO for K(bz) on 1 CPU] Loaded/Total (Percentual):64/64(100%)
+ <25s> P1-s3node40: [PARALLEL Response_G_space_and_IO for Q(ibz) on 1 CPU] Loaded/Total (Percentual):13/13(100%)
+ <25s> P1-s3node40: [PARALLEL Response_G_space_and_IO for K-q(ibz) on 1 CPU] Loaded/Total (Percentual):13/13(100%)
+ <25s> P1-s3node40: [LA@Response_G_space_and_IO] PARALLEL linear algebra uses a 4x4 SLK grid (16 cpu)
+ <25s> P1-s3node40: [PARALLEL Response_G_space_and_IO for K(ibz) on 1 CPU] Loaded/Total (Percentual):13/13(100%)
+ <25s> P1-s3node40: [PARALLEL Response_G_space_and_IO for CON bands on 16 CPU] Loaded/Total (Percentual):13/196(7%)
+ <25s> P1-s3node40: [PARALLEL Response_G_space_and_IO for VAL bands on 4 CPU] Loaded/Total (Percentual):1/4(25%)
+ <25s> P1-s3node40: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):18769/18769(100%)
+ <25s> P1-s3node40: [DIP] Checking dipoles header
+ <25s> P1-s3node40: [PARALLEL distribution for Wave-Function states] Loaded/Total(Percentual):182/2600(7%)
+ <25s> P1-s3node40: [FFT-X] Mesh size:  12  12  12
+ <25s> P1-s3node40: [X-CG] R(p) Tot o/o(of R):    75   832   100
+ <25s> P1-s3node40: Xo@q[1] |                                        | [000%] --(E) --(X)
+ <25s> P1-s3node40: Xo@q[1] |########################################| [100%] --(E) --(X)
+ <25s> P1-s3node40: [PARALLEL distribution for X Frequencies on 4 CPU] Loaded/Total (Percentual):1/2(50%)
+ <25s> P1-s3node40: X@q[1] |                                        | [000%] --(E) --(X)
+ <26s> P1-s3node40: X@q[1] |########################################| [100%] --(E) --(X)
+ <26s> P1-s3node40: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):18769/18769(100%)
+ <26s> P1-s3node40: [X-CG] R(p) Tot o/o(of R):   186   832   100
+ <26s> P1-s3node40: Xo@q[2] |                                        | [000%] --(E) --(X)
+ <26s> P1-s3node40: Xo@q[2] |########################################| [100%] --(E) --(X)
+ <26s> P1-s3node40: [PARALLEL distribution for X Frequencies on 4 CPU] Loaded/Total (Percentual):1/2(50%)
+ <26s> P1-s3node40: X@q[2] |                                        | [000%] --(E) --(X)
+ <26s> P1-s3node40: X@q[2] |########################################| [100%] --(E) --(X)
+ <26s> P1-s3node40: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):18769/18769(100%)
+ <26s> P1-s3node40: [X-CG] R(p) Tot o/o(of R):   119   832   100
+ <26s> P1-s3node40: Xo@q[3] |                                        | [000%] --(E) --(X)
+ <26s> P1-s3node40: Xo@q[3] |########################################| [100%] --(E) --(X)
+ <26s> P1-s3node40: [PARALLEL distribution for X Frequencies on 4 CPU] Loaded/Total (Percentual):1/2(50%)
+ <26s> P1-s3node40: X@q[3] |                                        | [000%] --(E) --(X)
+ <26s> P1-s3node40: X@q[3] |########################################| [100%] --(E) --(X)
+ <26s> P1-s3node40: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):18769/18769(100%)
+ <26s> P1-s3node40: [X-CG] R(p) Tot o/o(of R):   186   832   100
+ <26s> P1-s3node40: Xo@q[4] |                                        | [000%] --(E) --(X)
+ <26s> P1-s3node40: Xo@q[4] |########################################| [100%] --(E) --(X)
+ <26s> P1-s3node40: [PARALLEL distribution for X Frequencies on 4 CPU] Loaded/Total (Percentual):1/2(50%)
+ <26s> P1-s3node40: X@q[4] |                                        | [000%] --(E) --(X)
+ <26s> P1-s3node40: X@q[4] |########################################| [100%] --(E) --(X)
+ <26s> P1-s3node40: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):18769/18769(100%)
+ <26s> P1-s3node40: [X-CG] R(p) Tot o/o(of R):   157   832   100
+ <26s> P1-s3node40: Xo@q[5] |                                        | [000%] --(E) --(X)
+ <26s> P1-s3node40: Xo@q[5] |########################################| [100%] --(E) --(X)
+ <26s> P1-s3node40: [PARALLEL distribution for X Frequencies on 4 CPU] Loaded/Total (Percentual):1/2(50%)
+ <26s> P1-s3node40: X@q[5] |                                        | [000%] --(E) --(X)
+ <26s> P1-s3node40: X@q[5] |########################################| [100%] --(E) --(X)
+ <26s> P1-s3node40: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):18769/18769(100%)
+ <26s> P1-s3node40: [X-CG] R(p) Tot o/o(of R):   222   832   100
+ <26s> P1-s3node40: Xo@q[6] |                                        | [000%] --(E) --(X)
+ <26s> P1-s3node40: Xo@q[6] |########################################| [100%] --(E) --(X)
+ <26s> P1-s3node40: [PARALLEL distribution for X Frequencies on 4 CPU] Loaded/Total (Percentual):1/2(50%)
+ <26s> P1-s3node40: X@q[6] |                                        | [000%] --(E) --(X)
+ <26s> P1-s3node40: X@q[6] |########################################| [100%] --(E) --(X)
+ <26s> P1-s3node40: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):18769/18769(100%)
+ <26s> P1-s3node40: [X-CG] R(p) Tot o/o(of R):   166   832   100
+ <26s> P1-s3node40: Xo@q[7] |                                        | [000%] --(E) --(X)
+ <26s> P1-s3node40: Xo@q[7] |########################################| [100%] --(E) --(X)
+ <26s> P1-s3node40: [PARALLEL distribution for X Frequencies on 4 CPU] Loaded/Total (Percentual):1/2(50%)
+ <26s> P1-s3node40: X@q[7] |                                        | [000%] --(E) --(X)
+ <26s> P1-s3node40: X@q[7] |########################################| [100%] --(E) --(X)
+ <26s> P1-s3node40: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):18769/18769(100%)
+ <26s> P1-s3node40: [X-CG] R(p) Tot o/o(of R):   119   832   100
+ <26s> P1-s3node40: Xo@q[8] |                                        | [000%] --(E) --(X)
+ <26s> P1-s3node40: Xo@q[8] |########################################| [100%] --(E) --(X)
+ <26s> P1-s3node40: [PARALLEL distribution for X Frequencies on 4 CPU] Loaded/Total (Percentual):1/2(50%)
+ <26s> P1-s3node40: X@q[8] |                                        | [000%] --(E) --(X)
+ <26s> P1-s3node40: X@q[8] |########################################| [100%] --(E) --(X)
+ <27s> P1-s3node40: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):18769/18769(100%)
+ <27s> P1-s3node40: [X-CG] R(p) Tot o/o(of R):   222   832   100
+ <27s> P1-s3node40: Xo@q[9] |                                        | [000%] --(E) --(X)
+ <27s> P1-s3node40: Xo@q[9] |########################################| [100%] --(E) --(X)
+ <27s> P1-s3node40: [PARALLEL distribution for X Frequencies on 4 CPU] Loaded/Total (Percentual):1/2(50%)
+ <27s> P1-s3node40: X@q[9] |                                        | [000%] --(E) --(X)
+ <27s> P1-s3node40: X@q[9] |########################################| [100%] --(E) --(X)
+ <27s> P1-s3node40: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):18769/18769(100%)
+ <27s> P1-s3node40: [X-CG] R(p) Tot o/o(of R):   112   832   100
+ <27s> P1-s3node40: Xo@q[10] |                                        | [000%] --(E) --(X)
+ <27s> P1-s3node40: Xo@q[10] |########################################| [100%] --(E) --(X)
+ <27s> P1-s3node40: [PARALLEL distribution for X Frequencies on 4 CPU] Loaded/Total (Percentual):1/2(50%)
+ <27s> P1-s3node40: X@q[10] |                                        | [000%] --(E) --(X)
+ <27s> P1-s3node40: X@q[10] |########################################| [100%] --(E) --(X)
+ <27s> P1-s3node40: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):18769/18769(100%)
+ <27s> P1-s3node40: [X-CG] R(p) Tot o/o(of R):   222   832   100
+ <27s> P1-s3node40: Xo@q[11] |                                        | [000%] --(E) --(X)
+ <27s> P1-s3node40: Xo@q[11] |########################################| [100%] --(E) --(X)
+ <27s> P1-s3node40: [PARALLEL distribution for X Frequencies on 4 CPU] Loaded/Total (Percentual):1/2(50%)
+ <27s> P1-s3node40: X@q[11] |                                        | [000%] --(E) --(X)
+ <27s> P1-s3node40: X@q[11] |########################################| [100%] --(E) --(X)
+ <27s> P1-s3node40: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):18769/18769(100%)
+ <27s> P1-s3node40: [X-CG] R(p) Tot o/o(of R):   166   832   100
+ <27s> P1-s3node40: Xo@q[12] |                                        | [000%] --(E) --(X)
+ <27s> P1-s3node40: Xo@q[12] |########################################| [100%] --(E) --(X)
+ <27s> P1-s3node40: [PARALLEL distribution for X Frequencies on 4 CPU] Loaded/Total (Percentual):1/2(50%)
+ <27s> P1-s3node40: X@q[12] |                                        | [000%] --(E) --(X)
+ <27s> P1-s3node40: X@q[12] |########################################| [100%] --(E) --(X)
+ <27s> P1-s3node40: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):18769/18769(100%)
+ <27s> P1-s3node40: [X-CG] R(p) Tot o/o(of R):   145   832   100
+ <27s> P1-s3node40: Xo@q[13] |                                        | [000%] --(E) --(X)
+ <27s> P1-s3node40: Xo@q[13] |########################################| [100%] --(E) --(X)
+ <27s> P1-s3node40: [PARALLEL distribution for X Frequencies on 4 CPU] Loaded/Total (Percentual):1/2(50%)
+ <27s> P1-s3node40: X@q[13] |                                        | [000%] --(E) --(X)
+ <27s> P1-s3node40: X@q[13] |########################################| [100%] --(E) --(X)
+ <27s> P1-s3node40: [07] Local Exchange-Correlation + Non-Local Fock
+ <27s> P1-s3node40: [PARALLEL Self_Energy for QPs on 1 CPU] Loaded/Total (Percentual):4/4(100%)
+ <27s> P1-s3node40: [PARALLEL Self_Energy for Q(ibz) on 1 CPU] Loaded/Total (Percentual):13/13(100%)
+ <27s> P1-s3node40: [PARALLEL Self_Energy for G bands on 64 CPU] Loaded/Total (Percentual):1/64(2%)
+ <27s> P1-s3node40: [PARALLEL distribution for Wave-Function states] Loaded/Total(Percentual):17/832(2%)
+ <27s> P1-s3node40: [FFT-HF/Rho] Mesh size:   39   39   39
+ <27s> P1-s3node40: EXS |                                        | [000%] --(E) --(X)
+ <28s> P1-s3node40: EXS |########################################| [100%] --(E) --(X)
+ <28s> P1-s3node40: [xc] Functional : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+ <28s> P1-s3node40: [xc] LIBXC used to calculate xc functional
+ <28s> P1-s3node40: [07.01] Hartree-Fock occupations report
+ <28s> P1-s3node40: [08] Dyson equation: Newton solver
+ <28s> P1-s3node40: [WARNING] Response block size in GW reduced to 137     RL (10387   mHa)
+ <28s> P1-s3node40: [08.01] G0W0 (W PPA)
+ <28s> P1-s3node40: [PARALLEL Self_Energy for QPs on 1 CPU] Loaded/Total (Percentual):4/4(100%)
+ <28s> P1-s3node40: [PARALLEL Self_Energy for Q(ibz) on 1 CPU] Loaded/Total (Percentual):13/13(100%)
+ <28s> P1-s3node40: [PARALLEL Self_Energy for G bands on 64 CPU] Loaded/Total (Percentual):4/200(2%)
+ <28s> P1-s3node40: [PARALLEL distribution for Wave-Function states] Loaded/Total(Percentual):55/2600(2%)
+ <28s> P1-s3node40: [FFT-GW] Mesh size:  18  18  18
+ <29s> P1-s3node40: G0W0 (W PPA) |                                        | [000%] --(E) --(X)
+ <32s> P1-s3node40: G0W0 (W PPA) |########################################| [100%] 03s(E) 03s(X)
+ <32s> P1-s3node40: [08.02] QP properties and I/O
+ <33s> P1-s3node40: [09] Timing Overview
+ <33s> P1-s3node40: [TIMING]                               io_ATMPROJ_pwscf :      0.0002s CPU
+ <33s> P1-s3node40: [TIMING]                                          io_BS :      0.0004s CPU
+ <33s> P1-s3node40: [TIMING]                        IO_and_Messaging_switch :      0.0004s CPU ( 39 calls,   0.011 msec avg)
+ <33s> P1-s3node40: [TIMING]                                     io_COL_CUT :      0.0006s CPU (  2 calls,   0.280 msec avg)
+ <33s> P1-s3node40: [TIMING]                                   io_KB_abinit :      0.0009s CPU
+ <33s> P1-s3node40: [TIMING]                                 io_Double_Grid :      0.0012s CPU
+ <33s> P1-s3node40: [TIMING]     MATRIX transfer (X_G_finite_q_X_redux_2_1) :      0.0019s CPU ( 13 calls,   0.144 msec avg)
+ <33s> P1-s3node40: [TIMING]     MATRIX transfer (X_G_finite_q_X_redux_2_2) :      0.0019s CPU ( 13 calls,   0.144 msec avg)
+ <33s> P1-s3node40: [TIMING]                                   PP_uspp_init :      0.0030s CPU ( 16 calls,   0.187 msec avg)
+ <33s> P1-s3node40: [TIMING]                                 eval_G_minus_G :      0.0061s CPU
+ <33s> P1-s3node40: [TIMING]                                      X (REDUX) :      0.0113s CPU ( 13 calls,   0.871 msec avg)
+ <33s> P1-s3node40: [TIMING]                                      GW(REDUX) :      0.0275s CPU
+ <33s> P1-s3node40: [TIMING]                                   scatter_Gamp :      0.0279s CPU ( 65 calls,   0.429 msec avg)
+ <33s> P1-s3node40: [TIMING]                            PARALLEL_lin_system :      0.0298s CPU ( 13 calls,   2.295 msec avg)
+ <33s> P1-s3node40: [TIMING]                                 LINEAR ALGEBRA :      0.0299s CPU ( 13 calls,   2.302 msec avg)
+ <33s> P1-s3node40: [TIMING]                                       io_QINDX :      0.0340s CPU (  2 calls,  16.989 msec avg)
+ <33s> P1-s3node40: [TIMING]                                     Xo (REDUX) :      0.0473s CPU ( 13 calls,   3.639 msec avg)
+ <33s> P1-s3node40: [TIMING]                                      HF(REDUX) :      0.0488s CPU
+ <33s> P1-s3node40: [TIMING]                                      FFT_setup :      0.0665s CPU ( 15 calls,   4.430 msec avg)
+ <33s> P1-s3node40: [TIMING]                                   io_QP_and_GF :      0.0872s CPU
+ <33s> P1-s3node40: [TIMING]                                        io_GROT :      0.0899s CPU (  2 calls,  44.955 msec avg)
+ <33s> P1-s3node40: [TIMING]                            XC_potential_driver :      0.0920s CPU (  2 calls,  45.989 msec avg)
+ <33s> P1-s3node40: [TIMING]     MATRIX transfer (X_G_finite_q_X_redux_1_1) :      0.0939s CPU ( 13 calls,   7.226 msec avg)
+ <33s> P1-s3node40: [TIMING]                                      XCo_local :      0.0970s CPU
+ <33s> P1-s3node40: [TIMING]     MATRIX transfer (X_G_finite_q_X_redux_1_2) :      0.1026s CPU ( 13 calls,   7.896 msec avg)
+ <33s> P1-s3node40: [TIMING]                                          io_HF :      0.1244s CPU (  3 calls,  41.456 msec avg)
+ <33s> P1-s3node40: [TIMING]                                  X (procedure) :      0.2382s CPU ( 13 calls,  18.326 msec avg)
+ <33s> P1-s3node40: [TIMING]                                    io_KB_pwscf :      0.2549s CPU ( 15 calls,  16.990 msec avg)
+ <33s> P1-s3node40: [TIMING]                                 Xo (procedure) :      0.5566s CPU ( 13 calls,  42.819 msec avg)
+ <33s> P1-s3node40: [TIMING]                                             HF :      0.6071s CPU
+ <33s> P1-s3node40: [TIMING]                                           io_X :      1.0700s CPU ( 34 calls,   0.031 sec avg)
+ <33s> P1-s3node40: [TIMING]                                     io_DIPOLES :      1.1307s CPU ( 30 calls,   0.038 sec avg)
+ <33s> P1-s3node40: [TIMING]                              DIPOLE_transverse :      1.3309s CPU
+ <33s> P1-s3node40: [TIMING]                                    WF_load_FFT :      1.4868s CPU ( 16 calls,   0.093 sec avg)
+ <33s> P1-s3node40: [TIMING]                                          io_WF :      1.5758s CPU ( 85 calls,   0.019 sec avg)
+ <33s> P1-s3node40: [TIMING]                                    io_fragment :      1.6753s CPU (118 calls,   0.014 sec avg)
+ <33s> P1-s3node40: [TIMING]                                        Dipoles :      3.5539s CPU
+ <33s> P1-s3node40: [TIMING]                                        GW(ppa) :      3.6752s CPU
+ <33s> P1-s3node40: [TIMING]                                            RIM :     20.2407s CPU
+ <33s> P1-s3node40: [10] Memory Overview
+ <33s> P1-s3node40: [11] Game Over & Game summary
+ <33s> P1-s3node40: [TIMING]            [Time-Profile]: 33s

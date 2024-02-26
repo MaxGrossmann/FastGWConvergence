@@ -1,0 +1,283 @@
+
+     Program PWSCF v.7.1 starts on  5Dec2023 at 16:34:19 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     8 processors
+
+     MPI processes distributed on     1 nodes
+     123093 MiB available memory on the printing compute node when the environment starts
+ 
+     Reading input from pw_mp-5967_nscf_k0_E58.in
+Warning: card &IONS ignored
+Warning: card / ignored
+Warning: card &CELL ignored
+Warning: card / ignored
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  4
+
+     Atomic positions and unit cell read from directory:
+     out/mp-5967.save/
+     Atomic positions from file used, from input discarded
+ 
+ 
+     R & G space division:  proc/nbgrp/npool/nimage =       8
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     one sub-group per band group will be used
+     scalapack distributed-memory algorithm (size of sub-group:  2*  2 procs)
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         120     120     31                 2512     2512     320
+     Max         122     122     32                 2514     2514     321
+     Sum         967     967    253                20107    20107    2565
+ 
+     Using Slab Decomposition
+ 
+
+
+     bravais-lattice index     =            2
+     lattice parameter (alat)  =      11.0675  a.u.
+     unit-cell volume          =     338.9178 (a.u.)^3
+     number of atoms/cell      =            3
+     number of atomic types    =            3
+     number of electrons       =        44.00
+     number of Kohn-Sham states=          624
+     kinetic-energy cutoff     =      58.0000  Ry
+     charge density cutoff     =     232.0000  Ry
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+
+     celldm(1)=  11.067549  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (  -0.500000   0.000000   0.500000 )  
+               a(2) = (   0.000000   0.500000   0.500000 )  
+               a(3) = (  -0.500000   0.500000   0.000000 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = ( -1.000000 -1.000000  1.000000 )  
+               b(2) = (  1.000000  1.000000  1.000000 )  
+               b(3) = ( -1.000000  1.000000 -1.000000 )  
+
+
+     PseudoPot. # 1 for Co read from file:
+     /usr/scratch4/magr4985/MG/HTDF/pseudo/SG15/Co.upf
+     MD5 check sum: 04640e31e65e5bce9f0417487be359f7
+     Pseudo is Norm-conserving, Zval = 17.0
+     Generated using ONCVPSP code by D. R. Hamann
+     Using radial grid of  602 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+
+     PseudoPot. # 2 for Sb read from file:
+     /usr/scratch4/magr4985/MG/HTDF/pseudo/SG15/Sb.upf
+     MD5 check sum: 0417cd6c0fe8ce4611e2b23135f1abd9
+     Pseudo is Norm-conserving, Zval = 15.0
+     Generated using ONCVPSP code by D. R. Hamann
+     Using radial grid of  602 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+
+     PseudoPot. # 3 for Ti read from file:
+     /usr/scratch4/magr4985/MG/HTDF/pseudo/SG15/Ti.upf
+     MD5 check sum: 1aea57736bd12dcfee93c97d0b9b5968
+     Pseudo is Norm-conserving, Zval = 12.0
+     Generated using ONCVPSP code by D. R. Hamann
+     Using radial grid of  602 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+
+     atomic species   valence    mass     pseudopotential
+        Co            17.00    58.93320     Co( 1.00)
+        Sb            15.00   121.76000     Sb( 1.00)
+        Ti            12.00    47.86700     Ti( 1.00)
+
+     24 Sym. Ops. (no inversion) found
+
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           Ti  tau(   1) = (   0.0000000   0.0000000   0.0000000  )
+         2           Co  tau(   2) = (  -0.2500000   0.2500000   0.2500001  )
+         3           Sb  tau(   3) = (  -0.5000000   0.5000000   0.5000000  )
+
+     number of k points=     1  Gaussian smearing, width (Ry)=  0.0005
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   2.0000000
+
+     Dense  grid:    20107 G-vectors     FFT dimensions: (  40,  40,  40)
+
+     Estimated max dynamical RAM per process >      38.35 MB
+
+     Estimated total dynamical RAM >     306.78 MB
+
+     The potential is recalculated from file :
+     out/mp-5967.save/charge-density
+
+     Starting wfcs are random
+
+     Band Structure Calculation
+     Davidson diagonalization with overlap
+
+     ethr =  5.00E-06,  avg # of iterations = 10.0
+
+     total cpu time spent up to now is       20.9 secs
+
+     End of band structure calculation
+
+          k = 0.0000 0.0000 0.0000 (  2565 PWs)   bands (ev):
+
+   -77.8743 -41.1563 -41.1563 -41.1563 -40.2780 -16.5391 -16.5391 -16.5391
+   -12.0676 -12.0676 -12.0582 -12.0582 -12.0582   5.1226  13.9091  13.9091
+    13.9091  14.7382  14.7382  16.3592  16.3592  16.3592  18.2292  18.2292
+    19.4255  19.4255  19.4255  20.7890  24.3209  24.6591  24.6591  24.6591
+    26.6066  26.6066  26.6066  29.5439  29.5439  34.7462  38.2746  38.2746
+    38.2746  42.9335  42.9335  44.1448  44.1448  44.1448  44.7475  44.7475
+    44.7475  49.2926  49.2926  49.2926  50.5908  50.5908  50.5908  51.0197
+    52.6737  52.6737  52.6737  53.3350  54.8005  54.8005  54.8006  57.7777
+    57.7777  57.7777  57.9013  57.9013  58.2572  58.2572  58.8949  58.8949
+    58.8949  61.1748  62.5347  62.5347  62.5347  63.2488  63.2488  63.2488
+    67.0798  71.8273  74.9875  74.9875  74.9875  77.4415  77.4415  77.4415
+    78.6539  78.6539  81.8893  81.8894  81.8894  82.0387  85.3288  85.3288
+    85.7544  85.7544  85.7544  87.7099  87.7099  87.7099  87.7732  87.7732
+    87.7732  88.5938  88.5938  88.7829  88.7829  88.7829  88.8380  88.8380
+    88.8380  91.2557  91.2557  91.2557  92.0435  92.1749  92.1749  92.7308
+    92.7308  92.7308  93.8031  94.8035  94.8035  94.8035  94.9425  96.9860
+    96.9860  96.9860 101.1271 101.1271 102.7836 102.7836 102.7836 105.0220
+   105.5099 105.5099 105.5099 105.6023 105.6023 105.6023 106.7696 106.7696
+   106.7696 106.8669 106.8669 106.8669 107.9210 107.9210 111.8076 111.8077
+   111.8077 113.5146 115.0728 115.0728 115.1637 115.1637 115.1637 115.4750
+   117.4386 117.4386 117.4386 117.7665 117.7665 117.7665 118.6340 118.6340
+   118.6340 118.9536 119.2709 119.2709 119.2709 119.9117 122.2206 122.2206
+   122.2206 126.3563 126.3563 127.5277 127.5277 127.5277 127.9479 127.9479
+   129.2661 129.2661 129.2661 131.5671 131.5671 131.5671 133.7052 133.7052
+   133.7052 135.8916 137.8158 137.8158 137.8158 139.3745 139.3745 140.0421
+   141.0069 141.0070 141.0070 142.3232 145.1363 145.1363 145.1363 146.3616
+   146.8908 146.8908 146.8908 146.9889 146.9889 146.9889 148.9365 148.9365
+   148.9365 149.6804 150.1011 150.1011 150.1011 150.6757 150.6757 152.5466
+   153.1786 153.1786 153.1786 153.3907 153.3907 153.3907 154.6873 154.6873
+   154.6873 155.1945 155.1945 155.3326 156.6384 156.6384 156.6384 158.1954
+   158.1954 158.2247 158.2247 158.2247 159.0649 159.0649 159.0649 159.1882
+   159.1882 159.1882 159.4890 159.4890 159.4890 159.5282 159.5282 159.5282
+   159.8491 159.8491 160.0938 160.4804 160.4804 160.4804 160.8645 160.8645
+   160.8645 160.9110 160.9110 167.6416 167.7824 167.7824 167.7824 168.2072
+   168.2072 169.6268 169.6268 169.6268 171.1408 171.1408 171.1408 171.2874
+   171.2874 171.6174 171.6174 171.6174 172.0607 172.0607 172.0607 174.9769
+   177.4168 178.8464 178.8464 179.0814 179.0814 179.0814 179.2860 179.8794
+   179.8794 179.8794 181.3639 181.3639 181.3639 184.7886 184.7886 184.7886
+   187.0875 187.0875 187.0875 187.1407 187.1407 187.1407 188.9396 188.9396
+   188.9396 189.2859 189.2859 189.2859 189.4046 189.4046 190.2022 191.6301
+   191.6301 191.6301 191.7445 191.8126 191.8126 192.4410 192.4410 192.4410
+   192.5765 192.5765 192.5765 192.9274 192.9274 192.9274 193.6037 193.6037
+   194.9377 194.9377 194.9377 196.8176 196.8176 200.9367 200.9367 200.9367
+   202.6536 202.9361 202.9361 202.9361 204.8394 205.2941 205.2941 205.2941
+   206.0173 209.4766 209.4766 212.1091 212.1091 212.1091 212.3751 212.3751
+   212.3752 213.5774 213.5774 214.2379 214.2379 214.2379 214.6232 214.6232
+   214.6232 216.5787 217.5293 217.5293 217.5293 219.2917 219.7516 219.7516
+   219.7516 222.4787 222.4787 222.4787 222.7694 222.7694 223.2004 223.2004
+   223.2004 223.2087 223.2087 223.2087 223.3939 223.3939 223.3939 223.7347
+   223.7347 223.7347 224.0779 224.4618 224.4618 224.4618 224.9959 226.8456
+   226.8456 227.8043 227.8043 227.8043 227.9476 227.9476 227.9476 228.0476
+   228.0476 228.0476 228.3202 228.3202 228.3202 228.5702 230.4632 230.4632
+   230.4632 232.5656 232.5656 234.5320 236.1747 236.1747 236.1747 236.2295
+   238.4429 238.4430 238.4430 238.7333 238.7333 238.7333 238.8527 238.8527
+   238.8527 239.1586 239.1586 239.3187 239.3187 239.3858 239.3858 239.3858
+   240.9549 240.9549 240.9549 244.9088 245.3241 245.3241 246.1506 246.1506
+   246.1506 246.1657 246.2297 246.2297 246.2297 246.4227 246.4227 246.5725
+   246.5725 246.5725 246.5817 246.5817 246.5817 247.8688 247.8688 247.8688
+   248.1849 248.1849 249.0699 249.0699 249.0699 249.2479 249.6899 249.6899
+   249.6899 249.7468 249.7468 249.7468 249.8341 249.8341 249.8341 250.1748
+   250.1748 250.1748 250.2788 250.2788 250.2788 250.3923 251.4724 253.7481
+   253.7481 253.7481 255.2641 255.2641 255.8391 255.8391 255.8391 256.3396
+   256.3430 256.3430 257.2223 258.0981 258.0981 258.0981 258.9477 258.9477
+   259.5712 259.5712 259.5712 259.6705 259.6705 259.6705 259.8726 259.8726
+   259.8726 260.4969 260.4969 260.4969 260.6740 260.6740 261.7157 261.7157
+   261.7157 261.9770 261.9770 261.9770 262.1478 262.1478 262.1478 263.6718
+   263.6718 263.8472 263.8596 263.8596 263.8596 266.2019 266.2019 266.2019
+   267.1449 267.1756 267.1756 267.1756 270.5586 270.5586 277.2538 277.2538
+   277.2538 280.5644 280.5644 280.5644 283.1870 283.7705 286.3279 286.3279
+   286.8698 286.8698 286.8698 288.3473 288.3473 288.3473 289.1162 289.2524
+   289.2524 289.2524 289.3543 289.3543 289.3543 289.8077 289.8077 289.8077
+   290.0084 290.0084 291.0230 291.0230 291.0230 291.2394 291.9850 292.0898
+   292.0898 292.0898 293.0679 293.0679 293.0680 293.2379 293.2379 293.2379
+   293.4295 293.4295 293.4295 296.3882 296.3882 296.5546 296.5546 296.5546
+   298.4608 298.4608 298.8351 298.8351 298.8351 299.0412 299.0412 299.0412
+   299.2850 299.2850 299.2850 299.3818 299.3818 299.3818 299.5429 299.5429
+   301.4190 301.4190 301.4802 301.4802 301.4802 301.5802 303.4290 303.4290
+   303.4290 307.8673 307.8673 307.8673 308.1525 308.3246 308.3246 308.3246
+
+     the Fermi energy is    17.1351 ev
+     (compare with:    17.1351 eV, computed in scf)
+
+     Writing all to output data dir out/mp-5967.save/
+ 
+     init_run     :      0.04s CPU      0.06s WALL (       1 calls)
+     electrons    :     19.07s CPU     20.51s WALL (       1 calls)
+
+     Called by init_run:
+     wfcinit      :      0.00s CPU      0.00s WALL (       1 calls)
+     potinit      :      0.01s CPU      0.02s WALL (       1 calls)
+     hinit0       :      0.02s CPU      0.03s WALL (       1 calls)
+
+     Called by electrons:
+     c_bands      :     19.07s CPU     20.51s WALL (       1 calls)
+     v_of_rho     :      0.01s CPU      0.01s WALL (       1 calls)
+
+     Called by c_bands:
+     init_us_2    :      0.00s CPU      0.00s WALL (       1 calls)
+     init_us_2:cp :      0.00s CPU      0.00s WALL (       1 calls)
+     cegterg      :     18.54s CPU     19.95s WALL (       1 calls)
+
+     Called by *egterg:
+     cdiaghg      :     16.66s CPU     17.97s WALL (      11 calls)
+     h_psi        :      0.69s CPU      0.72s WALL (      12 calls)
+     g_psi        :      0.01s CPU      0.01s WALL (      10 calls)
+
+     Called by h_psi:
+     h_psi:calbec :      0.02s CPU      0.03s WALL (      12 calls)
+     vloc_psi     :      0.64s CPU      0.67s WALL (      12 calls)
+     add_vuspsi   :      0.02s CPU      0.02s WALL (      12 calls)
+
+     General routines
+     calbec       :      0.02s CPU      0.03s WALL (      12 calls)
+     fft          :      0.01s CPU      0.01s WALL (      10 calls)
+     fftw         :      0.57s CPU      0.59s WALL (    8442 calls)
+ 
+     Parallel routines
+ 
+     PWSCF        :     19.26s CPU     20.96s WALL
+
+ 
+   This run was terminated on:  16:34:40   5Dec2023            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=

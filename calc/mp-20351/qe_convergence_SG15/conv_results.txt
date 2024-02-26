@@ -1,0 +1,5 @@
+convergence threshold = 0.0029 Ha (= 1kcal/mol)
+cutoff (Ry)  kppa   total energy (Ha)
+35           1500   -58.904292
+35           3000   -58.904305
+40           3000   -58.905369

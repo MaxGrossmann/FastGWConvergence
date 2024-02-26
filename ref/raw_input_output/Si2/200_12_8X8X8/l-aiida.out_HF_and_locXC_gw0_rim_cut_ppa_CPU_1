@@ -1,0 +1,359 @@
+
+
+ ___ __  _____  __ __  _____   _____
+|   Y  ||  _  ||  Y  ||  _  \ |  _  |
+|   |  ||. |  ||.    ||. |  / |. |  |
+ \_  _/ |. _  ||.\_/ ||. _  \ |. |  |
+  |: |  |: |  ||: |  ||: |   \|: |  |
+  |::|  |:.|:.||:.|:.||::.   /|::.  |
+  `--"  `-- --"`-- --"`-----" `-----"
+
+
+ <---> P1: [01] MPI/OPENMP structure, Files & I/O Directories
+ <---> P1-jwb0004.juwels: MPI Cores-Threads   : 128(CPU)-6(threads)
+ <---> P1-jwb0004.juwels: MPI Cores-Threads   : DIP(environment)-1 32 4(CPUs)-k c v(ROLEs)
+ <---> P1-jwb0004.juwels: MPI Cores-Threads   : X_and_IO(environment)-1 1 1 32 4(CPUs)-q k g c v(ROLEs)
+ <---> P1-jwb0004.juwels: MPI Cores-Threads   : SE(environment)-1 2 64 1(CPUs)-q qp b g(ROLEs)
+ <---> P1-jwb0004.juwels: MPI assigned to GPU : 0
+ <---> P1-jwb0004.juwels: [02] CORE Variables Setup
+ <---> P1-jwb0004.juwels: [02.01] Unit cells
+ <---> P1-jwb0004.juwels: [02.02] Symmetries
+ <---> P1-jwb0004.juwels: [02.03] Reciprocal space
+ <---> P1-jwb0004.juwels: [02.04] K-grid lattice
+ <---> P1-jwb0004.juwels: Grid dimensions      :   8   8   8
+ <---> P1-jwb0004.juwels: [02.05] Energies & Occupations
+ <---> P1-jwb0004.juwels: [03] Transferred momenta grid and indexing
+ <---> P1-jwb0004.juwels: [04] Coloumb potential Random Integration (RIM)
+ <---> P1-jwb0004.juwels: [MEMORY] Alloc qr( 58.59300 [Mb]) (HOST) TOTAL:  68.82800 [Mb] (traced)  281.9080 [Mb] (memstat)
+ <---> P1-jwb0004.juwels: [04.01] RIM initialization
+ <---> P1-jwb0004.juwels: Random points |                                        | [000%] --(E) --(X)
+ <03s> P1-jwb0004.juwels: Random points |########################################| [100%] 03s(E) 03s(X)
+ <03s> P1-jwb0004.juwels: [04.02] RIM integrals
+ <03s> P1-jwb0004.juwels: Momenta loop |                                        | [000%] --(E) --(X)
+ <29s> P1-jwb0004.juwels: Momenta loop |########################################| [100%] 25s(E) 25s(X)
+ <31s> P1-jwb0004.juwels: [MEMORY]  Free qr( 58.59300 [Mb]) (HOST) TOTAL:  11.68500 [Mb] (traced)  283.3560 [Mb] (memstat)
+ <31s> P1-jwb0004.juwels: [05] Dipoles
+ <31s> P1-jwb0004.juwels: [PARALLEL DIPOLES for K(ibz) on 1 CPU] Loaded/Total (Percentual):29/29(100%)
+ <31s> P1-jwb0004.juwels: [PARALLEL DIPOLES for CON bands on 32 CPU] Loaded/Total (Percentual):7/196(4%)
+ <31s> P1-jwb0004.juwels: [PARALLEL DIPOLES for VAL bands on 4 CPU] Loaded/Total (Percentual):1/4(25%)
+ <31s> P1-jwb0004.juwels: [DIP] Checking dipoles header
+ <32s> P1-jwb0004.juwels:  [DIP] Database not correct or missing. To be computed
+ <32s> P1-jwb0004.juwels: [x,Vnl] computed using 36 projectors
+ <32s> P1-jwb0004.juwels: Dipoles: P, V and iR (T) |                                        | [000%] --(E) --(X)
+ <32s> P1-jwb0004.juwels: [PARALLEL distribution for Wave-Function states] Loaded/Total(Percentual):8/200(4%)
+ <32s> P1-jwb0004.juwels: [WF] Copying WF data from GPU device
+ <34s> P1-jwb0004.juwels: Dipoles: P, V and iR (T) |########################################| [100%] --(E) --(X)
+ <34s> P1-jwb0004.juwels: [DIP] Writing dipoles header
+ <34s> P1-jwb0004.juwels: [06] Dynamic Dielectric Matrix (PPA)
+ <34s> P1-jwb0004.juwels: [PARALLEL Response_G_space_and_IO for K(bz) on 1 CPU] Loaded/Total (Percentual):512/512(100%)
+ <34s> P1-jwb0004.juwels: [PARALLEL Response_G_space_and_IO for Q(ibz) on 1 CPU] Loaded/Total (Percentual):29/29(100%)
+ <34s> P1-jwb0004.juwels: [PARALLEL Response_G_space_and_IO for K-q(ibz) on 1 CPU] Loaded/Total (Percentual):29/29(100%)
+ <34s> P1-jwb0004.juwels: [LA] SERIAL linear algebra
+ <34s> P1-jwb0004.juwels: [PARALLEL Response_G_space_and_IO for K(ibz) on 1 CPU] Loaded/Total (Percentual):29/29(100%)
+ <34s> P1-jwb0004.juwels: [PARALLEL Response_G_space_and_IO for CON bands on 32 CPU] Loaded/Total (Percentual):7/196(4%)
+ <34s> P1-jwb0004.juwels: [PARALLEL Response_G_space_and_IO for VAL bands on 4 CPU] Loaded/Total (Percentual):1/4(25%)
+ <34s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <34s> P1-jwb0004.juwels: [DIP] Checking dipoles header
+ <35s> P1-jwb0004.juwels: [PARALLEL distribution for Wave-Function states] Loaded/Total(Percentual):232/5800(4%)
+ <35s> P1-jwb0004.juwels: [FFT-X] Mesh size:  21  21  21
+ <35s> P1-jwb0004.juwels: [WF] Copying WF data from GPU device
+ <35s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):    178   3584    100
+ <35s> P1-jwb0004.juwels: Xo@q[1] |                                        | [000%] --(E) --(X)
+ <37s> P1-jwb0004.juwels: Xo@q[1] |########################################| [100%] 02s(E) 02s(X)
+ <37s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <37s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <37s> P1-jwb0004.juwels: X@q[1] |                                        | [000%] --(E) --(X)
+ <38s> P1-jwb0004.juwels: X@q[1] |########################################| [100%] --(E) --(X)
+ <38s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <38s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):    752   3584    100
+ <38s> P1-jwb0004.juwels: Xo@q[2] |                                        | [000%] --(E) --(X)
+ <38s> P1-jwb0004.juwels: Xo@q[2] |########################################| [100%] --(E) --(X)
+ <38s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <38s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <38s> P1-jwb0004.juwels: X@q[2] |                                        | [000%] --(E) --(X)
+ <38s> P1-jwb0004.juwels: X@q[2] |########################################| [100%] --(E) --(X)
+ <39s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <39s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):    728   3584    100
+ <39s> P1-jwb0004.juwels: Xo@q[3] |                                        | [000%] --(E) --(X)
+ <39s> P1-jwb0004.juwels: Xo@q[3] |########################################| [100%] --(E) --(X)
+ <39s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <39s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <39s> P1-jwb0004.juwels: X@q[3] |                                        | [000%] --(E) --(X)
+ <39s> P1-jwb0004.juwels: X@q[3] |########################################| [100%] --(E) --(X)
+ <39s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <39s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):    758   3584    100
+ <39s> P1-jwb0004.juwels: Xo@q[4] |                                        | [000%] --(E) --(X)
+ <40s> P1-jwb0004.juwels: Xo@q[4] |########################################| [100%] --(E) --(X)
+ <40s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <40s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <40s> P1-jwb0004.juwels: X@q[4] |                                        | [000%] --(E) --(X)
+ <40s> P1-jwb0004.juwels: X@q[4] |########################################| [100%] --(E) --(X)
+ <40s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <40s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):    387   3584    100
+ <40s> P1-jwb0004.juwels: Xo@q[5] |                                        | [000%] --(E) --(X)
+ <40s> P1-jwb0004.juwels: Xo@q[5] |########################################| [100%] --(E) --(X)
+ <40s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <40s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <40s> P1-jwb0004.juwels: X@q[5] |                                        | [000%] --(E) --(X)
+ <40s> P1-jwb0004.juwels: X@q[5] |########################################| [100%] --(E) --(X)
+ <40s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <40s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):    622   3584    100
+ <40s> P1-jwb0004.juwels: Xo@q[6] |                                        | [000%] --(E) --(X)
+ <41s> P1-jwb0004.juwels: Xo@q[6] |########################################| [100%] --(E) --(X)
+ <41s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <41s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <41s> P1-jwb0004.juwels: X@q[6] |                                        | [000%] --(E) --(X)
+ <41s> P1-jwb0004.juwels: X@q[6] |########################################| [100%] --(E) --(X)
+ <41s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <41s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):   1371   3584    100
+ <41s> P1-jwb0004.juwels: Xo@q[7] |                                        | [000%] --(E) --(X)
+ <41s> P1-jwb0004.juwels: Xo@q[7] |########################################| [100%] --(E) --(X)
+ <41s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <41s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <41s> P1-jwb0004.juwels: X@q[7] |                                        | [000%] --(E) --(X)
+ <41s> P1-jwb0004.juwels: X@q[7] |########################################| [100%] --(E) --(X)
+ <41s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <41s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):   1184   3584    100
+ <41s> P1-jwb0004.juwels: Xo@q[8] |                                        | [000%] --(E) --(X)
+ <42s> P1-jwb0004.juwels: Xo@q[8] |########################################| [100%] --(E) --(X)
+ <42s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <42s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <42s> P1-jwb0004.juwels: X@q[8] |                                        | [000%] --(E) --(X)
+ <42s> P1-jwb0004.juwels: X@q[8] |########################################| [100%] --(E) --(X)
+ <42s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <42s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):   1224   3584    100
+ <42s> P1-jwb0004.juwels: Xo@q[9] |                                        | [000%] --(E) --(X)
+ <42s> P1-jwb0004.juwels: Xo@q[9] |########################################| [100%] --(E) --(X)
+ <42s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <42s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <42s> P1-jwb0004.juwels: X@q[9] |                                        | [000%] --(E) --(X)
+ <42s> P1-jwb0004.juwels: X@q[9] |########################################| [100%] --(E) --(X)
+ <42s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <42s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):   1013   3584    100
+ <42s> P1-jwb0004.juwels: Xo@q[10] |                                        | [000%] --(E) --(X)
+ <43s> P1-jwb0004.juwels: Xo@q[10] |########################################| [100%] --(E) --(X)
+ <43s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <43s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <43s> P1-jwb0004.juwels: X@q[10] |                                        | [000%] --(E) --(X)
+ <43s> P1-jwb0004.juwels: X@q[10] |########################################| [100%] --(E) --(X)
+ <43s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <43s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):   1409   3584    100
+ <43s> P1-jwb0004.juwels: Xo@q[11] |                                        | [000%] --(E) --(X)
+ <43s> P1-jwb0004.juwels: Xo@q[11] |########################################| [100%] --(E) --(X)
+ <43s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <43s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <43s> P1-jwb0004.juwels: X@q[11] |                                        | [000%] --(E) --(X)
+ <43s> P1-jwb0004.juwels: X@q[11] |########################################| [100%] --(E) --(X)
+ <43s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <43s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):    909   3584    100
+ <43s> P1-jwb0004.juwels: Xo@q[12] |                                        | [000%] --(E) --(X)
+ <44s> P1-jwb0004.juwels: Xo@q[12] |########################################| [100%] --(E) --(X)
+ <44s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <44s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <44s> P1-jwb0004.juwels: X@q[12] |                                        | [000%] --(E) --(X)
+ <44s> P1-jwb0004.juwels: X@q[12] |########################################| [100%] --(E) --(X)
+ <44s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <44s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):    570   3584    100
+ <44s> P1-jwb0004.juwels: Xo@q[13] |                                        | [000%] --(E) --(X)
+ <44s> P1-jwb0004.juwels: Xo@q[13] |########################################| [100%] --(E) --(X)
+ <44s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <44s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <44s> P1-jwb0004.juwels: X@q[13] |                                        | [000%] --(E) --(X)
+ <44s> P1-jwb0004.juwels: X@q[13] |########################################| [100%] --(E) --(X)
+ <44s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <44s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):   1414   3584    100
+ <44s> P1-jwb0004.juwels: Xo@q[14] |                                        | [000%] --(E) --(X)
+ <45s> P1-jwb0004.juwels: Xo@q[14] |########################################| [100%] --(E) --(X)
+ <45s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <45s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <45s> P1-jwb0004.juwels: X@q[14] |                                        | [000%] --(E) --(X)
+ <45s> P1-jwb0004.juwels: X@q[14] |########################################| [100%] --(E) --(X)
+ <45s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <45s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):   1062   3584    100
+ <45s> P1-jwb0004.juwels: Xo@q[15] |                                        | [000%] --(E) --(X)
+ <45s> P1-jwb0004.juwels: Xo@q[15] |########################################| [100%] --(E) --(X)
+ <45s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <45s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <45s> P1-jwb0004.juwels: X@q[15] |                                        | [000%] --(E) --(X)
+ <45s> P1-jwb0004.juwels: X@q[15] |########################################| [100%] --(E) --(X)
+ <45s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <45s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):   1370   3584    100
+ <45s> P1-jwb0004.juwels: Xo@q[16] |                                        | [000%] --(E) --(X)
+ <46s> P1-jwb0004.juwels: Xo@q[16] |########################################| [100%] --(E) --(X)
+ <46s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <46s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <46s> P1-jwb0004.juwels: X@q[16] |                                        | [000%] --(E) --(X)
+ <46s> P1-jwb0004.juwels: X@q[16] |########################################| [100%] --(E) --(X)
+ <46s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <46s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):    709   3584    100
+ <46s> P1-jwb0004.juwels: Xo@q[17] |                                        | [000%] --(E) --(X)
+ <46s> P1-jwb0004.juwels: Xo@q[17] |########################################| [100%] --(E) --(X)
+ <46s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <46s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <46s> P1-jwb0004.juwels: X@q[17] |                                        | [000%] --(E) --(X)
+ <46s> P1-jwb0004.juwels: X@q[17] |########################################| [100%] --(E) --(X)
+ <46s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <46s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):    623   3584    100
+ <46s> P1-jwb0004.juwels: Xo@q[18] |                                        | [000%] --(E) --(X)
+ <46s> P1-jwb0004.juwels: Xo@q[18] |########################################| [100%] --(E) --(X)
+ <46s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <46s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <46s> P1-jwb0004.juwels: X@q[18] |                                        | [000%] --(E) --(X)
+ <46s> P1-jwb0004.juwels: X@q[18] |########################################| [100%] --(E) --(X)
+ <47s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <47s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):   1219   3584    100
+ <47s> P1-jwb0004.juwels: Xo@q[19] |                                        | [000%] --(E) --(X)
+ <47s> P1-jwb0004.juwels: Xo@q[19] |########################################| [100%] --(E) --(X)
+ <47s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <47s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <47s> P1-jwb0004.juwels: X@q[19] |                                        | [000%] --(E) --(X)
+ <47s> P1-jwb0004.juwels: X@q[19] |########################################| [100%] --(E) --(X)
+ <47s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <47s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):    907   3584    100
+ <47s> P1-jwb0004.juwels: Xo@q[20] |                                        | [000%] --(E) --(X)
+ <48s> P1-jwb0004.juwels: Xo@q[20] |########################################| [100%] --(E) --(X)
+ <48s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <48s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <48s> P1-jwb0004.juwels: X@q[20] |                                        | [000%] --(E) --(X)
+ <48s> P1-jwb0004.juwels: X@q[20] |########################################| [100%] --(E) --(X)
+ <48s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <48s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):    345   3584    100
+ <48s> P1-jwb0004.juwels: Xo@q[21] |                                        | [000%] --(E) --(X)
+ <48s> P1-jwb0004.juwels: Xo@q[21] |########################################| [100%] --(E) --(X)
+ <48s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <48s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <48s> P1-jwb0004.juwels: X@q[21] |                                        | [000%] --(E) --(X)
+ <48s> P1-jwb0004.juwels: X@q[21] |########################################| [100%] --(E) --(X)
+ <48s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <48s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):   1160   3584    100
+ <48s> P1-jwb0004.juwels: Xo@q[22] |                                        | [000%] --(E) --(X)
+ <49s> P1-jwb0004.juwels: Xo@q[22] |########################################| [100%] --(E) --(X)
+ <49s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <49s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <49s> P1-jwb0004.juwels: X@q[22] |                                        | [000%] --(E) --(X)
+ <49s> P1-jwb0004.juwels: X@q[22] |########################################| [100%] --(E) --(X)
+ <49s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <49s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):   1595   3584    100
+ <49s> P1-jwb0004.juwels: Xo@q[23] |                                        | [000%] --(E) --(X)
+ <49s> P1-jwb0004.juwels: Xo@q[23] |########################################| [100%] --(E) --(X)
+ <49s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <49s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <49s> P1-jwb0004.juwels: X@q[23] |                                        | [000%] --(E) --(X)
+ <49s> P1-jwb0004.juwels: X@q[23] |########################################| [100%] --(E) --(X)
+ <49s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <49s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):   1134   3584    100
+ <49s> P1-jwb0004.juwels: Xo@q[24] |                                        | [000%] --(E) --(X)
+ <50s> P1-jwb0004.juwels: Xo@q[24] |########################################| [100%] --(E) --(X)
+ <50s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <50s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <50s> P1-jwb0004.juwels: X@q[24] |                                        | [000%] --(E) --(X)
+ <50s> P1-jwb0004.juwels: X@q[24] |########################################| [100%] --(E) --(X)
+ <50s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <50s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):   1177   3584    100
+ <50s> P1-jwb0004.juwels: Xo@q[25] |                                        | [000%] --(E) --(X)
+ <50s> P1-jwb0004.juwels: Xo@q[25] |########################################| [100%] --(E) --(X)
+ <50s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <50s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <50s> P1-jwb0004.juwels: X@q[25] |                                        | [000%] --(E) --(X)
+ <50s> P1-jwb0004.juwels: X@q[25] |########################################| [100%] --(E) --(X)
+ <50s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <50s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):   1597   3584    100
+ <50s> P1-jwb0004.juwels: Xo@q[26] |                                        | [000%] --(E) --(X)
+ <51s> P1-jwb0004.juwels: Xo@q[26] |########################################| [100%] --(E) --(X)
+ <51s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <51s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <51s> P1-jwb0004.juwels: X@q[26] |                                        | [000%] --(E) --(X)
+ <51s> P1-jwb0004.juwels: X@q[26] |########################################| [100%] --(E) --(X)
+ <51s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <51s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):   1162   3584    100
+ <51s> P1-jwb0004.juwels: Xo@q[27] |                                        | [000%] --(E) --(X)
+ <51s> P1-jwb0004.juwels: Xo@q[27] |########################################| [100%] --(E) --(X)
+ <51s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <51s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <51s> P1-jwb0004.juwels: X@q[27] |                                        | [000%] --(E) --(X)
+ <51s> P1-jwb0004.juwels: X@q[27] |########################################| [100%] --(E) --(X)
+ <51s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <51s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):    814   3584    100
+ <51s> P1-jwb0004.juwels: Xo@q[28] |                                        | [000%] --(E) --(X)
+ <52s> P1-jwb0004.juwels: Xo@q[28] |########################################| [100%] --(E) --(X)
+ <52s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <52s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <52s> P1-jwb0004.juwels: X@q[28] |                                        | [000%] --(E) --(X)
+ <52s> P1-jwb0004.juwels: X@q[28] |########################################| [100%] --(E) --(X)
+ <52s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <52s> P1-jwb0004.juwels: [X-CG] R(p) Tot o/o(of R):    530   3584    100
+ <52s> P1-jwb0004.juwels: Xo@q[29] |                                        | [000%] --(E) --(X)
+ <52s> P1-jwb0004.juwels: Xo@q[29] |########################################| [100%] --(E) --(X)
+ <52s> P1-jwb0004.juwels: [LA] X compute_on_gpu : yes
+ <52s> P1-jwb0004.juwels: [PARALLEL distribution for X Frequencies on 128 CPU] Loaded/Total (Percentual):1/2(50%)
+ <52s> P1-jwb0004.juwels: X@q[29] |                                        | [000%] --(E) --(X)
+ <52s> P1-jwb0004.juwels: X@q[29] |########################################| [100%] --(E) --(X)
+ <52s> P1-jwb0004.juwels: [07] Local Exchange-Correlation + Non-Local Fock
+ <52s> P1-jwb0004.juwels: [PARALLEL Self_Energy for QPs on 2 CPU] Loaded/Total (Percentual):2/4(50%)
+ <52s> P1-jwb0004.juwels: [PARALLEL Self_Energy for Q(ibz) on 1 CPU] Loaded/Total (Percentual):29/29(100%)
+ <52s> P1-jwb0004.juwels: [PARALLEL Self_Energy for G bands on 64 CPU] Loaded/Total (Percentual):1/64(2%)
+ <53s> P1-jwb0004.juwels: [PARALLEL distribution for Wave-Function states] Loaded/Total(Percentual):31/1856(2%)
+ <53s> P1-jwb0004.juwels: [FFT-HF/Rho] Mesh size:   44   44   44
+ <53s> P1-jwb0004.juwels: [WF] Copying WF data from GPU device
+ <53s> P1-jwb0004.juwels: EXS |                                        | [000%] --(E) --(X)
+ <53s> P1-jwb0004.juwels: EXS |########################################| [100%] --(E) --(X)
+ <53s> P1-jwb0004.juwels: [xc] Functional : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+ <53s> P1-jwb0004.juwels: [xc] LIBXC used to calculate xc functional
+ <53s> P1-jwb0004.juwels: [07.01] Hartree-Fock occupations report
+ <53s> P1-jwb0004.juwels: [08] Dyson equation: Newton solver
+ <53s> P1-jwb0004.juwels: [WARNING] Response block size in GW reduced to 181     RL (6091    mHa)
+ <53s> P1-jwb0004.juwels: [08.01] G0W0 (W PPA)
+ <53s> P1-jwb0004.juwels: [PARALLEL Self_Energy for QPs on 2 CPU] Loaded/Total (Percentual):2/4(50%)
+ <53s> P1-jwb0004.juwels: [PARALLEL Self_Energy for Q(ibz) on 1 CPU] Loaded/Total (Percentual):29/29(100%)
+ <53s> P1-jwb0004.juwels: [PARALLEL Self_Energy for G bands on 64 CPU] Loaded/Total (Percentual):4/200(2%)
+ <54s> P1-jwb0004.juwels: [PARALLEL distribution for Wave-Function states] Loaded/Total(Percentual):118/5800(2%)
+ <54s> P1-jwb0004.juwels: [FFT-GW] Mesh size:  21  21  21
+ <54s> P1-jwb0004.juwels: [WF] Copying WF data from GPU device
+ <54s> P1-jwb0004.juwels: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):32761/32761(100%)
+ <54s> P1-jwb0004.juwels: G0W0 (W PPA) |                                        | [000%] --(E) --(X)
+ <59s> P1-jwb0004.juwels: G0W0 (W PPA) |####################################    | [090%] 05s(E) 05s(X)
+ <01m-00s> P1-jwb0004.juwels: G0W0 (W PPA) |########################################| [100%] 05s(E) 05s(X)
+ <01m-03s> P1-jwb0004.juwels: [08.02] QP properties and I/O
+ <01m-03s> P1-jwb0004.juwels: [09] Timing Overview
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                               io_ATMPROJ_pwscf :      0.0000s CPU
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                   io_KB_abinit :      0.0000s CPU
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                 io_Double_Grid :      0.0001s CPU
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                     io_COL_CUT :      0.0004s CPU (  2 calls,   0.179 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                          io_BS :      0.0004s CPU
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                   PP_uspp_init :      0.0010s CPU ( 32 calls,   0.033 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                        IO_and_Messaging_switch :      0.0015s CPU ( 71 calls,   0.020 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                      HF(REDUX) :      0.0021s CPU
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                 eval_G_minus_G :      0.0041s CPU
+ <01m-03s> P1-jwb0004.juwels: [TIMING]     MATRIX transfer (X_G_finite_q_X_redux_2_1) :      0.0048s CPU ( 29 calls,   0.165 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]     MATRIX transfer (X_G_finite_q_X_redux_1_1) :      0.0050s CPU ( 29 calls,   0.172 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]     MATRIX transfer (X_G_finite_q_X_redux_2_2) :      0.0060s CPU ( 29 calls,   0.206 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]     MATRIX transfer (X_G_finite_q_X_redux_1_2) :      0.0062s CPU ( 29 calls,   0.215 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                       io_QINDX :      0.0071s CPU (  2 calls,   3.525 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                               scatter_Gamp_gpu :      0.0103s CPU (570 calls,   0.018 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                          io_HF :      0.0143s CPU (  3 calls,   4.774 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                   io_QP_and_GF :      0.0212s CPU
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                    io_KB_pwscf :      0.0466s CPU ( 31 calls,   1.505 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                      X (REDUX) :      0.0667s CPU ( 29 calls,   2.300 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                        io_GROT :      0.0909s CPU (  2 calls,  45.437 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                             HF :      0.0983s CPU
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                      FFT_setup :      0.1316s CPU ( 31 calls,   4.246 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                            XC_potential_driver :      0.1382s CPU (  2 calls,  69.100 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                      XCo_local :      0.1418s CPU
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                          io_WF :      0.2546s CPU (181 calls,   1.407 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                     Xo (REDUX) :      0.2732s CPU ( 29 calls,   9.420 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                     io_DIPOLES :      0.3033s CPU ( 66 calls,   4.595 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                    WF_load_FFT :      0.3340s CPU ( 32 calls,  10.437 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                          SERIAL_lin_system_gpu :      0.3473s CPU ( 29 calls,  11.976 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                 LINEAR ALGEBRA :      0.3478s CPU ( 29 calls,  11.992 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                  X (procedure) :      0.6592s CPU ( 29 calls,  22.733 msec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                    io_fragment :      1.0002s CPU (204 calls,   0.005 sec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                              DIPOLE_transverse :      1.5994s CPU
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                      GW(REDUX) :      3.5189s CPU
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                        Dipoles :      3.8378s CPU
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                        GW(ppa) :      5.7518s CPU
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                           io_X :      6.1857s CPU ( 66 calls,   0.094 sec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                 Xo (procedure) :     10.3762s CPU ( 29 calls,   0.358 sec avg)
+ <01m-03s> P1-jwb0004.juwels: [TIMING]                                            RIM :     30.6235s CPU
+ <01m-03s> P1-jwb0004.juwels: [10] Memory Overview
+ <01m-03s> P1-jwb0004.juwels: [11] Game Over & Game summary
+ <01m-03s> P1-jwb0004.juwels: [TIMING]            [Time-Profile]: 01m-03s

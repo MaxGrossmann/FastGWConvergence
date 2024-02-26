@@ -1,0 +1,39 @@
+&CONTROL
+  calculation = 'nscf'
+  max_seconds =   3.4200000000d+03
+  outdir = './out/'
+  prefix = 'aiida'
+  pseudo_dir = './pseudo/'
+  verbosity = 'high'
+  wf_collect = .true.
+/
+&SYSTEM
+  ecutwfc = 104
+  force_symmorphic = .true.
+  ibrav = 0
+  nat = 4
+  nbnd = 1000
+  ntyp = 2
+/
+&ELECTRONS
+  conv_thr =   1.0000000000d-08
+  diago_full_acc = .true.
+  diago_thr_init =   5.0000000000d-06
+  diagonalization = 'david'
+  mixing_beta =   6.0000000000d-01
+  mixing_mode = 'plain'
+/
+ATOMIC_SPECIES
+O      15.9994 O.upf
+Zn     65.38 Zn.upf
+ATOMIC_POSITIONS angstrom
+Zn           0.0000000000       1.8989642022       0.0029081379 
+Zn           1.6445512400       0.9494821011       2.6563186379 
+O            0.0000000000       1.8989642022       2.0153289566 
+O            1.6445512400       0.9494821011       4.6687394566 
+K_POINTS automatic
+10 10 6 0 0 0
+CELL_PARAMETERS angstrom
+      3.2891024800       0.0000000000       0.0000000000
+     -1.6445512400       2.8484463033       0.0000000000
+      0.0000000000       0.0000000000       5.3068210000

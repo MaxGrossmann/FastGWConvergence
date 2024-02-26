@@ -1,0 +1,36 @@
+&CONTROL
+  calculation = 'nscf'
+  max_seconds =   3.4200000000d+03
+  outdir = './out/'
+  prefix = 'aiida'
+  pseudo_dir = './pseudo/'
+  verbosity = 'high'
+  wf_collect = .true.
+/
+&SYSTEM
+  ecutwfc = 72
+  force_symmorphic = .true.
+  ibrav = 0
+  nat = 2
+  nbnd = 400
+  ntyp = 1
+/
+&ELECTRONS
+  conv_thr =   1.0000000000d-08
+  diago_full_acc = .true.
+  diago_thr_init =   5.0000000000d-06
+  diagonalization = 'david'
+  mixing_beta =   6.0000000000d-01
+  mixing_mode = 'plain'
+/
+ATOMIC_SPECIES
+Si     28.085 Si.upf
+ATOMIC_POSITIONS angstrom
+Si           0.0000000000       0.0000000000       0.0000000000 
+Si          -1.3471528782       1.3471528782       1.3471528782 
+K_POINTS automatic
+8 8 8 0 0 0
+CELL_PARAMETERS angstrom
+     -2.6943057563       0.0000000000       2.6943057563
+      0.0000000000       2.6943057563       2.6943057563
+     -2.6943057563       2.6943057563       0.0000000000

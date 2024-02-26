@@ -1,0 +1,38 @@
+&CONTROL
+  calculation = 'scf'
+  max_seconds =   8.0712000000d+04
+  outdir = './out/'
+  prefix = 'aiida'
+  pseudo_dir = './',
+  verbosity = 'high'
+  wf_collect = .true.
+/
+&SYSTEM
+  degauss =   2.0000000000d-02
+  ecutwfc =   1.3200000000d+02
+  force_symmorphic = .true.
+  ibrav = 0
+  nat = 2
+  nbnd = 18
+  ntyp = 1
+  occupations = 'smearing'
+  smearing = 'cold'
+/
+&ELECTRONS
+  conv_thr =   1.0000000000d-08
+  diago_full_acc = .true.
+  diago_thr_init =   5.0000000000d-06
+  mixing_beta =   6.0000000000d-01
+  mixing_mode = 'plain'
+/
+ATOMIC_SPECIES
+C      12.011 C_ONCV_PBE-1.0.upf
+ATOMIC_POSITIONS angstrom
+C            3.7904918550       2.1884414928       1.5474618198 
+C            2.5269945700       1.4589609952       1.0316412132 
+K_POINTS automatic
+4 4 4 0 0 0
+CELL_PARAMETERS angstrom
+      2.5269945700       0.0000000000       0.0000000000
+      1.2634972850       2.1884414928       0.0000000000
+      1.2634972850       0.7294804976       2.0632824264

@@ -1,0 +1,1031 @@
+                                                                          
+     __  __   ________   ___ __ __    _______   ______                    
+    /_/\/_/\ /_______/\ /__//_//_/\ /_______/\ /_____/\                   
+    \ \ \ \ \\::: _  \ \\::\| \| \ \\::: _  \ \\:::_ \ \                  
+     \:\_\ \ \\::(_)  \ \\:.      \ \\::(_)  \/_\:\ \ \ \                 
+      \::::_\/ \:: __  \ \\:.\-/\  \ \\::  _  \ \\:\ \ \ \                
+        \::\ \  \:.\ \  \ \\. \  \  \ \\::(_)  \ \\:\_\ \ \               
+         \__\/   \__\/\__\/ \__\/ \__\/ \_______\/ \_____\/               
+                                                                          
+                                                                          
+          Version 5.1.0 Revision 19995 Hash a543a61a2                     
+                      Branch is devel-SLK                                 
+               MPI+OpenMP+CUDA+HDF5_MPI_IO Build                          
+                   http://www.yambo-code.org                              
+ 
+ 06/29/2022 at 21:17 yambo @ jwb0452.juwels
+ ==================================================
+
+ Cores-Threads       : 128(CPU)-6(threads)
+ Cores-Threads       : DIP(environment)-1 16 8(CPUs)-k c v(ROLEs)
+ Cores-Threads       : X_and_IO(environment)-1 1 1 16 8(CPUs)-q k g c v(ROLEs)
+ Cores-Threads       : SE(environment)-1 2 64 1(CPUs)-q qp b g(ROLEs)
+ MPI Cores           :  128
+ Threads per core    :   6
+ Threads total       :   768
+ Nodes Computing     :  16
+ Nodes IO            :  1
+ CUDA support        : yes
+ CUDA devices        : yes
+ CUDA visible dev    : 0
+ MPI tasks / GPU     :   8
+
+ Fragmented WFs      : yes
+ CORE databases      : .
+ Additional I/O      : .
+ Communications      : .
+ Input file          : aiida.in
+ Report file         : ./r-aiida.out_HF_and_locXC_gw0_rim_cut_ppa
+ Verbose log/report  : no
+ Log files           : ./LOG
+
+ Job   string        : aiida.out
+
+ Precision           : SINGLE
+  
+ [RD./SAVE//ns.db1]--------------------------------------------------------------
+  Bands                                            :  200
+  K-points                                         :  202
+  G-vectors                                        :   35075 [RL space]
+  Components                                       :   4419 [wavefunctions]
+  Symmetries                                       :  12 [spatial]
+  Spinor components                                :  1
+  Spin polarizations                               :  1
+  Temperature                                      :  0.000000 [eV]
+  Electrons                                        :  16.00000
+  WF G-vectors                                     :   5505
+  Max atoms/species                                :  2
+  No. of atom species                              :  2
+  Exact exchange fraction in XC                    :  0.000000
+  Exact exchange screening in XC                   :  0.000000
+  Magnetic symmetries                              : no
+ - S/N 006087 ---------------------------------------------- v.05.01.00 r.20475 -
+
+ [02] CORE Variables Setup
+ =========================
+
+
+  [02.01] Unit cells
+  ==================
+
+  Cell kind             :  HCP
+  Atoms in the cell     :  B  N
+  number of B  atoms    :  2
+  number of N  atoms    :  2
+  Alat factors          :   4.74780   4.11172  14.56462 [a.u.]
+
+  Direct lattice volume :  284.3249 [a.u.]
+  Direct lattice vectors:  A[ 1 ]  A[ 2 ]  A[ 3 ]
+   A[ 1 ]:  1.000000  0.000000  0.000000  [iru]
+   A[ 2 ]: -0.500000  1.000000  0.000000  [iru]
+   A[ 3 ]:  0.000000  0.000000  1.000000  [iru]
+
+  Recip. lattice volume :  0.872418 [a.u.]
+  Recip. lattice vectors:  B[ 1 ]  B[ 2 ]  B[ 3 ]
+   B[ 1 ]:  1.000000  0.500000  0.000000  [iku]
+   B[ 2 ]:  0.000000  1.000000  0.000000  [iku]
+   B[ 3 ]:  0.000000  0.000000  1.000000  [iku]
+
+  [02.02] Symmetries
+  ==================
+
+  Inversion symmetry    : yes
+  Spatial inversion     : yes
+  Inversion index       :   7
+  K-space Time-reversal : no
+  Magnetic symmetries   : no
+  Group table correct   : yes
+  Symmetries units      :  [cc]
+
+   [S  1]:   1.00000      0.00000      0.00000     0.331892E-8   1.00000      0.00000      0.00000      0.00000      1.00000   
+   [S  2]:   1.00000      0.00000      0.00000     0.331892E-8  -1.00000      0.00000      0.00000      0.00000     -1.00000   
+   [S  3]: -0.500000  0.866025  0.000000 -0.866025 -0.500000  0.000000  0.000000  0.000000  1.000000
+   [S  4]: -0.500000 -0.866025  0.000000  0.866025 -0.500000  0.000000  0.000000  0.000000  1.000000
+   [S  5]: -0.500000 -0.866025  0.000000 -0.866025  0.500000  0.000000  0.000000  0.000000 -1.000000
+   [S  6]: -0.500000  0.866025  0.000000  0.866025  0.500000  0.000000  0.000000  0.000000 -1.000000
+   [S  7]:  -1.00000      0.00000      0.00000    -0.331892E-8  -1.00000      0.00000      0.00000      0.00000     -1.00000   
+   [S  8]:  -1.00000      0.00000      0.00000    -0.331892E-8   1.00000      0.00000      0.00000      0.00000      1.00000   
+   [S  9]:  0.500000 -0.866025  0.000000  0.866025  0.500000  0.000000  0.000000  0.000000 -1.000000
+   [S 10]:  0.500000  0.866025  0.000000 -0.866025  0.500000  0.000000  0.000000  0.000000 -1.000000
+   [S 11]:  0.500000  0.866025  0.000000  0.866025 -0.500000  0.000000  0.000000  0.000000  1.000000
+   [S 12]:  0.500000 -0.866025  0.000000 -0.866025 -0.500000  0.000000  0.000000  0.000000  1.000000
+
+  [02.03] Reciprocal space
+  ========================
+
+  nG shells         :  1762
+  nG charge         :   35075
+  nG WFs            :   5505
+  nC WFs            :   4419
+  G-vecs. in first 80 shells:  [ Number ]
+     1    3    5    7   13   25   27   39   51
+    53   65   67   79   85   97  109  121  133
+   135  141  153  165  177  189  201  213  215
+    227   239   251   263   265   277   289   301   325
+    349   361   385   397   399   411   435   447   471
+    477   489   501   513   525   527   539   563   575
+    587   599   623   635   647   649   661   673   679
+    691   715   727   739   751   763   775   787   811
+    823   847   871   873   885   909   921   933
+  ...
+  Shell energy in first 80 shells:  [ mHa ]
+    0.00000      93.0533      372.213      837.479      1167.57      1260.62      1488.85      1539.78      2005.05   
+    2326.33      2656.42      3349.92      3493.90      3502.71      3595.77      3874.93      4340.19      4517.49   
+    4559.61      4670.29      4763.34      4991.57      5042.50      5507.76      5727.18      5829.04      5955.41   
+    6159.14      6852.63      6996.62      7122.98      7537.31      8020.20      8062.32      8173.00      8266.05   
+    8545.21      8704.88      9010.48      9229.90      9305.32      9458.12      9661.85      10472.9      10499.3   
+    10508.1      10601.2      10625.7      10880.4      11040.0      11259.4      11345.6      11522.9      11997.0   
+    12207.6      12427.0      12732.6      12808.0      12834.5      13399.7      13858.1      13975.6      14010.9   
+    14103.9      14128.4      14383.1      14567.2      14762.2      14848.3      15067.8      15178.4      15271.5   
+    15499.7      15550.6      15710.3      15726.0      15929.7      16015.9      16337.2      16463.6   
+  ...
+
+  [02.04] K-grid lattice
+  ======================
+
+  Compatible Grid is   : 3D
+  Base K vectors       :  K_min[ 1 ]  K_min[ 2 ]  K_min[ 3 ]
+  K_min[ 1 ] :  0.21291E-09  0.55556E-01   0.0000     [rlu]
+  K_min[ 2 ] :  0.555556E-1 -0.228476E-8   0.00000    [rlu]
+  K_min[ 3 ] :  0.000000  0.000000  0.166667 [rlu]
+  Grid dimensions      :  18  18   6
+  K lattice UC volume  :  0.448775E-3 [a.u.]
+
+  [02.05] Energies & Occupations
+  ==============================
+
+  [X] === General ===
+  [X] Electronic Temperature                        :  0.000000  0.000000 [eV K]
+  [X] Bosonic    Temperature                        :  0.000000  0.000000 [eV K]
+  [X] Finite Temperature mode                       : no
+  [X] El. density                                   :  0.37975E+24 [cm-3]
+  [X] Fermi Level                                   :  3.216710 [eV]
+
+  [X] === Gaps and Widths ===
+  [X] Conduction Band Min                           :  4.516222 [eV]
+  [X] Valence Band Max                              :  0.000000 [eV]
+  [X] Filled Bands                                  :   8
+  [X] Empty Bands                                   :    9  200
+  [X] Direct Gap                                    :  4.674942 [eV]
+  [X] Direct Gap localized at k-point               :  148
+  [X] Indirect Gap                                  :  4.516222 [eV]
+  [X] Indirect Gap between k-points                 :  148   37
+  [X] Last valence band width                       :  3.253137 [eV]
+  [X] 1st conduction band width                     :  3.112408 [eV]
+   
+   
+
+ [03] Transferred momenta grid and indexing
+ ==========================================
+
+ [RD./SAVE//ndb.kindx]-----------------------------------------------------------
+  Fragmentation                                    : no
+  Polarization last K                              :  202
+  QP states                                        :    1  202
+  X grid is uniform                                : yes
+  Grids                                            : X S
+  BS scattering                                    : no
+  COLL scattering                                  : no
+  Sigma scattering                                 : yes
+  X scattering                                     : yes
+ - S/N 006087 ---------------------------------------------- v.05.01.00 r.19995 -
+
+ IBZ Q-points :  202
+ BZ  Q-points :  1944
+
+ K/Q-points units:
+ rlu = crystal or reduced units; cc = cartesian coordinates; iku = interal k-units
+
+ Q [  1]:  0.000000  0.000000  0.000000 [rlu]
+ Q [  2]:  0.000000  0.000000  0.166667 [rlu]
+ Q [  3]:  0.000000  0.000000  0.333333 [rlu]
+ Q [  4]:  0.000000  0.000000 -0.500000 [rlu]
+ Q [  5]:  0.21291E-09  0.55556E-01   0.0000     [rlu]
+ Q [  6]:  0.21291E-09  0.55556E-01  0.16667     [rlu]
+ Q [  7]:  0.21291E-09  0.55556E-01  0.33333     [rlu]
+ Q [  8]:  0.21291E-09  0.55556E-01 -0.50000     [rlu]
+ Q [  9]:  0.42582E-09  0.11111       0.0000     [rlu]
+ Q [ 10]:  0.42582E-09  0.11111      0.16667     [rlu]
+ Q [ 11]:  0.42582E-09  0.11111      0.33333     [rlu]
+ Q [ 12]:  0.42582E-09  0.11111     -0.50000     [rlu]
+ Q [ 13]:  0.63873E-09  0.16667       0.0000     [rlu]
+ Q [ 14]:  0.63873E-09  0.16667      0.16667     [rlu]
+ Q [ 15]:  0.63873E-09  0.16667      0.33333     [rlu]
+ Q [ 16]:  0.63873E-09  0.16667     -0.50000     [rlu]
+ Q [ 17]:  0.85163E-09  0.22222       0.0000     [rlu]
+ Q [ 18]:  0.85163E-09  0.22222      0.16667     [rlu]
+ Q [ 19]:  0.85163E-09  0.22222      0.33333     [rlu]
+ Q [ 20]:  0.85163E-09  0.22222     -0.50000     [rlu]
+ Q [ 21]:  0.106454E-8  0.277778      0.00000    [rlu]
+ Q [ 22]:  0.106454E-8  0.277778     0.166667    [rlu]
+ Q [ 23]:  0.106454E-8  0.277778     0.333333    [rlu]
+ Q [ 24]:  0.106454E-8  0.277778    -0.500000    [rlu]
+ Q [ 25]:  0.127745E-8  0.333333      0.00000    [rlu]
+ Q [ 26]:  0.127745E-8  0.333333     0.166667    [rlu]
+ Q [ 27]:  0.127745E-8  0.333333     0.333333    [rlu]
+ Q [ 28]:  0.127745E-8  0.333333    -0.500000    [rlu]
+ Q [ 29]:  0.149036E-8  0.388889      0.00000    [rlu]
+ Q [ 30]:  0.149036E-8  0.388889     0.166667    [rlu]
+ Q [ 31]:  0.149036E-8  0.388889     0.333333    [rlu]
+ Q [ 32]:  0.149036E-8  0.388889    -0.500000    [rlu]
+ Q [ 33]:  0.170327E-8  0.444444      0.00000    [rlu]
+ Q [ 34]:  0.170327E-8  0.444444     0.166667    [rlu]
+ Q [ 35]:  0.170327E-8  0.444444     0.333333    [rlu]
+ Q [ 36]:  0.170327E-8  0.444444    -0.500000    [rlu]
+ Q [ 37]: -0.191618E-8 -0.500000      0.00000    [rlu]
+ Q [ 38]: -0.191618E-8 -0.500000     0.166667    [rlu]
+ Q [ 39]: -0.191618E-8 -0.500000     0.333333    [rlu]
+ Q [ 40]: -0.191618E-8 -0.500000    -0.500000    [rlu]
+ Q [ 41]:  0.055556  0.055556  0.000000 [rlu]
+ Q [ 42]:  0.055556  0.055556  0.166667 [rlu]
+ Q [ 43]:  0.055556  0.055556  0.333333 [rlu]
+ Q [ 44]:  0.055556  0.055556 -0.500000 [rlu]
+ Q [ 45]:  0.055556  0.111111  0.000000 [rlu]
+ Q [ 46]:  0.055556  0.111111  0.166667 [rlu]
+ Q [ 47]:  0.055556  0.111111  0.333333 [rlu]
+ Q [ 48]:  0.055556  0.111111 -0.500000 [rlu]
+ Q [ 49]:  0.055556  0.166667  0.000000 [rlu]
+ Q [ 50]:  0.055556  0.166667  0.166667 [rlu]
+
+ Remaining 152 points informations can be written running with -fatlog
+
+
+ [04] Coloumb potential Random Integration (RIM)
+ ===============================================
+
+
+  [04.01] RIM initialization
+  ==========================
+
+  * Diagonal components only detected *
+
+  8 x (sBL volume)        :  0.003590 [a.u.]
+  sBZ random points       :   5000006
+  Points outside the sBZ  :   39997957
+  RL volume               :  0.872418 [a.u.]
+  Integrated volume       :  0.872464 [a.u.]
+
+
+  [04.02] RIM integrals
+  =====================
+
+  [WR./aiida.out//ndb.RIM]--------------------------------------------------------
+   Brillouin Zone Q/K grids (IBZ/BZ)                :   202  1944   202  1944
+   Coulombian RL components                         :  109
+   Coulombian diagonal components                   : yes
+   RIM random points                                :   5000006
+   RIM  RL volume             [a.u.]                :  0.872464
+   Real RL volume             [a.u.]                :  0.872418
+   Eps^-1 reference component                       : 0
+   Eps^-1 components                                :  0.000000  0.000000  0.000000
+   RIM anysotropy factor                            :  0.000000
+  - S/N 006087 ---------------------------------------------- v.05.01.00 r.19995 -
+
+  Summary of Coulomb integrals for non-metallic bands |Q|[au] RIM/Bare
+
+  Q [1] 0.100000E-4 0.988354 * Q [2] 0.071900 1.016629
+  Q [5] 0.084895 1.075316 * Q [6] 0.111251 1.045539
+  Q [149] 0.111251 1.045262 * Q [3] 0.143800 1.011171
+  Q [41] 0.147043 1.026233 * Q [42] 0.163681 1.020526
+  Q [7] 0.166990 1.013632 * Q [150] 0.166990 1.013577
+  Q [9] 0.169791 1.019689 * Q [151] 0.184387 1.016150
+  Q [10] 0.184387 1.016203 * Q [43] 0.205670 1.010903
+  Q [4] 0.215700 1.005752 * Q [11] 0.222503 1.009712
+  Q [152] 0.222503 1.009674 * Q [45] 0.224612 1.011257
+  Q [8] 0.231806 1.006058 * Q [46] 0.235839 1.009926
+  Q [165] 0.235839 1.009986 * Q [13] 0.254686 1.008795
+  Q [44] 0.261052 1.005713 * Q [14] 0.264641 1.007950
+  Q [153] 0.264641 1.007935 * Q [47] 0.266700 1.007097
+  Q [166] 0.266700 1.007144 * Q [12] 0.274510 1.005467
+  Q [15] 0.292478 1.006048 * Q [154] 0.292478 1.006032
+  Q [73] 0.294086 1.006553 * Q [74] 0.302748 1.006055
+  Q [49] 0.306095 1.006077 * Q [48] 0.311412 1.004627
+  Q [167] 0.314426 1.005688 * Q [50] 0.314426 1.005649
+  Q [75] 0.327361 1.004877 * Q [16] 0.333754 1.004196
+  Q [168] 0.338190 1.004649 * Q [51] 0.338190 1.004616
+  Q [17] 0.339582 1.004964 * Q [155] 0.347110 1.004669
+  Q [18] 0.347110 1.004674 * Q [76] 0.364710 1.003613
+  Q [156] 0.368774 1.003943 * Q [19] 0.368774 1.003949
+  Q [77] 0.370051 1.004152 * Q [52] 0.374461 1.003476
+  Q [78] 0.376971 1.003943 * Q [179] 0.376971 1.004006
+  Q [53] 0.389040 1.003776 * Q [54] 0.395628 1.003603
+  Q [169] 0.395628 1.003630 * Q [180] 0.397009 1.003466
+  Q [79] 0.397009 1.003410 * Q [20] 0.402296 1.003098
+  Q [55] 0.414765 1.003155 * Q [170] 0.414765 1.003179
+  Q [21] 0.424477 1.003190 * Q [80] 0.428327 1.002757
+  Q [22] 0.430523 1.003067 * Q [157] 0.430523 1.003065
+  Q [101] 0.441130 1.002920 * Q [56] 0.444835 1.002593
+  Q [102] 0.446951 1.002814 * Q [158] 0.448173 1.002736
+  Q [23] 0.448173 1.002739 * Q [81] 0.449224 1.002829
+  Q [181] 0.454942 1.002775 * Q [82] 0.454942 1.002730
+  Q [103] 0.463976 1.002531 * Q [83] 0.471679 1.002465
+  Q [182] 0.471679 1.002506 * Q [57] 0.472678 1.002570
+  Q [24] 0.476138 1.002311 * Q [58] 0.478115 1.002488
+  Q [171] 0.478115 1.002508 * Q [104] 0.491042 1.002159
+  Q [59] 0.494068 1.002268 * Q [172] 0.494068 1.002286
+  Q [84] 0.498326 1.002112 * Q [25] 0.509372 1.002227
+  Q [26] 0.514422 1.002166 * Q [159] 0.514422 1.002165
+  Q [105] 0.516399 1.002142 * Q [60] 0.519568 1.001968
+  Q [189] 0.521380 1.002136 * Q [106] 0.521380 1.002084
+  Q [160] 0.529281 1.001998 * Q [27] 0.529281 1.001999
+  Q [85] 0.530172 1.002042 * Q [86] 0.535025 1.001990
+  Q [183] 0.535025 1.002023 * Q [190] 0.536047 1.001976
+  Q [107] 0.536047 1.001926 * Q [184] 0.549327 1.001878
+  Q [87] 0.549327 1.001846 * Q [28] 0.553161 1.001766
+  Q [61] 0.556696 1.001863 * Q [108] 0.559638 1.001706
+  Q [62] 0.561320 1.001820 * Q [173] 0.561320 1.001835
+  Q [88] 0.572371 1.001645 * Q [63] 0.574969 1.001700
+  Q [174] 0.574969 1.001715 * Q [121] 0.588173 1.001654
+  Q [122] 0.592551 1.001619 * Q [109] 0.594268 1.001627
+  Q [29] 0.594268 1.001647 * Q [64] 0.597024 1.001530
+  Q [110] 0.598602 1.001594 * Q [191] 0.598602 1.001634
+  Q [30] 0.598602 1.001614 * Q [161] 0.598602 1.001613
+  Q [123] 0.605496 1.001522 * Q [111] 0.611419 1.001500
+  Q [192] 0.611419 1.001539 * Q [31] 0.611419 1.001520
+  Q [162] 0.611419 1.001520 * Q [89] 0.612190 1.001542
+  Q [185] 0.616397 1.001537 * Q [90] 0.616397 1.001512
+  Q [124] 0.626477 1.001384 * Q [186] 0.628852 1.001453
+  Q [91] 0.628852 1.001429 * Q [112] 0.632203 1.001367
+  Q [32] 0.632203 1.001384 * Q [65] 0.640946 1.001416
+  Q [175] 0.644967 1.001402 * Q [66] 0.644967 1.001391
+  Q [92] 0.649078 1.001308 * Q [176] 0.656880 1.001332
+  Q [67] 0.656880 1.001321 * Q [125] 0.663055 1.001310
+  Q [126] 0.666941 1.001288 * Q [197] 0.666942 1.001332
+  Q [113] 0.673837 1.001275 * Q [68] 0.676268 1.001218
+  Q [114] 0.677662 1.001254 * Q [193] 0.677662 1.001286
+  Q [127] 0.678469 1.001227 * Q [198] 0.678469 1.001270
+  Q [33] 0.679163 1.001271 * Q [163] 0.682959 1.001251
+  Q [34] 0.682959 1.001251 * Q [115] 0.689010 1.001197
+  Q [194] 0.689010 1.001228 * Q [164] 0.694220 1.001195
+  Q [35] 0.694220 1.001194 * Q [93] 0.694899 1.001206
+  Q [128] 0.697257 1.001137 * Q [94] 0.698609 1.001188
+  Q [187] 0.698609 1.001208 * Q [116] 0.707518 1.001112
+  Q [95] 0.709622 1.001136 * Q [188] 0.709622 1.001156
+  Q [36] 0.712594 1.001111 * Q [69] 0.725347 1.001115
+  Q [96] 0.727607 1.001060 * Q [177] 0.728902 1.001109
+  Q [70] 0.728902 1.001099 * Q [137] 0.735216 1.001069
+  Q [138] 0.738723 1.001055 * Q [178] 0.739464 1.001065
+  Q [71] 0.739464 1.001056 * Q [129] 0.740101 1.001060
+  Q [199] 0.743585 1.001081 * Q [130] 0.743585 1.001046
+  Q [139] 0.749147 1.001014 * Q [200] 0.753942 1.001040
+  Q [131] 0.753942 1.001006 * Q [117] 0.754567 1.001025
+  Q [72] 0.756739 1.000991 * Q [118] 0.757985 1.001012
+  Q [195] 0.757985 1.001037 * Q [37] 0.764059 1.001051
+  Q [140] 0.766204 1.000953 * Q [38] 0.767434 1.001037
+  Q [119] 0.768147 1.000975 * Q [196] 0.768147 1.001000
+  Q [132] 0.770893 1.000946 * Q [39] 0.777473 1.000999
+  Q [97] 0.778079 1.000970 * Q [98] 0.781394 1.000959
+  Q [120] 0.784792 1.000919 * Q [99] 0.791256 1.000926
+  Q [40] 0.793922 1.000948 * Q [100] 0.807424 1.000876
+  Q [141] 0.809851 1.000889 * Q [142] 0.813036 1.000879
+  Q [201] 0.813036 1.000916 * Q [133] 0.818702 1.000874
+  Q [134] 0.821853 1.000864 * Q [202] 0.822519 1.000887
+  Q [143] 0.822519 1.000851 * Q [135] 0.831235 1.000837
+  Q [144] 0.838084 1.000808 * Q [136] 0.846640 1.000797
+  Q [145] 0.882259 1.000753 * Q [146] 0.885184 1.000746
+  Q [147] 0.893901 1.000726 * Q [148] 0.908244 1.000695
+
+ Timing [Min/Max/Average]: 56s/56s/56s
+
+ [05] Dipoles
+ ============
+
+ [RD./SAVE//ns.kb_pp_pwscf]------------------------------------------------------
+  Fragmentation                                    : yes
+ - S/N 006087 ---------------------------------------------- v.05.01.00 r.20475 -
+ [WF] Copying WF data from GPU device
+
+ [WF-Oscillators/G space/Transverse up loader] Normalization (few states)  min/max  :  0.67984E-09   1.0000    
+
+ [WR./aiida.out//ndb.dipoles]----------------------------------------------------
+  Brillouin Zone Q/K grids (IBZ/BZ)                :   202  1944   202  1944
+  RL vectors                                       :   5515 [WF]
+  Fragmentation                                    : yes
+  Electronic Temperature                           :  0.000000 [K]
+  Bosonic    Temperature                           :  0.000000 [K]
+  DIP band range                                   :    1  200
+  DIP band range limits                            :   8   9
+  DIP e/h energy range                             : -1.000000 -1.000000 [eV]
+  RL vectors in the sum                            :   5515
+  [r,Vnl] included                                 : yes
+  Bands ordered                                    : yes
+  Direct v evaluation                              : no
+  Approach used                                    : G-space v
+  Dipoles computed                                 : R V P
+  Wavefunctions                                    : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+ - S/N 006087 ---------------------------------------------- v.05.01.00 r.19995 -
+
+ Timing [Min/Max/Average]: 19s/19s/19s
+
+ [06] Dynamic Dielectric Matrix (PPA)
+ ====================================
+
+ [WR./aiida.out//ndb.pp]---------------------------------------------------------
+  Brillouin Zone Q/K grids (IBZ/BZ)                :   202  1944   202  1944
+  RL vectors                                       :   5515 [WF]
+  Coulomb cutoff potential                         : none
+  Fragmentation                                    : yes
+  Electronic Temperature                           :  0.000000 [K]
+  Bosonic    Temperature                           :  0.000000 [K]
+  PPA    diel. fun.  energies                      : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+  wavefunctions                                    : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+  Global Gauge                                     : length
+  X matrix size                                    :   51
+  X band range                                     :    1  200
+  X e/h energy range                               : -1.000000 -1.000000 [eV]
+  X Time ordering                                  : R
+  X xc-Kernel                                      : none
+  X Drude frequency                                :  0.000000  0.000000
+  X poles                                          :  100.0000 [o/o]
+  RL vectors in the sum                            :   5515
+  [r,Vnl] included                                 : yes
+  Field direction                                  :  0.577350E-5  0.577350E-5  0.577350E-5
+  BZ energy Double Grid                            : no
+  BZ energy DbGd points                            : 0
+  BZ Q point size factor                           :  1.000000
+ - S/N 006087 ---------------------------------------------- v.05.01.00 r.19995 -
+ [RD./aiida.out//ndb.dipoles]----------------------------------------------------
+  Brillouin Zone Q/K grids (IBZ/BZ)                :   202  1944   202  1944
+  RL vectors                                       :   5515 [WF]
+  Fragmentation                                    : yes
+  Electronic Temperature                           :  0.000000 [K]
+  Bosonic    Temperature                           :  0.000000 [K]
+  DIP band range                                   :    1  200
+  DIP band range limits                            :   8   9
+  DIP e/h energy range                             : -1.000000 -1.000000 [eV]
+  RL vectors in the sum                            :   5515
+  [r,Vnl] included                                 : yes
+  Bands ordered                                    : yes
+  Direct v evaluation                              : no
+  Approach used                                    : G-space v
+  Dipoles computed                                 : R V P
+  Wavefunctions                                    : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+ - S/N 006087 ---------------------------------------------- v.05.01.00 r.19995 -
+ [FFT-X] Mesh size:   15   15   49
+
+ [WF] Copying WF data from GPU device
+
+ [X-CG] R(p) Tot o/o(of R):   1496  23328    100
+ [WR./aiida.out//ndb.pp_fragment_1]----------------------------------------------
+  PPA Im  energy                                   :  27.21138 eV
+ - S/N 006087 ---------------------------------------------- v.05.01.00 r.19995 -
+ [X-CG] R(p) Tot o/o(of R):   2307  23328    100
+ [WR./aiida.out//ndb.pp_fragment_2]----------------------------------------------
+  PPA Im  energy                                   :  27.21138 eV
+ - S/N 006087 ---------------------------------------------- v.05.01.00 r.19995 -
+ [X-CG] R(p) Tot o/o(of R):   2297  23328    100
+ [X-CG] R(p) Tot o/o(of R):   1499  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6395  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9405  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9447  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6389  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6308  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9295  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9295  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6324  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6399  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9421  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9504  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6396  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6303  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9354  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9358  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6319  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6339  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9500  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9491  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6361  23328    100
+ [X-CG] R(p) Tot o/o(of R):   5838  23328    100
+ [X-CG] R(p) Tot o/o(of R):   8691  23328    100
+ [X-CG] R(p) Tot o/o(of R):   8756  23328    100
+ [X-CG] R(p) Tot o/o(of R):   5871  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6364  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9488  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9488  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6367  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6335  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9395  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9428  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6372  23328    100
+ [X-CG] R(p) Tot o/o(of R):   3577  23328    100
+ [X-CG] R(p) Tot o/o(of R):   5457  23328    100
+ [X-CG] R(p) Tot o/o(of R):   5383  23328    100
+ [X-CG] R(p) Tot o/o(of R):   3571  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6321  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9317  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9306  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6298  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10691  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15334  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15329  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10713  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10748  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15309  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15354  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10710  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10044  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14498  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14483  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10104  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10167  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14559  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14540  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10202  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10106  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14583  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14474  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10197  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10094  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14500  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14649  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10143  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10460  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14975  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14980  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10435  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6286  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9306  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9255  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6199  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10646  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15289  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15292  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10739  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9889  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14269  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14217  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9937  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10103  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14548  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14513  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10163  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9923  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14321  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14282  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9939  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10479  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14873  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14933  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10431  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6259  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9279  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9334  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6282  23328    100
+ [X-CG] R(p) Tot o/o(of R):   5840  23328    100
+ [X-CG] R(p) Tot o/o(of R):   8700  23328    100
+ [X-CG] R(p) Tot o/o(of R):   8694  23328    100
+ [X-CG] R(p) Tot o/o(of R):   5871  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10727  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15359  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15333  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10730  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10664  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15252  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15309  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10699  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9735  23328    100
+ [X-CG] R(p) Tot o/o(of R):  13946  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14013  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9758  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10733  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15188  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15388  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10775  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6261  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9269  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9281  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6255  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10406  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14940  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14959  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10406  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9910  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14161  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14222  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9903  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6322  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9303  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9325  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6323  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6333  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9334  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9350  23328    100
+ [X-CG] R(p) Tot o/o(of R):   6311  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10095  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14497  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14493  23328    100
+ [X-CG] R(p) Tot o/o(of R):  10142  23328    100
+ [X-CG] R(p) Tot o/o(of R):   2537  23328    100
+ [X-CG] R(p) Tot o/o(of R):   3860  23328    100
+ [X-CG] R(p) Tot o/o(of R):   3853  23328    100
+ [X-CG] R(p) Tot o/o(of R):   2541  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9409  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9448  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9297  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9286  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9421  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9510  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9351  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9356  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9498  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9492  23328    100
+ [X-CG] R(p) Tot o/o(of R):   8692  23328    100
+ [X-CG] R(p) Tot o/o(of R):   8753  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9488  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9481  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9399  23328    100
+ [X-CG] R(p) Tot o/o(of R):   9431  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15333  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15330  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15326  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15358  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14497  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14488  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14551  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14542  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14574  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14477  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14498  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14658  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14974  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14976  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15279  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15288  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14268  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14213  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14549  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14513  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14314  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14286  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14875  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14923  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15357  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15331  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15261  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15306  23328    100
+ [X-CG] R(p) Tot o/o(of R):  13956  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14026  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15184  23328    100
+ [X-CG] R(p) Tot o/o(of R):  15387  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14938  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14956  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14160  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14219  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14501  23328    100
+ [X-CG] R(p) Tot o/o(of R):  14493  23328    100
+
+ Timing [Min/Max/Average]: 06m-41s/06m-41s/06m-41s
+
+ [07] Local Exchange-Correlation + Non-Local Fock
+ ================================================
+
+ [VXC] Plane waves :   35075
+ [EXS] Plane waves :   35075
+  
+ QP @ state[ 1 ] K range:  1  1
+ QP @ state[ 1 ] b range:   8   9
+ QP @ state[ 2 ] K range:  1  1
+ QP @ state[ 2 ] b range:   64   64
+ QP @ state[ 3 ] K range:   37   37
+ QP @ state[ 3 ] b range:   8   9
+ QP @ state[ 4 ] K range:  148  148
+ QP @ state[ 4 ] b range:   8   8
+ QP @ state[ 5 ] K range:  160  160
+ QP @ state[ 5 ] b range:   8   9
+  
+ [FFT-HF/Rho] Mesh size:   33   33  102
+
+ [WF] Copying WF data from GPU device
+
+ [xc] Functional : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+ [xc] LIBXC used to calculate xc functional
+ [WR./aiida.out//ndb.HF_and_locXC]-----------------------------------------------
+  Brillouin Zone Q/K grids (IBZ/BZ)                :   202  1944   202  1944
+  RL vectors                                       :   5515 [WF]
+  Fragmentation                                    : no
+  Electronic Temperature                           :  0.000000 [K]
+  Bosonic    Temperature                           :  0.000000 [K]
+  Green`s function   wavefunctions                 : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+  Total number of QP states                        :   8
+  Exchange RL vectors                              :   35075
+  Exchange summation bands                         :   8
+  RIM RL components                                :  109
+  RIM random points                                :   5000006
+ - S/N 006087 ---------------------------------------------- v.05.01.00 r.19995 -
+
+ [xc] E_xc :  -7.366397 [Ha]
+      E_xc :  -14.73279 [Ry]
+
+  Local XC kind (lXC) : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+  Non-Local XC kind (nlXC) : Hartree-Fock
+
+  Corrections @ K [1] :  [eV]
+ <8|nlXC|8> = -22.76756 -0.327261E-8 <8|lXC|8> = -18.37126  0.000000
+ <9|nlXC|9> = -3.351254 -0.63480E-09 <9|lXC|9> = -6.988067  0.000000
+ <64|nlXC|64> = -1.883193 -0.11216E-10 <64|lXC|64> = -10.11279  0.000000
+
+  Corrections @ K [37] :  [eV]
+ <8|nlXC|8> = -19.71294 -0.51070E-09 <8|lXC|8> = -16.04601  0.000000
+ <9|nlXC|9> = -5.480573  0.66796E-09 <9|lXC|9> = -10.32808  0.000000
+
+  Corrections @ K [148] :  [eV]
+ <8|nlXC|8> = -19.98199 -0.35164E-09 <8|lXC|8> = -16.61197 -0.405481E-6
+
+  Corrections @ K [160] :  [eV]
+ <8|nlXC|8> = -18.79152  0.220546E-8 <8|lXC|8> = -14.51719  0.000000
+ <9|nlXC|9> = -6.669310  0.39460E-10 <9|lXC|9> = -12.20816 -0.380139E-7
+
+
+  [07.01] Hartree-Fock occupations report
+  =======================================
+
+  [Hartree-Fock] === General ===
+  [Hartree-Fock] Electronic Temperature             :  0.000000  0.000000 [eV K]
+  [Hartree-Fock] Bosonic    Temperature             :  0.000000  0.000000 [eV K]
+  [Hartree-Fock] Finite Temperature mode            : no
+  [Hartree-Fock] El. density                        :  0.37975E+24 [cm-3]
+  [Hartree-Fock] Fermi Level                        :  3.216710 [eV]
+
+  [Hartree-Fock] === Gaps and Widths ===
+  [Hartree-Fock] Conduction Band Min                :  4.546153 [eV]
+  [Hartree-Fock] Valence Band Max                   : -0.002826 [eV]
+  [Hartree-Fock] Filled Bands                       :   8
+  [Hartree-Fock] Empty Bands                        :    9  200
+  [Hartree-Fock] Direct Gap                         :  4.688609 [eV]
+  [Hartree-Fock] Direct Gap localized at k-point    :  147
+  [Hartree-Fock] Indirect Gap                       :  4.548979 [eV]
+  [Hartree-Fock] Indirect Gap between k-points      :  147   38
+  [Hartree-Fock] Last valence band width            :  6.642762 [eV]
+  [Hartree-Fock] 1st conduction band width          :  7.907817 [eV]
+   
+   
+
+ Timing [Min/Max/Average]: 11s/11s/11s
+
+ [08] Dyson equation: Newton solver
+ ==================================
+
+
+ [WARNING] Response block size in GW reduced to 51      RL (2005    mHa)
+ [Newton] SC iterations : 0
+
+
+  [08.01] G0W0 (W PPA)
+  ====================
+
+  [  GW  ] Bands range     :    1  200
+  [GW/PPA] G damping       :  0.100000 [eV]
+   
+   
+  QP @ state[ 1 ] K range:  1  1
+  QP @ state[ 1 ] b range:   8   9
+  QP @ state[ 2 ] K range:  1  1
+  QP @ state[ 2 ] b range:   64   64
+  QP @ state[ 3 ] K range:   37   37
+  QP @ state[ 3 ] b range:   8   9
+  QP @ state[ 4 ] K range:  148  148
+  QP @ state[ 4 ] b range:   8   8
+  QP @ state[ 5 ] K range:  160  160
+  QP @ state[ 5 ] b range:   8   9
+   
+  [FFT-GW] Mesh size:   15   15   49
+
+  [WF] Copying WF data from GPU device
+
+  [RD./aiida.out//ndb.pp]---------------------------------------------------------
+   Brillouin Zone Q/K grids (IBZ/BZ)                :   202  1944   202  1944
+   RL vectors                                       :   5515 [WF]
+   Coulomb cutoff potential                         : none
+   Fragmentation                                    : yes
+   Electronic Temperature                           :  0.000000 [K]
+   Bosonic    Temperature                           :  0.000000 [K]
+   PPA    diel. fun.  energies                      : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+   wavefunctions                                    : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+   Global Gauge                                     : length
+   X matrix size                                    :   51
+   X band range                                     :    1  200
+   X e/h energy range                               : -1.000000 -1.000000 [eV]
+   X Time ordering                                  : R
+   X xc-Kernel                                      : none
+   X Drude frequency                                :  0.000000  0.000000
+   X poles                                          :  100.0000 [o/o]
+   RL vectors in the sum                            :   5515
+   [r,Vnl] included                                 : yes
+   Field direction                                  :  0.577350E-5  0.577350E-5  0.577350E-5
+   BZ energy Double Grid                            : no
+   BZ energy DbGd points                            : 0
+   BZ Q point size factor                           :  1.000000
+  [RD./aiida.out//ndb.pp_fragment_1]----------------------------------------------
+   PPA Im  energy                                   :  27.21138 eV
+  - S/N 006087 ---------------------------------------------- v.05.01.00 r.19995 -
+
+  [08.02] QP properties and I/O
+  =============================
+
+  Legend (energies in eV)
+  - B  : Band       - Eo  : bare energy
+  - E  : QP energy  - Z   : Renormalization factor
+  - So : Sc(Eo)     - S   : Sc(E)
+  - dSp: Sc derivative precision
+
+  - lXC: Local XC (Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C))
+  -nlXC: non-Local XC (Hartree-Fock)
+
+  QP [eV] @ K [1] (iku):  0.000000  0.000000  0.000000
+   B=8 Eo= -1.37 E= -2.13 E-Eo= -0.76 Re(Z)=0.82 Im(Z)=-0.104298E-2 nlXC= -22.7676 lXC= -18.3713 So=  3.47163
+   B=9 Eo=  4.64 E=  4.67 E-Eo=  0.03 Re(Z)=0.86 Im(Z)=-0.889210E-3 nlXC= -3.35125 lXC= -6.98807 So= -3.60211
+   B=64 Eo= 64.16 E= 64.13 E-Eo= -0.02 Re(Z)=0.17 Im(Z)= -0.16859 nlXC= -1.88319 lXC=-10.11279 So= -5.76659
+
+  QP [eV] @ K [37] (iku):  0.000000 -0.500000  0.000000
+   B=8 Eo= -0.69 E= -1.50 E-Eo= -0.81 Re(Z)=0.81 Im(Z)=-0.126246E-2 nlXC= -19.7129 lXC= -16.0460 So=  2.67248
+   B=9 Eo=  4.52 E=  5.34 E-Eo=  0.82 Re(Z)=0.84 Im(Z)=-0.964491E-3 nlXC= -5.48057 lXC= -10.3281 So= -3.87420
+
+  QP [eV] @ K [148] (iku):  0.333333  0.500000 -0.500000
+   B=8 Eo=  0.00 E= -0.67 E-Eo= -0.67 Re(Z)=0.81 Im(Z)=-0.110117E-2 nlXC= -19.9820 lXC= -16.6120 So=  2.54671
+
+  QP [eV] @ K [160] (iku):  0.000000  0.333333 -0.333333
+   B=8 Eo= -2.37 E= -3.50 E-Eo= -1.13 Re(Z)=0.81 Im(Z)=-0.259423E-2 nlXC= -18.7915 lXC= -14.5172 So=  2.87865
+   B=9 Eo=  6.92 E=  8.12 E-Eo=  1.21 Re(Z)=0.83 Im(Z)=-0.827476E-3 nlXC= -6.66931 lXC= -12.2082 So= -4.07845
+
+  [WR./aiida.out//ndb.QP]---------------------------------------------------------
+   Lattice constants                                :   4.74780   4.11172  14.56462
+   Coulomb cutoff potential                         : none
+   Electronic Temperature                           :  0.000000 [K]
+   Bosonic    Temperature                           :  0.000000 [K]
+   Green`s function   energies                      : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+   wavefunctions                                    : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+   PPA    diel. fun.  energies                      : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+   wavefunctions                                    : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+   QP tot states                                    :   8
+   GWo SC iterations                                : 0
+   GW  SC iterations                                : 0
+   GW solver                                        : Newton
+   GW approximation                                 : PPA
+   PPA imaginary Energy                             :  27.21138 ev
+   RIM G`s                                          :  109
+   RIM random pts                                   :   5000006
+   GW SC iterations                                 : 0
+   dS/dw steps                                      :  2
+   dS/dw step                                       :  0.100000 ev
+   X G`s                                            :   51 used
+   X G`s                                            :   51 disk
+   X bands                                          :    1  200
+   X poles                                          :  100.0000 o/o
+   X e/h E range                                    : -1.000000 -1.000000 ev
+   X xc-Kernel                                      : none
+   X BZ energy Double Grid                          : no
+   Sc/G bands                                       :    1  200
+   Sc/G damping                                     :  0.100000 ev
+   Sc bands terminator                              : yes
+   Sc terminator kind                               : BG
+   Sc Terminator pole                               :  40.81708
+   Sx RL components                                 :   35075
+                                                    
+   QP @ state[ 1 ] K range                          :  1  1
+   QP @ state[ 1 ] b range                          :   8   9
+   QP @ state[ 2 ] K range                          :  1  1
+   QP @ state[ 2 ] b range                          :   64   64
+   QP @ state[ 3 ] K range                          :   37   37
+   QP @ state[ 3 ] b range                          :   8   9
+   QP @ state[ 4 ] K range                          :  148  148
+   QP @ state[ 4 ] b range                          :   8   8
+   QP @ state[ 5 ] K range                          :  160  160
+   QP @ state[ 5 ] b range                          :   8   9
+   GF energies kind                                 : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+   GF WF`s kind                                     : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+   Xs energies kind                                 : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+   Xs WF`s kind                                     : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+  - S/N 006087 ---------------------------------------------- v.05.01.00 r.19995 -
+
+ Timing [Min/Max/Average]: 01m-11s/01m-11s/01m-11s
+
+ [09] Timing Overview
+ ====================
+
+ Clock: global (MAX - min (if any spread is present) clocks)
+                                io_ATMPROJ_pwscf :      0.0004s P9 [MAX]      0.0000s P92 [min]
+                                    io_KB_abinit :      0.0002s P62 [MAX]      0.0000s P20 [min]
+                                           io_BS :      0.0009s P40 [MAX]      0.0001s P1 [min]
+                                  io_Double_Grid :      0.0001s P31 [MAX]      0.0001s P1 [min]
+                                      io_COL_CUT :      0.0156s P60 (   2 calls,   7.794 msec avg) [MAX]      0.0001s P1 (   2 calls,   0.072 msec avg) [min]
+                                       HF(REDUX) :      8.5730s P73 [MAX]      0.0002s P4 [min]
+                                       GW(REDUX) :     11.8987s P90 [MAX]      0.0002s P67 [min]
+                                  eval_G_minus_G :      0.0052s P112 [MAX]      0.0032s P111 [min]
+                                           io_HF :      0.0197s P1 (   3 calls,   6.563 msec avg) [MAX]      0.0032s P6 (   3 calls,   1.073 msec avg) [min]
+      MATRIX transfer (X_G_finite_q_X_redux_1_2) :      0.0150s P2 ( 202 calls,   0.074 msec avg) [MAX]      0.0036s P30 ( 202 calls,   0.018 msec avg) [min]
+      MATRIX transfer (X_G_finite_q_X_redux_2_1) :      0.0061s P1 ( 202 calls,   0.030 msec avg) [MAX]      0.0037s P127 ( 202 calls,   0.018 msec avg) [min]
+      MATRIX transfer (X_G_finite_q_X_redux_2_2) :      0.0151s P2 ( 202 calls,   0.075 msec avg) [MAX]      0.0037s P109 ( 202 calls,   0.018 msec avg) [min]
+      MATRIX transfer (X_G_finite_q_X_redux_1_1) :      0.0065s P1 ( 202 calls,   0.032 msec avg) [MAX]      0.0042s P35 ( 202 calls,   0.021 msec avg) [min]
+                                         io_GROT :      0.0125s P72 (   2 calls,   6.235 msec avg) [MAX]      0.0061s P8 (   2 calls,   3.037 msec avg) [min]
+                                    PP_uspp_init :      0.0083s P2 ( 205 calls,   0.040 msec avg) [MAX]      0.0066s P44 ( 205 calls,   0.032 msec avg) [min]
+                         IO_and_Messaging_switch :      0.0083s P57 ( 417 calls,   0.020 msec avg) [MAX]      0.0080s P55 ( 417 calls,   0.019 msec avg) [min]
+                                        io_QINDX :      0.0207s P72 (   2 calls,  10.360 msec avg) [MAX]      0.0112s P114 (   2 calls,   5.604 msec avg) [min]
+                                    io_QP_and_GF :      0.0238s P1
+                                scatter_Gamp_gpu :      0.0427s P2 (2752 calls,   0.016 msec avg) [MAX]      0.0400s P88 (2752 calls,   0.015 msec avg) [min]
+                                              HF :      7.8462s P4 [MAX]      0.0540s P21 [min]
+                                      io_DIPOLES :      0.6439s P1 ( 412 calls,   1.563 msec avg) [MAX]      0.1313s P4 ( 208 calls,   0.631 msec avg) [min]
+                                       FFT_setup :      0.2745s P105 ( 204 calls,   1.346 msec avg) [MAX]      0.2063s P9 ( 204 calls,   1.011 msec avg) [min]
+                             XC_potential_driver :      0.2095s P1 (   2 calls, 104.729 msec avg) [MAX]      0.2080s P52 (   2 calls, 103.987 msec avg) [min]
+                                       XCo_local :      0.2117s P84 [MAX]      0.2110s P62 [min]
+                                       X (REDUX) :      0.9108s P72 ( 202 calls,   4.509 msec avg) [MAX]      0.2368s P1 ( 202 calls,   1.172 msec avg) [min]
+                                     io_KB_pwscf :      0.9131s P115 ( 204 calls,   4.476 msec avg) [MAX]      0.2744s P5 ( 204 calls,   1.345 msec avg) [min]
+                                   X (procedure) :      1.0459s P1 ( 202 calls,   0.005 msec avg) [MAX]      0.3765s P109 ( 202 calls,   1.864 msec avg) [min]
+                           SERIAL_lin_system_gpu :      0.6172s P1 ( 202 calls,   3.055 msec avg) [MAX]      0.6092s P2 ( 202 calls,   3.016 msec avg) [min]
+                                  LINEAR ALGEBRA :      0.6204s P1 ( 202 calls,   3.071 msec avg) [MAX]      0.6124s P2 ( 202 calls,   3.032 msec avg) [min]
+                                      Xo (REDUX) :     17.6748s P29 ( 202 calls,   0.087 sec avg) [MAX]      1.5195s P33 ( 202 calls,   0.008 sec avg) [min]
+                                           io_WF :      4.5967s P2 (1219 calls,   0.004 sec avg) [MAX]      2.0518s P75 (1219 calls,   0.002 sec avg) [min]
+                                     WF_load_FFT :      4.8999s P2 ( 205 calls,   0.024 sec avg) [MAX]      2.2701s P75 ( 205 calls,   0.011 sec avg) [min]
+                                     io_fragment :     10.4085s P101 (1415 calls,   0.007 sec avg) [MAX]      8.0758s P76 (1415 calls,   0.006 sec avg) [min]
+                               DIPOLE_transverse :     12.1848s P86 [MAX]     11.6881s P8 [min]
+                                         Dipoles :     19.3896s P77 [MAX]     19.3894s P56 [min]
+                                            io_X :     39.5466s P90 ( 412 calls,   0.096 sec avg) [MAX]     38.2348s P7 ( 412 calls,   0.093 sec avg) [min]
+                                         GW(ppa) :     65.1016s P71 [MAX]     53.0602s P97 [min]
+                                             RIM :     56.4982s P26 [MAX]     56.4977s P3 [min]
+                                  Xo (procedure) :    358.4816s P33 ( 202 calls,   1.775 sec avg) [MAX]    342.3186s P29 ( 202 calls,   1.695 sec avg) [min]
+
+ [10] Memory Overview
+ ====================
+
+ Memory Usage: global (Only MASTER cpu here). [O] stands for group 'O'
+ Memory treshold are: 173.7510 [Mb] (basic treshold)  1.737510 [Gb] (SAVEs treshold)
+
+
+         Max memory used (HOST)  :  353.5070 [Mb]
+         Max memory used (DEV)   :  371.9030 [Mb]
+
+ [11] Game Over & Game summary
+ =============================
+
+ 06/29/2022 at 21:17 yambo @ jwb0452.juwels [start]
+ 06/29/2022 at 21:26                        [end]
+
+ Timing   [Min/Max/Average]: 09m-21s/09m-22s/09m-21s
+             [Time-Profile]: 09m-22s
+
+ .-ACKNOWLEDGMENT
+ |
+ | The users of YAMBO have little formal obligations with respect to
+ | the YAMBO group (those specified in the GNU General Public
+ | License, http://www.gnu.org/copyleft/gpl.txt). However, it is
+ | common practice in the scientific literature, to acknowledge the
+ | efforts of people that have made the research possible. In this
+ | spirit, please find below the reference we kindly ask you to use
+ | in order to acknowledge YAMBO
+ |
+ | Many-body perturbation theory calculations using the yambo code
+ | D. Sangalli, A. Ferretti, H. Miranda, C. Attaccalite, I. Marri, E. Cannuccia, P. Melo,
+ | M Marsili, F Paleari, A Marrazzo, G Prandini, P Bonfà, M O Atambo, F Affinito,
+ | M Palummo, A Molina-Sánchez, C Hogan, M Grüning, D Varsano and A Marini.
+ | J. Phys.: Condens. Matter 31, 325902 (2019).
+ |
+ | Yambo: An ab initio tool for excited state calculations
+ | A. Marini, C. Hogan, M. Grüning, D. Varsano
+ | Computer Physics Communications 180, 1392 (2009).
+ |
+  
+ .-Input file  aiida.in
+ | HF_and_locXC                     # [R] Hartree-Fock
+ | gw0                              # [R] GW approximation
+ | rim_cut                          # [R] Coulomb potential
+ | ppa                              # [R][Xp] Plasmon Pole Approximation for the Screened Interaction
+ | BoseTemp= 0.000000         eV    # Bosonic Temperature
+ | FFTGvecs=  5515            RL    # [FFT] Plane-waves
+ | X_and_IO_CPU= "1 1 1 16 8"       # [PARALLEL] CPUs for each role
+ | X_and_IO_ROLEs= "q k g c v"      # [PARALLEL] CPUs roles (q,g,k,c,v)
+ | X_and_IO_nCPU_LinAlg_INV= 16     # [PARALLEL] CPUs for Linear Algebra (if -1 it is automatically set)
+ | X_Threads= 1                     # [OPENMP/X] Number of threads for response functions
+ | DIP_CPU= "1 16 8"                # [PARALLEL] CPUs for each role
+ | DIP_ROLEs= "k c v"               # [PARALLEL] CPUs roles (k,c,v)
+ | DIP_Threads=  6                  # [OPENMP/X] Number of threads for dipoles
+ | SE_CPU= "1 2 64 1"               # [PARALLEL] CPUs for each role
+ | SE_ROLEs= "q qp b g"             # [PARALLEL] CPUs roles (q,g,qp,b)
+ | SE_Threads=  6                   # [OPENMP/GW] Number of threads for self-energy
+ | RandQpts=  5000006               # [RIM] Number of random q-points in the BZ
+ | RandGvec= 109              RL    # [RIM] Coulomb interaction RS components
+ | CUTGeo= "none"                   # [CUT] Coulomb Cutoff geometry: box/cylinder/sphere/ws X/Y/Z/XY..
+ | % CUTBox
+ |  0.000000 | 0.000000 | 0.000000 |        # [CUT] [au] Box sides
+ | %
+ | CUTRadius= 0.000000              # [CUT] [au] Sphere/Cylinder radius
+ | CUTCylLen= 0.000000              # [CUT] [au] Cylinder length
+ | CUTwsGvec= 0.000000              # [CUT] WS cutoff: number of G to be modified
+ | EXXRLvcs=  35075           RL    # [XX] Exchange    RL components
+ | VXCRLvcs=  35075           RL    # [XC] XCpotential RL components
+ | % GbndRnge
+ |    1 | 200 |                         # [GW] G[W] bands range
+ | %
+ | GTermKind= "BG"                  # [GW] GW terminator ("none","BG" Bruneval-Gonze,"BRS" Berger-Reining-Sottile)
+ | DysSolver= "n"                   # [GW] Dyson Equation solver ("n","s","g")
+ | %QPkrange                        # [GW] QP generalized Kpoint/Band indices
+ | 1|1|64|64|
+ | 1|1|8|8|
+ | 1|1|9|9|
+ | 160|160|8|8|
+ | 160|160|9|9|
+ | 37|37|8|8|
+ | 37|37|9|9|
+ | 148|148|8|8|
+ | %
+ | %QPerange                        # [GW] QP generalized Kpoint/Energy indices
+ | 1|202| 0.000000|-1.000000|
+ | %

@@ -1,0 +1,102 @@
+#                                                                     
+#  __  __   ________   ___ __ __    _______   ______                  
+# /_/\/_/\ /_______/\ /__//_//_/\ /_______/\ /_____/\                 
+# \ \ \ \ \\::: _  \ \\::\| \| \ \\::: _  \ \\:::_ \ \                
+#  \:\_\ \ \\::(_)  \ \\:.      \ \\::(_)  \/_\:\ \ \ \               
+#   \::::_\/ \:: __  \ \\:.\-/\  \ \\::  _  \ \\:\ \ \ \              
+#     \::\ \  \:.\ \  \ \\. \  \  \ \\::(_)  \ \\:\_\ \ \             
+#      \__\/   \__\/\__\/ \__\/ \__\/ \_______\/ \_____\/             
+#                                                                     
+#                                                                     
+#       Version 5.1.0 Revision 19995 Hash a543a61a2                   
+#                   Branch is devel-SLK                               
+#            MPI+OpenMP+CUDA+HDF5_MPI_IO Build                        
+#                http://www.yambo-code.org                            
+#
+#
+# GW solver                                       : Newton
+# GW approximation                                : PPA
+# PPA imaginary Energy                            :   27.2113838    [ev]
+# RIM G`s                                         :  111
+# RIM random pts                                  :   5000000
+# GW SC iterations                                : 0
+# dS/dw steps                                     :  2
+# dS/dw step                                      :  0.100000001    [ev]
+# X G`s                                           :  251 [used]
+# X G`s                                           :  251 [disk]
+# X bands                                         :     1   400
+# X poles                                         :   100.000000    [o/o]
+# X e/h E range                                   :  -1.00000000     -1.00000000    [ev]
+# X xc-Kernel                                     : none
+# X BZ energy Double Grid                         : no
+# Sc/G bands                                      :     1   400
+# Sc/G damping                                    :  0.100000001    [ev]
+# Sc bands terminator                             : yes
+# Sc terminator kind                              : BG
+# Sc Terminator pole                              :   40.8170776   
+# Sx RL components                                :   48083
+#                                                 
+# QP @ state[ 1 ] K range                         :  1  1
+# QP @ state[ 1 ] b range                         :  26  27
+# QP @ state[ 2 ] K range                         :  1  1
+# QP @ state[ 2 ] b range                         :   64   64
+# GF energies kind                                : Slater exchange(X)+Perdew & Wang(C)
+# GF WF`s kind                                    : Slater exchange(X)+Perdew & Wang(C)
+# Xs energies kind                                : Slater exchange(X)+Perdew & Wang(C)
+# Xs WF`s kind                                    : Slater exchange(X)+Perdew & Wang(C)
+#
+# Vxc  =Slater exchange(X)+Perdew & Wang(C)
+# Vnlxc=Hartree-Fock
+#
+#    K-point            Band               Eo [eV]            E-Eo [eV]          Sc|Eo [eV]
+#
+        1                  26                 0.000000          -1.055018           4.416145
+        1                  27                 0.707784           0.514280          -3.061443
+        1                   64                48.43050          -0.893600          -8.910738
+# 
+# 03/16/2022 at 16:02 yambo @ jwb0103.juwels [start]
+# 03/16/2022 at 16:10                        [end]
+#  
+# Timing   [Min/Max/Average]: 07m-46s/07m-46s/07m-46s
+#
+# .-Input file  aiida.in
+# | HF_and_locXC                     # [R] Hartree-Fock
+# | gw0                              # [R] GW approximation
+# | rim_cut                          # [R] Coulomb potential
+# | ppa                              # [R][Xp] Plasmon Pole Approximation for the Screened Interaction
+# | BoseTemp= 0.000000         eV    # Bosonic Temperature
+# | FFTGvecs=  7307            RL    # [FFT] Plane-waves
+# | X_and_IO_CPU= "1 1 1 32 4"       # [PARALLEL] CPUs for each role
+# | X_and_IO_ROLEs= "q k g c v"      # [PARALLEL] CPUs roles (q,g,k,c,v)
+# | X_and_IO_nCPU_LinAlg_INV= 16     # [PARALLEL] CPUs for Linear Algebra (if -1 it is automatically set)
+# | X_Threads= 1                     # [OPENMP/X] Number of threads for response functions
+# | DIP_CPU= "1 32 4"                # [PARALLEL] CPUs for each role
+# | DIP_ROLEs= "k c v"               # [PARALLEL] CPUs roles (k,c,v)
+# | DIP_Threads=  6                  # [OPENMP/X] Number of threads for dipoles
+# | SE_CPU= "1 2 64 1"               # [PARALLEL] CPUs for each role
+# | SE_ROLEs= "q qp b g"             # [PARALLEL] CPUs roles (q,g,qp,b)
+# | SE_Threads=  6                   # [OPENMP/GW] Number of threads for self-energy
+# | RandQpts=  5000000               # [RIM] Number of random q-points in the BZ
+# | RandGvec= 111              RL    # [RIM] Coulomb interaction RS components
+# | CUTGeo= "none"                   # [CUT] Coulomb Cutoff geometry: box/cylinder/sphere/ws X/Y/Z/XY..
+# | % CUTBox
+# |  0.000000 | 0.000000 | 0.000000 |        # [CUT] [au] Box sides
+# | %
+# | CUTRadius= 0.000000              # [CUT] [au] Sphere/Cylinder radius
+# | CUTCylLen= 0.000000              # [CUT] [au] Cylinder length
+# | CUTwsGvec= 0.000000              # [CUT] WS cutoff: number of G to be modified
+# | EXXRLvcs=  48083           RL    # [XX] Exchange    RL components
+# | VXCRLvcs=  48083           RL    # [XC] XCpotential RL components
+# | % GbndRnge
+# |     1 |  400 |                       # [GW] G[W] bands range
+# | %
+# | GTermKind= "BG"                  # [GW] GW terminator ("none","BG" Bruneval-Gonze,"BRS" Berger-Reining-Sottile)
+# | DysSolver= "n"                   # [GW] Dyson Equation solver ("n","s","g")
+# | %QPkrange                        # [GW] QP generalized Kpoint/Band indices
+# | 1|1|64|64|
+# | 1|1|26|26|
+# | 1|1|27|27|
+# | %
+# | %QPerange                        # [GW] QP generalized Kpoint/Energy indices
+# | 1|72| 0.000000|-1.000000|
+# | %

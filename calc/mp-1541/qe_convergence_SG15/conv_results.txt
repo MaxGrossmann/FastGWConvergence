@@ -1,0 +1,5 @@
+convergence threshold = 0.0029 Ha (= 1kcal/mol)
+cutoff (Ry)  kppa   total energy (Ha)
+44           1500   -22.817224
+44           3000   -22.817226
+49           3000   -22.817438

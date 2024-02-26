@@ -1,0 +1,38 @@
+&CONTROL
+  calculation = 'scf'
+  max_seconds =   3.4200000000d+03
+  outdir = './out/'
+  prefix = 'aiida'
+  pseudo_dir = '/usr/scratch4/magr4985/MG/HTDF/ref/mp-984_SG15_1',
+  verbosity = 'high'
+  wf_collect = .true.
+/
+&SYSTEM
+  ecutwfc = 94
+  force_symmorphic = .true.
+  ibrav = 0
+  nat = 4
+  nbnd = 40
+  ntyp = 2
+/
+&ELECTRONS
+  conv_thr =   1.0000000000d-07
+  diago_full_acc = .true.
+  diago_thr_init =   5.0000000000d-06
+  mixing_beta =   6.0000000000d-01
+  mixing_mode = 'plain'
+/
+ATOMIC_SPECIES
+B      10.81 B_ONCV_PBE-1.0.upf
+N      14.007 N_ONCV_PBE-1.0.upf
+ATOMIC_POSITIONS angstrom
+B            1.2562141276       0.7252755502       5.7804487500 
+B           -0.0000000126       1.4505511222       1.9268162500 
+N            1.2562141276       0.7252755502       1.9268162500 
+N           -0.0000000126       1.4505511222       5.7804487500 
+K_POINTS automatic
+6 6 2 0 0 0
+CELL_PARAMETERS angstrom
+      2.5124282300       0.0000000000       0.0000000000
+     -1.2562141150       2.1758266724       0.0000000000
+      0.0000000000       0.0000000000       7.7072650000

@@ -1,0 +1,41 @@
+&CONTROL
+  calculation = 'nscf',
+  disk_io = 'low',
+  outdir = 'out/',
+  prefix = 'mp-22894',
+  pseudo_dir = '/usr/scratch4/magr4985/MG/HTDF/pseudo/SG15',
+/
+&SYSTEM
+  celldm(1) = 8.803395093424584,
+  celldm(3) = 1.6212617226696413,
+  degauss = 0.0004593661607577953,
+  ecutwfc = 51,
+  force_symmorphic = .TRUE.,
+  ibrav = 4,
+  nbnd = 1200,
+  occupations = 'smearing',
+  smearing = 'gaussian',
+  nat = 4,
+  ntyp = 2,
+/
+&ELECTRONS
+  conv_thr = 1d-10,
+  diago_full_acc = .TRUE.,
+  diago_thr_init = 5d-06,
+  diagonalization = 'david',
+/
+&IONS
+/
+&CELL
+/
+ATOMIC_SPECIES
+  Ag  107.8682 Ag.upf
+  I  126.9045 I.upf
+ATOMIC_POSITIONS crystal
+  Ag 0.66666672 0.33333336 0.00098414
+  Ag 0.33333336 0.66666664 0.50098418
+  I 0.66666672 0.33333336 0.37891589
+  I 0.33333336 0.66666664 0.87891593
+K_POINTS automatic
+  2 2 2 0 0 0
+

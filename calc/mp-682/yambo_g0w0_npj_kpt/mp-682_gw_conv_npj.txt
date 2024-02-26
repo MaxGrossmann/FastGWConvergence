@@ -1,0 +1,6 @@
+kppa 	 kpt 	    nk_ir  bnd_x  bnd_g  cutsrc  gap      #GW  time (s)  ncpu  conv_thr
+CONVERGENCE FAILED. GRID SHIFT LIMIT WAS REACHED.
+10   	 2x2x2      3      1000   1000   44      11.07717  25   5453      8     0.025
+60   	 4x4x4      8      800    800    44      11.04338  25   30438     8     0.025
+260  	 6x6x6      16     1000   1000   44      11.05202  24   48757     24    0.025
+690  	 8x8x8      29     800    800    44      11.03922  43   334675    8     0.025
