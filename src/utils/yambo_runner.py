@@ -58,6 +58,12 @@ def yambo_run_gw_conv_npj(
         pw_cutoff:      Cutoff used for the last nscf calculation
     """
 
+    # flag for 2d materials
+    flag_2d = False
+    aspect_ratio = max(calc_data_scf.structure.lattice.abc) / min(calc_data_scf.structure.lattice.abc)
+    if calc_data_scf.structure.lattice.abc[2] > 15 and aspect_ratio > 5:
+        flag_2d = True
+
     # adjust the number of bands to fit with the number of cores
     if n_bands < edges[2]:
         print(
@@ -151,6 +157,7 @@ def yambo_run_gw_conv_npj(
             bnd_step=bnd_step,
             cut_step=cut_step,
             cut_max=46,  # hard coded ... larger is computationally to expense
+            flag_2d=flag_2d,
         )
     if gw is not None:
         gw.bnd_max = n_bands
@@ -201,6 +208,7 @@ def yambo_run_gw_conv_npj_reference(
     Simple function that starts a npj convergence calculation used for the reference calculation
     reproducing the results from Bonacci et al. (https://doi.org/10.1038/s41524-023-01027-2).
     INPUT:
+        structure       pymatgen structure object
         ncpu:           Number of cpu cores used for a mpi calls
         edges:          Edges of the grid used for the npj fit algorithm
         bnd_step:       Steps in the number of bands
@@ -280,6 +288,12 @@ def yambo_run_gw_conv_cs(
         filename_nscf:      Filename of the nscf calculation
         pw_cutoff:          Cutoff used for the last nscf calculation
     """
+    
+    # flag for 2d materials
+    flag_2d = False
+    aspect_ratio = max(calc_data_scf.structure.lattice.abc) / min(calc_data_scf.structure.lattice.abc)
+    if calc_data_scf.structure.lattice.abc[2] > 15 and aspect_ratio > 5:
+        flag_2d = True
 
     # adjust the number of bands to fit with the number of cores
     if n_bands < bnd_start:
@@ -361,7 +375,7 @@ def yambo_run_gw_conv_cs(
     os.system("yambo")
     path_to_rsetup = os.getcwd()
 
-    # npj fit algorithm
+    # cs algorithm
     if not os.path.isdir("g0w0_cs"):
         os.mkdir("g0w0_cs")
     os.chdir("g0w0_cs")
@@ -376,6 +390,7 @@ def yambo_run_gw_conv_cs(
             cut_step=cut_step,
             cut_max=46,  # hard coded ... larger is computationally to expense
             ref_flag=ref_flag,
+            flag_2d=flag_2d,
         )
     if gw is not None:
         gw.bnd_max = n_bands
@@ -444,6 +459,12 @@ def yambo_run_gw_conv_cs_reference(
         filename_nscf:      Filename of the nscf calculation
         pw_cutoff:          Cutoff used for the last nscf calculation
     """
+    
+    # flag for 2d materials
+    flag_2d = False
+    aspect_ratio = max(calc_data_scf.structure.lattice.abc) / min(calc_data_scf.structure.lattice.abc)
+    if calc_data_scf.structure.lattice.abc[2] > 15 and aspect_ratio > 5:
+        flag_2d = True
 
     # unit cell volume to estimate the cutoff for the number of wanted bands
     vol = qe_helper.uc_vol_au(calc_data_scf.structure)
@@ -570,6 +591,7 @@ def yambo_run_gw_conv_cs_reference(
         cut_max,
         bnd_max,
         kpt_bnd_idx,
+        flag_2d=flag_2d,
     )
     os.system(f"mpirun -np {ncpu} yambo -F {f_name}.in -J {f_name} -I ../")
     ref_gap = yambo_helper.get_minimal_gw_gap(f_name, kpt_bnd_idx)

@@ -1,0 +1,38 @@
+&CONTROL
+  calculation = 'scf',
+  disk_io = 'low',
+  outdir = 'out/',
+  prefix = 'CdI2',
+  pseudo_dir = '/usr/scratch4/magr4985/FGWC/FGWC/pseudo/SG15',
+/
+&SYSTEM
+  celldm(1) = 8.081495910815853,
+  celldm(3) = 5.491081629508996,
+  degauss = 0.0018374646430311813,
+  ecutwfc = 56,
+  force_symmorphic = .FALSE.,
+  ibrav = 4,
+  nbnd = 54,
+  occupations = 'smearing',
+  smearing = 'gaussian',
+  nat = 3,
+  ntyp = 2,
+/
+&ELECTRONS
+  conv_thr = 1d-10,
+  diagonalization = 'david',
+/
+&IONS
+/
+&CELL
+/
+ATOMIC_SPECIES
+  Cd  112.4110 Cd.upf
+  I  126.9045 I.upf
+ATOMIC_POSITIONS crystal
+  Cd 0.00000000 0.00000000 0.50000004
+  I 0.66666672 0.33333336 0.57469783
+  I 0.33333336 0.66666664 0.42530224
+K_POINTS automatic
+  18 18 1 0 0 0
+

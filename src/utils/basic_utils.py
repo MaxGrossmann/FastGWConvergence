@@ -8,6 +8,7 @@ import os
 import textwrap
 import warnings
 from mp_api.client import MPRester
+from pymatgen.io.xcrysden import XSF
 from pymatgen.io.vasp.inputs import Kpoints
 
 
@@ -18,11 +19,6 @@ def ha2ev(val):
 
 def ev2ha(val):
     return val / 13.6057039763 / 2
-
-
-def au2ang(val):
-    return val * 0.529177249
-
 
 def ang2au(val):
     return val / 0.529177249
@@ -56,6 +52,27 @@ def get_structure(api_key, material_id):
     return structure, name, metal_check
 
 
+def get_structure_2d(xsf_name):
+    """
+    Loads structure from XSF file located in the "input_2d" directory.
+    INPUT:
+        xsf_name:       Name of the XSF file
+    OUTPUT:
+        structure:      The structure of the material
+    """
+    available_systems = os.listdir("input_2d")
+    if xsf_name + ".xsf" not in available_systems:
+        raise Exception(
+            f"QUITTING: No XSF available for material {xsf_name}!"
+        )
+    # parse the xsf file and convert it into a structures
+    with open("input_2d/" + xsf_name + ".xsf", "r") as f:
+        xsf_str = f.read()
+    structure = XSF.from_str(xsf_str).structure
+    
+    return structure
+
+
 def get_kpt_grid(structure, kppa):
     """
     Generates the k-point-grid for a structure with given k-point density
@@ -71,8 +88,13 @@ def get_kpt_grid(structure, kppa):
     if kppa == 0:  # for gamma-only calculations
         return [1, 1, 1]
     else:
-        return [i if i % 2 == 0 else i + 1 for i in kpts.kpts[0]]
-
+        # bad detection of 2d materials...
+        kgrid = [i if i % 2 == 0 else i + 1 for i in kpts.kpts[0]]
+        aspect_ratio = max(structure.lattice.abc) / min(structure.lattice.abc)
+        if structure.lattice.abc[2] > 15 and aspect_ratio > 5:
+            return [kgrid[0], kgrid[1], 1]
+        else:
+            return kgrid
 
 # YOU NEED TO ADJUST THE BATCHJOB PART OF THIS FUNCTION FOR THE SUPERCOMPUTER
 # THAT YOU USE, ELSE THIS MAY NOT WORK... THE LOCAL SETUP SHOULD WORK.
@@ -114,7 +136,7 @@ def start_calc(
             #!/bin/bash
             #BSUB -q BatchXL
             #BSUB -R "mem > {memory} span[hosts=1]"
-            #BSUB -J FGWC_{material_id}
+            #BSUB -J FGWC
             #BSUB -oo lsf_%J.log
             #BSUB -eo lsf_%J.log
             #BSUB -n {ncores}
@@ -123,7 +145,6 @@ def start_calc(
             """
             )
         )
-        f.write("conda activate base\n")
         f.write(f"export PYTHONPATH={base_dir}\n")
         f.write(f"echo {material_id}\n")
         for wf in script_names:
@@ -146,7 +167,6 @@ def start_calc(
             """
             )
         )
-        f.write("conda activate base\n")
         f.write(f"export PYTHONPATH={base_dir}\n")
         f.write(f"echo {material_id}\n")
         for wf in script_names:

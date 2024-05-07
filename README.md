@@ -50,6 +50,12 @@ with respect to the plane-wave cutoff. This does not affect the GW results in an
 We did not modify/optimize the code for publication as this is how the data was generated. 
 However, we strongly recommend that you adjust the starting values of the DFT cutoff energies when using our code.
 
+Unfortunately, we made a mistake when converting the smearing energy from eV to Ry. Therefore, we have used a smearing of 6.25 meV instead of 25 meV in all bulk calculations. This does not affect the results in any way, since all the materials studied were semiconductors or insulators.
+
+**2D MATERIALS**
+
+We added 2D materials as an afterthought. Therefore, we determine that a given material is 2D by checking if the c-axis of the unit cell is greater than 15 angstroms. One could also additionally check the aspect ratio of the cells. So be very careful if you try to use this package for structures with larger cell sizes from the Materials Project. Errors or unwanted behavior will occur.
+
 **ACKNOWLEDGEMENT**
 
 We would like to thank Miguel A. L. Marques for providing the automated symmetry detection that supports the Quantum ESPRESSO workflows.

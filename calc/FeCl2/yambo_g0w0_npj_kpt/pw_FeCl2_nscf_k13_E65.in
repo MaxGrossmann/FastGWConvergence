@@ -1,0 +1,40 @@
+&CONTROL
+  calculation = 'nscf',
+  disk_io = 'low',
+  outdir = 'out/',
+  prefix = 'FeCl2',
+  pseudo_dir = '/usr/scratch4/magr4985/FGWC/FGWC/pseudo/SG15',
+/
+&SYSTEM
+  celldm(1) = 6.433606132291065,
+  celldm(3) = 6.597264089521966,
+  degauss = 0.0004593661607577953,
+  ecutwfc = 65,
+  force_symmorphic = .TRUE.,
+  ibrav = 4,
+  nbnd = 1200,
+  occupations = 'smearing',
+  smearing = 'gaussian',
+  nat = 3,
+  ntyp = 2,
+/
+&ELECTRONS
+  conv_thr = 1d-10,
+  diago_full_acc = .TRUE.,
+  diago_thr_init = 5d-06,
+  diagonalization = 'david',
+/
+&IONS
+/
+&CELL
+/
+ATOMIC_SPECIES
+  Cl  35.4530 Cl.upf
+  Fe  55.8450 Fe.upf
+ATOMIC_POSITIONS crystal
+  Fe 0.00000000 0.00000000 0.50000004
+  Cl 0.33333336 0.66666664 0.55375821
+  Cl 0.66666672 0.33333336 0.44624187
+K_POINTS automatic
+  4 4 1 0 0 0
+

@@ -21,7 +21,7 @@ from pymatgen.symmetry.analyzer import SpacegroupAnalyzer
 from pymatgen.analysis.structure_matcher import StructureMatcher
 
 # local imports
-from src.utils.basic_utils import ang2au, ha2ev, ev2ha
+from src.utils.basic_utils import ang2au, ha2ev
 import src.utils.ht_cutoff_SG15 as ht_cutoff_SG15
 
 
@@ -463,6 +463,8 @@ def qe_init_structure(id, base_dir):
     f = open(os.path.join(base_dir, "calc", id, "structure.pckl"), "rb")
     structure, name = pickle.load(f)
     f.close()
+    
+    # standardize the structure and get the ibrav
     structure = qe_standardize_cell(structure, symprec=0.1)
     try:
         ibrav, structure = qe_get_ibrav(structure)

@@ -1,0 +1,39 @@
+&CONTROL
+  calculation = 'nscf',
+  disk_io = 'low',
+  outdir = 'out/',
+  prefix = 'SbAs',
+  pseudo_dir = '/usr/scratch4/magr4985/FGWC/FGWC/pseudo/SG15',
+/
+&SYSTEM
+  celldm(1) = 7.263453764026843,
+  celldm(3) = 5.2033813388832355,
+  degauss = 0.0004593661607577953,
+  ecutwfc = 47,
+  force_symmorphic = .TRUE.,
+  ibrav = 4,
+  nbnd = 1200,
+  occupations = 'smearing',
+  smearing = 'gaussian',
+  nat = 2,
+  ntyp = 2,
+/
+&ELECTRONS
+  conv_thr = 1d-10,
+  diago_full_acc = .TRUE.,
+  diago_thr_init = 5d-06,
+  diagonalization = 'david',
+/
+&IONS
+/
+&CELL
+/
+ATOMIC_SPECIES
+  As  74.9216 As.upf
+  Sb  121.7600 Sb.upf
+ATOMIC_POSITIONS crystal
+  Sb 0.66666672 0.33333336 0.03836944
+  As 0.00000000 0.00000000 0.96163063
+K_POINTS automatic
+  6 6 1 0 0 0
+

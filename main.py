@@ -78,7 +78,7 @@ for mp in material_id:
         calc_setup,
         mp,
         script_name,
-        file_name="htdf_job",
+        file_name="fgwc_job",
         ncores=ncores,
         memory=memory,
         calc_folder=calc_folder,

@@ -46,10 +46,19 @@ class calc_data:
 
         # if no cutoff is supplied, use the default value
         if pw_cutoff == -1:
-            self.pw_cutoff = qe_get_cutoff(structure, pseudo)
+            self.pw_cutoff = qe_get_cutoff(structure)
         else:
             self.pw_cutoff = pw_cutoff
-        self.k_points_grid = get_kpt_grid(structure, kppa)
+        
+        # bad detection of 2d materials...
+        aspect_ratio = max(structure.lattice.abc) / min(structure.lattice.abc)
+        if structure.lattice.abc[2] > 15 and aspect_ratio > 5:
+            temp_kpt = get_kpt_grid(structure, kppa)
+            self.k_points_grid = [temp_kpt[0], temp_kpt[1], 1]
+        else:
+            self.k_points_grid = get_kpt_grid(structure, kppa)
+            
+        # fixed prefix for Quantum Espresso calculations
         self.prefix = (
             self.identifier
             + "_"

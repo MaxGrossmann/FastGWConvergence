@@ -44,7 +44,7 @@ def write_scf(calc_data, disk_io="medium", diagonalization="david", symmorphic=F
     system = {
         "ecutwfc": calc_data.pw_cutoff,
         "occupations": "smearing",
-        "degauss": basic_utils.ev2ha(0.025) / 2,  # 25meV smearing to "emulate" 300K
+        "degauss": 2*basic_utils.ev2ha(0.025), # 25 meV smearing to "emulate" 300K
         "smearing": "gaussian",
         "nbnd": int(
             np.ceil(

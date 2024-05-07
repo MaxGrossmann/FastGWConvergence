@@ -3,7 +3,7 @@ This workflow finds the convergence parameters for a GW calculation
 in a very efficient way. First, the convergence parameters for W 
 are found using the coordinate search algorithm on a Gamma-only k-point
 grid. Then, the k-point grid density is increased and one GW calculation
-per k-point grid is performedusing small parameters in W, i.e. (200,4), 
+per k-point grid is performed using small parameters in W, i.e. (200,4), 
 until the gap converges with respect to the k-point grid.
 In some cases, this may result in an underconverged calculation.
 If high accuracy is required, check the final parameters again.
@@ -47,6 +47,13 @@ os.chdir(wf_dir)
 # initialize structure for a QuantumEspresso calculation
 structure, name, ibrav = qe_helper.qe_init_structure(id, base_dir)
 vol = qe_helper.uc_vol_au(structure)
+
+# flag for 2d materials
+flag_2d = False
+aspect_ratio = max(structure.lattice.abc) / min(structure.lattice.abc)
+if structure.lattice.abc[2] > 15 and aspect_ratio > 5:
+    print("\n2D MATERIAL", flush=True)
+    flag_2d = True
 
 # setup and start a scf calculation on a fine k-point grid
 convergence_flag, calc_data_conv = qe_runner.qe_convergence_checker(
@@ -97,7 +104,6 @@ with open(f"{id}_gw_conv.txt", "w+") as f:
 
 # converge the parameters in W doing a gamma-only gw calculation
 gw = None
-grid_shift = 0
 n_gw_calc = 0
 while True:
     (
@@ -266,6 +272,7 @@ while diff_gap > conv_thr:
         cut_start,
         bnd_start,
         kpt_bnd_idx,
+        flag_2d=flag_2d,
     )
     os.system(f"mpirun -np {ncpu} yambo -F {f_name}.in -J {f_name} -I ../")
     kgrid_gap.append(yambo_helper.get_minimal_gw_gap(f_name, kpt_bnd_idx))
@@ -299,7 +306,7 @@ while diff_gap > conv_thr:
 
     # log message
     print(
-        f"Finshed the npj kppa = {kppa[iter]:d} workflow, going back to {os.getcwd()}\n",
+        f"Finshed the kppa = {kppa[iter]:d} workflow, going back to {os.getcwd()}\n",
         flush=True,
     )
     iter += 1

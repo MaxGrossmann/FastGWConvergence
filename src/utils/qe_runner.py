@@ -41,9 +41,9 @@ def qe_pw_run(
             kwargs["diagonalization"] = "paro"
             filename = input_name(calc_data, **kwargs)
             os.system(f"mpirun -np {ncores} pw.x -inp {filename}.in > {filename}.out")
-            open("paro.txt", "a").close()  # create a file so we know that paro is used
+            # open("paro.txt", "a").close()  # create a file so we know that paro is used, only used for debugging
 
-    # check if the "eigenvalues not converged" appear
+    # check if the "eigenvalues not converged" error appears
     # but we need to separate two cases
     # 1st case: last iteration of a scf calculation
     # 2nd case: nscf calculation
@@ -128,7 +128,7 @@ def qe_convergence_checker(id, wf_dir, ncores, conv_dir="qe_convergence_SG15"):
             os.path.join(conv_dir, "out", id + ".save", "charge-density.dat"),
             os.path.join(wf_dir, "out", id + ".save", "charge-density.dat"),
         )
-        
+
         return conv_flag, calc_data_conv
 
     else:
@@ -145,5 +145,5 @@ def qe_convergence_checker(id, wf_dir, ncores, conv_dir="qe_convergence_SG15"):
                 pseudo=os.path.join(base_dir, "pseudo", "SG15"),
             )
         qe_pw_run(calc_data_conv, qe_write.write_scf, ncores, kwargs={})
-        
+
         return conv_flag, calc_data_conv

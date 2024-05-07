@@ -51,6 +51,11 @@ delta_cutoff = 5
 # initialize structure for a QuantumEspresso calculation
 structure, name, ibrav = qe_helper.qe_init_structure(id, base_dir)
 
+# log message if the material is 2D
+aspect_ratio = max(structure.lattice.abc) / min(structure.lattice.abc)
+if structure.lattice.abc[2] > 15 and aspect_ratio > 5:
+    print("\n2D MATERIAL", flush=True)
+
 # create dummy scf calculation (useful to check k-grid later)
 calc_data0 = calc_data(
     structure,

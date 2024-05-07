@@ -1,0 +1,271 @@
+
+
+ __    __ ______           ____     _____
+/\ \  /\ \\  _  \  /"\_/`\/\  _`\ /\  __`\
+\ `\`\\/"/ \ \L\ \/\      \ \ \L\ \ \ \/\ \
+ `\ `\ /" \ \  __ \ \ \__\ \ \  _ <" \ \ \ \
+   `\ \ \  \ \ \/\ \ \ \_/\ \ \ \L\ \ \ \_\ \
+     \ \_\  \ \_\ \_\ \_\\ \_\ \____/\ \_____\
+      \/_/   \/_/\/_/\/_/ \/_/\/___/  \/_____/
+
+
+ <---> P1: [01] MPI/OPENMP structure, Files & I/O Directories
+ <---> P1-r500n009: MPI Cores-Threads   : 480(CPU)-1(threads)-1(threads@X)-1(threads@DIP)-1(threads@SE)-1(threads@RT)-1(threads@K)-1(threads@NL)
+ <---> P1-r500n009: MPI Cores-Threads   : DIP(environment)-1 60 8(CPUs)-k c v(ROLEs)
+ <---> P1-r500n009: MPI Cores-Threads   : X_and_IO(environment)-1 1 1 60 8(CPUs)-q k g c v(ROLEs)
+ <---> P1-r500n009: MPI Cores-Threads   : SE(environment)-8 1 60(CPUs)-q qp b(ROLEs)
+ <---> P1-r500n009: [02] CORE Variables Setup
+ <---> P1-r500n009: [02.01] Unit cells
+ <---> P1-r500n009: [02.02] Symmetries
+ <---> P1-r500n009: [02.03] Reciprocal space
+ <---> P1-r500n009: [02.04] K-grid lattice
+ <---> P1-r500n009: Grid dimensions      :  10  10
+ <---> P1-r500n009: [02.05] Energies & Occupations
+ <---> P1-r500n009: [03] Transferred momenta grid and indexing
+ <---> P1-r500n009: [04] Coloumb potential Random Integration (RIM)
+ <---> P1-r500n009: [05] Coloumb potential CutOffslab
+ <---> P1-r500n009: [06] Dipoles
+ <---> P1-r500n009: [PARALLEL DIPOLES for K(ibz) on 1 CPU] Loaded/Total (Percentual):14/14(100%)
+ <---> P1-r500n009: [PARALLEL DIPOLES for CON bands on 60 CPU] Loaded/Total (Percentual):20/1187(2%)
+ <---> P1-r500n009: [PARALLEL DIPOLES for VAL bands on 8 CPU] Loaded/Total (Percentual):2/13(15%)
+ <---> P1-r500n009: [DIP] Checking dipoles header
+ <---> P1-r500n009: [07] Dynamic Dielectric Matrix (PPA)
+ <---> P1-r500n009: [PARALLEL Response_G_space_and_IO for K(bz) on 1 CPU] Loaded/Total (Percentual):100/100(100%)
+ <---> P1-r500n009: [PARALLEL Response_G_space_and_IO for Q(ibz) on 1 CPU] Loaded/Total (Percentual):14/14(100%)
+ <---> P1-r500n009: [PARALLEL Response_G_space_and_IO for K-q(ibz) on 1 CPU] Loaded/Total (Percentual):14/14(100%)
+ <---> P1-r500n009: [LA@Response_G_space_and_IO] PARALLEL linear algebra uses a 4x4 SLK grid (16 cpu)
+ <---> P1-r500n009: [PARALLEL Response_G_space_and_IO for K(ibz) on 1 CPU] Loaded/Total (Percentual):14/14(100%)
+ <---> P1-r500n009: [PARALLEL Response_G_space_and_IO for CON bands on 60 CPU] Loaded/Total (Percentual):20/1187(2%)
+ <---> P1-r500n009: [PARALLEL Response_G_space_and_IO for VAL bands on 8 CPU] Loaded/Total (Percentual):2/13(15%)
+ <---> P1-r500n009: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):7667361/7667361(100%)
+ <---> P1-r500n009: [PARALLEL distribution for Wave-Function states] Loaded/Total(Percentual):308/16800(2%)
+ <---> P1-r500n009: [FFT-X] Mesh size:   21   21  147
+ <---> P1-r500n009: [X-CG] R(p) Tot o/o(of R):   3090   4000    100
+ <---> P1-r500n009: Xo@q[12] |                                        | [000%] --(E) --(X)
+ <14s> P1-r500n009: Xo@q[12] |#                                       | [002%] 12s(E) 08m-12s(X)
+ <26s> P1-r500n009: Xo@q[12] |##                                      | [005%] 24s(E) 08m-12s(X)
+ <38s> P1-r500n009: Xo@q[12] |###                                     | [007%] 37s(E) 08m-13s(X)
+ <51s> P1-r500n009: Xo@q[12] |####                                    | [010%] 49s(E) 08m-13s(X)
+ <01m-03s> P1-r500n009: Xo@q[12] |#####                                   | [012%] 01m-01s(E) 08m-12s(X)
+ <01m-15s> P1-r500n009: Xo@q[12] |######                                  | [015%] 01m-13s(E) 08m-12s(X)
+ <01m-27s> P1-r500n009: Xo@q[12] |#######                                 | [017%] 01m-26s(E) 08m-12s(X)
+ <01m-40s> P1-r500n009: Xo@q[12] |########                                | [020%] 01m-38s(E) 08m-12s(X)
+ <01m-52s> P1-r500n009: Xo@q[12] |#########                               | [022%] 01m-51s(E) 08m-12s(X)
+ <02m-05s> P1-r500n009: Xo@q[12] |##########                              | [025%] 02m-03s(E) 08m-13s(X)
+ <02m-17s> P1-r500n009: Xo@q[12] |###########                             | [027%] 02m-15s(E) 08m-13s(X)
+ <02m-29s> P1-r500n009: Xo@q[12] |############                            | [030%] 02m-27s(E) 08m-12s(X)
+ <02m-42s> P1-r500n009: Xo@q[12] |#############                           | [032%] 02m-40s(E) 08m-13s(X)
+ <02m-54s> P1-r500n009: Xo@q[12] |##############                          | [035%] 02m-52s(E) 08m-13s(X)
+ <03m-06s> P1-r500n009: Xo@q[12] |###############                         | [037%] 03m-04s(E) 08m-13s(X)
+ <03m-19s> P1-r500n009: Xo@q[12] |################                        | [040%] 03m-17s(E) 08m-13s(X)
+ <03m-31s> P1-r500n009: Xo@q[12] |#################                       | [042%] 03m-29s(E) 08m-13s(X)
+ <03m-43s> P1-r500n009: Xo@q[12] |##################                      | [045%] 03m-42s(E) 08m-13s(X)
+ <03m-56s> P1-r500n009: Xo@q[12] |###################                     | [047%] 03m-54s(E) 08m-13s(X)
+ <04m-08s> P1-r500n009: Xo@q[12] |####################                    | [050%] 04m-06s(E) 08m-13s(X)
+ <04m-20s> P1-r500n009: Xo@q[12] |#####################                   | [052%] 04m-19s(E) 08m-13s(X)
+ <04m-30s> P1-r500n009: Xo@q[12] |######################                  | [055%] 04m-29s(E) 08m-09s(X)
+ <04m-39s> P1-r500n009: Xo@q[12] |#######################                 | [057%] 04m-37s(E) 08m-03s(X)
+ <04m-48s> P1-r500n009: Xo@q[12] |########################                | [060%] 04m-46s(E) 07m-57s(X)
+ <04m-56s> P1-r500n009: Xo@q[12] |#########################               | [062%] 04m-55s(E) 07m-52s(X)
+ <05m-05s> P1-r500n009: Xo@q[12] |##########################              | [065%] 05m-03s(E) 07m-47s(X)
+ <05m-13s> P1-r500n009: Xo@q[12] |###########################             | [067%] 05m-12s(E) 07m-42s(X)
+ <05m-22s> P1-r500n009: Xo@q[12] |############################            | [070%] 05m-20s(E) 07m-38s(X)
+ <05m-31s> P1-r500n009: Xo@q[12] |#############################           | [072%] 05m-29s(E) 07m-34s(X)
+ <05m-40s> P1-r500n009: Xo@q[12] |##############################          | [075%] 05m-38s(E) 07m-31s(X)
+ <05m-48s> P1-r500n009: Xo@q[12] |###############################         | [077%] 05m-47s(E) 07m-27s(X)
+ <05m-57s> P1-r500n009: Xo@q[12] |################################        | [080%] 05m-55s(E) 07m-24s(X)
+ <06m-06s> P1-r500n009: Xo@q[12] |#################################       | [082%] 06m-04s(E) 07m-21s(X)
+ <06m-14s> P1-r500n009: Xo@q[12] |##################################      | [085%] 06m-13s(E) 07m-18s(X)
+ <06m-23s> P1-r500n009: Xo@q[12] |###################################     | [087%] 06m-21s(E) 07m-16s(X)
+ <06m-32s> P1-r500n009: Xo@q[12] |####################################    | [090%] 06m-30s(E) 07m-13s(X)
+ <06m-40s> P1-r500n009: Xo@q[12] |#####################################   | [092%] 06m-39s(E) 07m-11s(X)
+ <06m-48s> P1-r500n009: Xo@q[12] |######################################  | [095%] 06m-47s(E) 07m-08s(X)
+ <06m-56s> P1-r500n009: Xo@q[12] |####################################### | [097%] 06m-54s(E) 07m-05s(X)
+ <07m-03s> P1-r500n009: Xo@q[12] |########################################| [100%] 07m-01s(E) 07m-01s(X)
+ <07m-21s> P1-r500n009: [PARALLEL distribution for X Frequencies on 30 CPU] Loaded/Total (Percentual):1/2(50%)
+ <07m-21s> P1-r500n009: X@q[12] |                                        | [000%] --(E) --(X)
+ <07m-22s> P1-r500n009: X@q[12] |########################################| [100%] --(E) --(X)
+ <07m-24s> P1-r500n009: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):7667361/7667361(100%)
+ <07m-24s> P1-r500n009: [X-CG] R(p) Tot o/o(of R):   1953   4000    100
+ <07m-24s> P1-r500n009: Xo@q[13] |                                        | [000%] --(E) --(X)
+ <07m-32s> P1-r500n009: Xo@q[13] |#                                       | [002%] 08s(E) 05m-27s(X)
+ <07m-40s> P1-r500n009: Xo@q[13] |##                                      | [005%] 16s(E) 05m-27s(X)
+ <07m-49s> P1-r500n009: Xo@q[13] |###                                     | [007%] 24s(E) 05m-27s(X)
+ <07m-57s> P1-r500n009: Xo@q[13] |####                                    | [010%] 32s(E) 05m-28s(X)
+ <08m-05s> P1-r500n009: Xo@q[13] |#####                                   | [012%] 41s(E) 05m-27s(X)
+ <08m-13s> P1-r500n009: Xo@q[13] |######                                  | [015%] 49s(E) 05m-27s(X)
+ <08m-21s> P1-r500n009: Xo@q[13] |#######                                 | [017%] 57s(E) 05m-27s(X)
+ <08m-30s> P1-r500n009: Xo@q[13] |########                                | [020%] 01m-05s(E) 05m-28s(X)
+ <08m-38s> P1-r500n009: Xo@q[13] |#########                               | [022%] 01m-13s(E) 05m-28s(X)
+ <08m-46s> P1-r500n009: Xo@q[13] |##########                              | [025%] 01m-22s(E) 05m-28s(X)
+ <08m-54s> P1-r500n009: Xo@q[13] |###########                             | [027%] 01m-30s(E) 05m-28s(X)
+ <09m-03s> P1-r500n009: Xo@q[13] |############                            | [030%] 01m-38s(E) 05m-28s(X)
+ <09m-11s> P1-r500n009: Xo@q[13] |#############                           | [032%] 01m-46s(E) 05m-28s(X)
+ <09m-19s> P1-r500n009: Xo@q[13] |##############                          | [035%] 01m-54s(E) 05m-28s(X)
+ <09m-27s> P1-r500n009: Xo@q[13] |###############                         | [037%] 02m-03s(E) 05m-28s(X)
+ <09m-36s> P1-r500n009: Xo@q[13] |################                        | [040%] 02m-11s(E) 05m-28s(X)
+ <09m-44s> P1-r500n009: Xo@q[13] |#################                       | [042%] 02m-19s(E) 05m-28s(X)
+ <09m-52s> P1-r500n009: Xo@q[13] |##################                      | [045%] 02m-27s(E) 05m-28s(X)
+ <10m-00s> P1-r500n009: Xo@q[13] |###################                     | [047%] 02m-35s(E) 05m-28s(X)
+ <10m-08s> P1-r500n009: Xo@q[13] |####################                    | [050%] 02m-44s(E) 05m-28s(X)
+ <10m-16s> P1-r500n009: Xo@q[13] |#####################                   | [052%] 02m-52s(E) 05m-28s(X)
+ <10m-24s> P1-r500n009: Xo@q[13] |######################                  | [055%] 02m-59s(E) 05m-26s(X)
+ <10m-30s> P1-r500n009: Xo@q[13] |#######################                 | [057%] 03m-05s(E) 05m-23s(X)
+ <10m-36s> P1-r500n009: Xo@q[13] |########################                | [060%] 03m-11s(E) 05m-19s(X)
+ <10m-42s> P1-r500n009: Xo@q[13] |#########################               | [062%] 03m-17s(E) 05m-16s(X)
+ <10m-48s> P1-r500n009: Xo@q[13] |##########################              | [065%] 03m-23s(E) 05m-12s(X)
+ <10m-53s> P1-r500n009: Xo@q[13] |###########################             | [067%] 03m-29s(E) 05m-09s(X)
+ <10m-59s> P1-r500n009: Xo@q[13] |############################            | [070%] 03m-35s(E) 05m-07s(X)
+ <11m-05s> P1-r500n009: Xo@q[13] |#############################           | [072%] 03m-40s(E) 05m-04s(X)
+ <11m-11s> P1-r500n009: Xo@q[13] |##############################          | [075%] 03m-46s(E) 05m-02s(X)
+ <11m-17s> P1-r500n009: Xo@q[13] |###############################         | [077%] 03m-52s(E) 05m-00s(X)
+ <11m-23s> P1-r500n009: Xo@q[13] |################################        | [080%] 03m-58s(E) 04m-58s(X)
+ <11m-28s> P1-r500n009: Xo@q[13] |#################################       | [082%] 04m-04s(E) 04m-56s(X)
+ <11m-34s> P1-r500n009: Xo@q[13] |##################################      | [085%] 04m-10s(E) 04m-54s(X)
+ <11m-40s> P1-r500n009: Xo@q[13] |###################################     | [087%] 04m-15s(E) 04m-52s(X)
+ <11m-46s> P1-r500n009: Xo@q[13] |####################################    | [090%] 04m-21s(E) 04m-50s(X)
+ <11m-52s> P1-r500n009: Xo@q[13] |#####################################   | [092%] 04m-27s(E) 04m-49s(X)
+ <11m-57s> P1-r500n009: Xo@q[13] |######################################  | [095%] 04m-33s(E) 04m-47s(X)
+ <12m-03s> P1-r500n009: Xo@q[13] |####################################### | [097%] 04m-38s(E) 04m-45s(X)
+ <12m-08s> P1-r500n009: Xo@q[13] |########################################| [100%] 04m-43s(E) 04m-43s(X)
+ <12m-21s> P1-r500n009: [PARALLEL distribution for X Frequencies on 30 CPU] Loaded/Total (Percentual):1/2(50%)
+ <12m-21s> P1-r500n009: X@q[13] |                                        | [000%] --(E) --(X)
+ <12m-21s> P1-r500n009: X@q[13] |########################################| [100%] --(E) --(X)
+ <12m-23s> P1-r500n009: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):7667361/7667361(100%)
+ <12m-23s> P1-r500n009: [X-CG] R(p) Tot o/o(of R):   2023   4000    100
+ <12m-23s> P1-r500n009: Xo@q[14] |                                        | [000%] --(E) --(X)
+ <12m-32s> P1-r500n009: Xo@q[14] |#                                       | [002%] 08s(E) 05m-42s(X)
+ <12m-40s> P1-r500n009: Xo@q[14] |##                                      | [005%] 17s(E) 05m-41s(X)
+ <12m-49s> P1-r500n009: Xo@q[14] |###                                     | [007%] 25s(E) 05m-41s(X)
+ <12m-57s> P1-r500n009: Xo@q[14] |####                                    | [010%] 34s(E) 05m-42s(X)
+ <13m-06s> P1-r500n009: Xo@q[14] |#####                                   | [012%] 42s(E) 05m-41s(X)
+ <13m-14s> P1-r500n009: Xo@q[14] |######                                  | [015%] 51s(E) 05m-42s(X)
+ <13m-23s> P1-r500n009: Xo@q[14] |#######                                 | [017%] 59s(E) 05m-41s(X)
+ <13m-31s> P1-r500n009: Xo@q[14] |########                                | [020%] 01m-08s(E) 05m-41s(X)
+ <13m-40s> P1-r500n009: Xo@q[14] |#########                               | [022%] 01m-17s(E) 05m-42s(X)
+ <13m-49s> P1-r500n009: Xo@q[14] |##########                              | [025%] 01m-25s(E) 05m-42s(X)
+ <13m-57s> P1-r500n009: Xo@q[14] |###########                             | [027%] 01m-34s(E) 05m-42s(X)
+ <14m-06s> P1-r500n009: Xo@q[14] |############                            | [030%] 01m-42s(E) 05m-42s(X)
+ <14m-14s> P1-r500n009: Xo@q[14] |#############                           | [032%] 01m-51s(E) 05m-42s(X)
+ <14m-23s> P1-r500n009: Xo@q[14] |##############                          | [035%] 02m-00s(E) 05m-42s(X)
+ <14m-31s> P1-r500n009: Xo@q[14] |###############                         | [037%] 02m-08s(E) 05m-42s(X)
+ <14m-40s> P1-r500n009: Xo@q[14] |################                        | [040%] 02m-17s(E) 05m-42s(X)
+ <14m-49s> P1-r500n009: Xo@q[14] |#################                       | [042%] 02m-25s(E) 05m-42s(X)
+ <14m-57s> P1-r500n009: Xo@q[14] |##################                      | [045%] 02m-34s(E) 05m-42s(X)
+ <15m-06s> P1-r500n009: Xo@q[14] |###################                     | [047%] 02m-42s(E) 05m-42s(X)
+ <15m-14s> P1-r500n009: Xo@q[14] |####################                    | [050%] 02m-51s(E) 05m-42s(X)
+ <15m-23s> P1-r500n009: Xo@q[14] |#####################                   | [052%] 03m-00s(E) 05m-42s(X)
+ <15m-30s> P1-r500n009: Xo@q[14] |######################                  | [055%] 03m-07s(E) 05m-40s(X)
+ <15m-36s> P1-r500n009: Xo@q[14] |#######################                 | [057%] 03m-13s(E) 05m-36s(X)
+ <15m-42s> P1-r500n009: Xo@q[14] |########################                | [060%] 03m-19s(E) 05m-32s(X)
+ <15m-48s> P1-r500n009: Xo@q[14] |#########################               | [062%] 03m-25s(E) 05m-28s(X)
+ <15m-54s> P1-r500n009: Xo@q[14] |##########################              | [065%] 03m-31s(E) 05m-25s(X)
+ <16m-01s> P1-r500n009: Xo@q[14] |###########################             | [067%] 03m-37s(E) 05m-22s(X)
+ <16m-07s> P1-r500n009: Xo@q[14] |############################            | [070%] 03m-43s(E) 05m-19s(X)
+ <16m-13s> P1-r500n009: Xo@q[14] |#############################           | [072%] 03m-49s(E) 05m-16s(X)
+ <16m-19s> P1-r500n009: Xo@q[14] |##############################          | [075%] 03m-56s(E) 05m-14s(X)
+ <16m-25s> P1-r500n009: Xo@q[14] |###############################         | [077%] 04m-02s(E) 05m-12s(X)
+ <16m-31s> P1-r500n009: Xo@q[14] |################################        | [080%] 04m-08s(E) 05m-10s(X)
+ <16m-37s> P1-r500n009: Xo@q[14] |#################################       | [082%] 04m-14s(E) 05m-08s(X)
+ <16m-43s> P1-r500n009: Xo@q[14] |##################################      | [085%] 04m-20s(E) 05m-06s(X)
+ <16m-49s> P1-r500n009: Xo@q[14] |###################################     | [087%] 04m-26s(E) 05m-04s(X)
+ <16m-55s> P1-r500n009: Xo@q[14] |####################################    | [090%] 04m-32s(E) 05m-02s(X)
+ <17m-01s> P1-r500n009: Xo@q[14] |#####################################   | [092%] 04m-38s(E) 05m-01s(X)
+ <17m-07s> P1-r500n009: Xo@q[14] |######################################  | [095%] 04m-44s(E) 04m-59s(X)
+ <17m-13s> P1-r500n009: Xo@q[14] |####################################### | [097%] 04m-49s(E) 04m-57s(X)
+ <17m-18s> P1-r500n009: Xo@q[14] |########################################| [100%] 04m-55s(E) 04m-55s(X)
+ <17m-28s> P1-r500n009: [PARALLEL distribution for X Frequencies on 30 CPU] Loaded/Total (Percentual):1/2(50%)
+ <17m-28s> P1-r500n009: X@q[14] |                                        | [000%] --(E) --(X)
+ <17m-29s> P1-r500n009: X@q[14] |########################################| [100%] --(E) --(X)
+ <17m-30s> P1-r500n009: [08] Local Exchange-Correlation + Non-Local Fock
+ <17m-30s> P1-r500n009: [PARALLEL Self_Energy for QPs on 1 CPU] Loaded/Total (Percentual):6/6(100%)
+ <17m-30s> P1-r500n009: [PARALLEL Self_Energy for Q(ibz) on 8 CPU] Loaded/Total (Percentual):2/14(14%)
+ <17m-30s> P1-r500n009: [PARALLEL Self_Energy for G bands on 60 CPU] Loaded/Total (Percentual):2/64(3%)
+ <17m-31s> P1-r500n009: [PARALLEL distribution for Wave-Function states] Loaded/Total(Percentual):22/896(2%)
+ <17m-31s> P1-r500n009: [FFT-HF/Rho] Mesh size:   32   32  231
+ <17m-31s> P1-r500n009: EXS |                                        | [000%] --(E) --(X)
+ <17m-31s> P1-r500n009: EXS |########################################| [100%] --(E) --(X)
+ <17m-32s> P1-r500n009: [xc] Functional : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+ <17m-32s> P1-r500n009: [xc] LIBXC used to calculate xc functional
+ <17m-33s> P1-r500n009: [08.01] Hartree-Fock occupations report
+ <17m-33s> P1-r500n009: [09] Dyson equation: Newton solver
+ <17m-57s> P1-r500n009: [WARNING] Response block size in GW reduced to 2769    RL (12052   mHa)
+ <17m-58s> P1-r500n009: [09.01] RIM-W interpolation
+ <17m-58s> P1-r500n009: [WARNING]RIM-W works only for 2D semiconductors with slab cutoff
+ <17m-58s> P1-r500n009: [09.01.01] RIM-W integrals
+ <17m-58s> P1-r500n009: Random points |                                        | [000%] --(E) --(X)
+ <18m-01s> P1-r500n009: Random points |########################################| [100%] 02s(E) 02s(X)
+ <18m-01s> P1-r500n009: [09.01.02] RIM integrals
+ <18m-01s> P1-r500n009: Momenta loop |                                        | [000%] --(E) --(X)
+ <18m-03s> P1-r500n009: Momenta loop |########################################| [100%] --(E) --(X)
+ <18m-03s> P1-r500n009: [09.02] G0W0 (W PPA)
+ <18m-03s> P1-r500n009: [PARALLEL Self_Energy for QPs on 1 CPU] Loaded/Total (Percentual):6/6(100%)
+ <18m-03s> P1-r500n009: [PARALLEL Self_Energy for Q(ibz) on 8 CPU] Loaded/Total (Percentual):2/14(14%)
+ <18m-03s> P1-r500n009: [PARALLEL Self_Energy for G bands on 60 CPU] Loaded/Total (Percentual):20/1200(2%)
+ <18m-04s> P1-r500n009: [PARALLEL distribution for Wave-Function states] Loaded/Total(Percentual):161/16800(1%)
+ <18m-04s> P1-r500n009: [FFT-GW] Mesh size:   21   21  153
+ <18m-05s> P1-r500n009: G0W0 (W PPA) |                                        | [000%] --(E) --(X)
+ <18m-10s> P1-r500n009: G0W0 (W PPA) |##                                      | [005%] 05s(E) 01m-30s(X)
+ <18m-16s> P1-r500n009: G0W0 (W PPA) |####                                    | [010%] 10s(E) 01m-38s(X)
+ <18m-21s> P1-r500n009: G0W0 (W PPA) |######                                  | [016%] 15s(E) 01m-34s(X)
+ <18m-26s> P1-r500n009: G0W0 (W PPA) |########                                | [021%] 21s(E) 01m-37s(X)
+ <18m-31s> P1-r500n009: G0W0 (W PPA) |##########                              | [026%] 26s(E) 01m-38s(X)
+ <18m-37s> P1-r500n009: G0W0 (W PPA) |#############                           | [032%] 31s(E) 01m-36s(X)
+ <18m-42s> P1-r500n009: G0W0 (W PPA) |###############                         | [037%] 36s(E) 01m-38s(X)
+ <18m-47s> P1-r500n009: G0W0 (W PPA) |#################                       | [042%] 42s(E) 01m-39s(X)
+ <18m-52s> P1-r500n009: G0W0 (W PPA) |###################                     | [048%] 47s(E) 01m-37s(X)
+ <18m-58s> P1-r500n009: G0W0 (W PPA) |#####################                   | [052%] 52s(E) 01m-39s(X)
+ <19m-04s> P1-r500n009: G0W0 (W PPA) |#######################                 | [058%] 58s(E) 01m-39s(X)
+ <19m-09s> P1-r500n009: G0W0 (W PPA) |#########################               | [064%] 01m-03s(E) 01m-38s(X)
+ <19m-14s> P1-r500n009: G0W0 (W PPA) |###########################             | [069%] 01m-09s(E) 01m-39s(X)
+ <19m-20s> P1-r500n009: G0W0 (W PPA) |##############################          | [075%] 01m-15s(E) 01m-39s(X)
+ <19m-25s> P1-r500n009: G0W0 (W PPA) |################################        | [081%] 01m-20s(E) 01m-38s(X)
+ <19m-31s> P1-r500n009: G0W0 (W PPA) |##################################      | [086%] 01m-25s(E) 01m-39s(X)
+ <19m-37s> P1-r500n009: G0W0 (W PPA) |####################################    | [092%] 01m-31s(E) 01m-39s(X)
+ <19m-42s> P1-r500n009: G0W0 (W PPA) |####################################### | [097%] 01m-36s(E) 01m-38s(X)
+ <19m-44s> P1-r500n009: G0W0 (W PPA) |########################################| [100%] 01m-38s(E) 01m-38s(X)
+ <37m-51s> P1-r500n009: [09.03] QP properties and I/O
+ <37m-51s> P1-r500n009: [10] Timing Overview
+ <37m-51s> P1-r500n009: [TIMING]                               io_ATMPROJ_pwscf :      0.0000s CPU
+ <37m-51s> P1-r500n009: [TIMING]                        IO_and_Messaging_switch :      0.0001s CPU (12 calls,   0.009 msec avg)
+ <37m-51s> P1-r500n009: [TIMING]                                          io_BS :      0.0001s CPU
+ <37m-51s> P1-r500n009: [TIMING]                                   PP_uspp_init :      0.0002s CPU ( 3 calls,   0.050 msec avg)
+ <37m-51s> P1-r500n009: [TIMING]                                   io_KB_abinit :      0.0002s CPU
+ <37m-51s> P1-r500n009: [TIMING]                                 io_Double_Grid :      0.0008s CPU
+ <37m-51s> P1-r500n009: [TIMING]                                    io_KB_pwscf :      0.0057s CPU
+ <37m-51s> P1-r500n009: [TIMING]                                 Coulomb Cutoff :      0.0072s CPU
+ <37m-51s> P1-r500n009: [TIMING]                                       io_QINDX :      0.0121s CPU ( 2 calls,   6.029 msec avg)
+ <37m-51s> P1-r500n009: [TIMING]                                     io_DIPOLES :      0.0148s CPU ( 2 calls,   7.408 msec avg)
+ <37m-51s> P1-r500n009: [TIMING]                                          io_HF :      0.0158s CPU ( 3 calls,   5.261 msec avg)
+ <37m-51s> P1-r500n009: [TIMING]                                     io_COL_CUT :      0.0183s CPU ( 3 calls,   6.103 msec avg)
+ <37m-51s> P1-r500n009: [TIMING]                                        Dipoles :      0.0388s CPU
+ <37m-51s> P1-r500n009: [TIMING]                                   io_QP_and_GF :      0.0394s CPU
+ <37m-51s> P1-r500n009: [TIMING]                                        io_GROT :      0.0545s CPU ( 2 calls,  27.249 msec avg)
+ <37m-51s> P1-r500n009: [TIMING]     MATRIX transfer (X_G_finite_q_X_redux_1_1) :      0.0820s CPU ( 3 calls,  27.330 msec avg)
+ <37m-51s> P1-r500n009: [TIMING]     MATRIX transfer (X_G_finite_q_X_redux_1_2) :      0.0909s CPU ( 3 calls,  30.307 msec avg)
+ <37m-51s> P1-r500n009: [TIMING]     MATRIX transfer (X_G_finite_q_X_redux_2_1) :      0.0943s CPU ( 3 calls,  31.419 msec avg)
+ <37m-51s> P1-r500n009: [TIMING]     MATRIX transfer (X_G_finite_q_X_redux_2_2) :      0.0982s CPU ( 3 calls,  32.720 msec avg)
+ <37m-51s> P1-r500n009: [TIMING]                                          io_WF :      0.1285s CPU (37 calls,   3.472 msec avg)
+ <37m-51s> P1-r500n009: [TIMING]                                    io_fragment :      0.1772s CPU (65 calls,   2.727 msec avg)
+ <37m-51s> P1-r500n009: [TIMING]                                   scatter_Gamp :      0.1935s CPU (14 calls,  13.821 msec avg)
+ <37m-51s> P1-r500n009: [TIMING]                            XC_potential_driver :      0.3241s CPU ( 2 calls, 162.030 msec avg)
+ <37m-51s> P1-r500n009: [TIMING]                                      XCo_local :      0.3430s CPU
+ <37m-51s> P1-r500n009: [TIMING]                                             HF :      0.3653s CPU
+ <37m-51s> P1-r500n009: [TIMING]                                      X (REDUX) :      0.5510s CPU ( 3 calls, 183.679 msec avg)
+ <37m-51s> P1-r500n009: [TIMING]                                      FFT_setup :      0.5541s CPU ( 5 calls, 110.812 msec avg)
+ <37m-51s> P1-r500n009: [TIMING]                                    WF_load_FFT :      0.6357s CPU ( 3 calls, 211.887 msec avg)
+ <37m-51s> P1-r500n009: [TIMING]                                    RIM-W-coeff :      0.9296s CPU
+ <37m-51s> P1-r500n009: [TIMING]                                      HF(REDUX) :      1.0463s CPU
+ <37m-51s> P1-r500n009: [TIMING]                            PARALLEL_lin_system :      1.5299s CPU ( 3 calls,   0.510 sec avg)
+ <37m-51s> P1-r500n009: [TIMING]                                 LINEAR ALGEBRA :      1.5299s CPU ( 3 calls,   0.510 sec avg)
+ <37m-51s> P1-r500n009: [TIMING]                                  X (procedure) :      1.7499s CPU ( 3 calls,   0.583 sec avg)
+ <37m-51s> P1-r500n009: [TIMING]                                           io_X :      4.4133s CPU (40 calls,   0.110 sec avg)
+ <37m-51s> P1-r500n009: [TIMING]                                          RIM-W :      4.8233s CPU
+ <37m-51s> P1-r500n009: [TIMING]                                 eval_G_minus_G :     24.4991s CPU
+ <37m-51s> P1-r500n009: [TIMING]                                     Xo (REDUX) :     42.0425s CPU ( 3 calls,  14.014 sec avg)
+ <37m-51s> P1-r500n009: [TIMING]                                        GW(ppa) :    348.6465s CPU
+ <37m-51s> P1-r500n009: [TIMING]                                      GW(REDUX) :      13m-57s CPU
+ <37m-51s> P1-r500n009: [TIMING]                                 Xo (procedure) :      16m-40s CPU ( 3 calls, 333.495 sec avg)
+ <37m-51s> P1-r500n009: [11] Memory Overview
+ <37m-51s> P1-r500n009: [12] Game Over & Game summary
+ <37m-51s> P1-r500n009: [TIMING]            [Time-Profile]: 37m-51s

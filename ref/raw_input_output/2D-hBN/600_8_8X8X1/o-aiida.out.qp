@@ -1,0 +1,108 @@
+#                                                                     
+#  ____  ____     _       ____    ____  ______      ___               
+# |_  _||_  _|   / \     |_   \  /   _||_   _ \   ."   `.             
+#   \ \  / /    / _ \      |   \/   |    | |_) | /  .-.  \            
+#    \ \/ /    / ___ \     | |\  /| |    |  __". | |   | |            
+#    _|  |_  _/ /   \ \_  _| |_\/_| |_  _| |__) |\  `-"  /            
+#   |______||____| |____||_____||_____||_______/  `.___."             
+#                                                                     
+#                                                                     
+#                                                                     
+# Version 5.1.0 Revision 20393 Hash (prev commit) 4910e0284           
+#                  Branch is devel-RIM-W                              
+#            MPI+OpenMP+SLK+SLEPC+HDF5_IO Build                       
+#                http://www.yambo-code.org                            
+#
+#
+# GW solver                                       : Newton
+# GW approximation                                : PPA
+# PPA imaginary Energy                            :   27.2113838    [ev]
+# RIM G`s                                         :   35
+# RIM random pts                                  :   5000000
+# GW SC iterations                                : 0
+# dS/dw steps                                     :  2
+# dS/dw step                                      :  0.100000001    [ev]
+# X G`s                                           :  245 [used]
+# X G`s                                           :  245 [disk]
+# X bands                                         :     1   600
+# X poles                                         :   100.000000    [o/o]
+# X e/h E range                                   :  -1.00000000     -1.00000000    [ev]
+# X xc-Kernel                                     : none
+# X BZ energy Double Grid                         : no
+# Sc/G bands                                      :     1   600
+# Sc/G damping                                    :  0.100000001    [ev]
+# Sc bands terminator                             : yes
+# Sc terminator kind                              : BG
+# Sc Terminator pole                              :   40.8170776   
+# Sx RL components                                :   85519
+#                                                 
+# QP @ state[ 1 ] K range                         :  1  1
+# QP @ state[ 1 ] b range                         :   4   5
+# QP @ state[ 2 ] K range                         :  1  1
+# QP @ state[ 2 ] b range                         :  10  10
+# QP @ state[ 3 ] K range                         :   5   5
+# QP @ state[ 3 ] b range                         :   4   5
+# GF energies kind                                : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+# GF WF`s kind                                    : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+# Xs energies kind                                : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+# Xs WF`s kind                                    : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+#
+# Vxc  =Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+# Vnlxc=Hartree-Fock
+#
+#    K-point            Band               Eo [eV]            E-Eo [eV]          Sc|Eo [eV]
+#
+        1                   4                -1.164793          -1.398672           2.682236
+        1                   5                 4.899035           0.611323          -1.662489
+        1                  10                 10.19139           0.444332          -1.197019
+         5                  4                -0.717456          -1.431093           1.941694
+         5                  5                 5.052033           1.298376          -3.441010
+# 
+# 10/29/2021 at 18:36 yambo @ s3node14 [start]
+# 10/29/2021 at 18:37                  [end]
+#  
+# Timing   [Min/Max/Average]: 01m-32s/01m-32s/01m-32s
+#
+# .-Input file  aiida.in
+# | HF_and_locXC                     # [R] Hartree-Fock
+# | gw0                              # [R] GW approximation
+# | rim_cut                          # [R] Coulomb potential
+# | ppa                              # [R][Xp] Plasmon Pole Approximation for the Screened Interaction
+# | BoseTemp= 0.000000         eV    # Bosonic Temperature
+# | FFTGvecs= 13619            RL    # [FFT] Plane-waves
+# | X_and_IO_CPU= "1 1 1 20 1"       # [PARALLEL] CPUs for each role
+# | X_and_IO_ROLEs= "q k g c v"      # [PARALLEL] CPUs roles (q,g,k,c,v)
+# | X_and_IO_nCPU_LinAlg_INV= 16     # [PARALLEL] CPUs for Linear Algebra (if -1 it is automatically set)
+# | X_Threads= 2                     # [OPENMP/X] Number of threads for response functions
+# | DIP_CPU= "1 20 1"                # [PARALLEL] CPUs for each role
+# | DIP_ROLEs= "k c v"               # [PARALLEL] CPUs roles (k,c,v)
+# | DIP_Threads= 2                   # [OPENMP/X] Number of threads for dipoles
+# | SE_CPU= "1 1 2 10"               # [PARALLEL] CPUs for each role
+# | SE_ROLEs= "q g qp b"             # [PARALLEL] CPUs roles (q,qp,b)
+# | SE_Threads= 2                    # [OPENMP/GW] Number of threads for self-energy
+# | RandQpts=  5000000               # [RIM] Number of random q-points in the BZ
+# | RandGvec=  35              RL    # [RIM] Coulomb interaction RS components
+# | CUTGeo= "slab z"                 # [CUT] Coulomb Cutoff geometry: box/cylinder/sphere/ws/slab X/Y/Z/XY..
+# | % CUTBox
+# |  0.000000 | 0.000000 | 0.000000 |        # [CUT] [au] Box sides
+# | %
+# | CUTRadius= 0.000000              # [CUT] [au] Sphere/Cylinder radius
+# | CUTCylLen= 0.000000              # [CUT] [au] Cylinder length
+# | CUTwsGvec= 0.000000              # [CUT] WS cutoff: number of G to be modified
+# | EXXRLvcs=  85519           RL    # [XX] Exchange    RL components
+# | VXCRLvcs=  85519           RL    # [XC] XCpotential RL components
+# | % GbndRnge
+# |     1 |  600 |                       # [GW] G[W] bands range
+# | %
+# | GTermKind= "BG"                  # [GW] GW terminator ("none","BG" Bruneval-Gonze,"BRS" Berger-Reining-Sottile)
+# | DysSolver= "n"                   # [GW] Dyson Equation solver ("n","s","g")
+# | %QPkrange                        # [GW] QP generalized Kpoint/Band indices
+# | 1|1|10|10|
+# | 1|1|4|4|
+# | 1|1|5|5|
+# | 5|5|4|4|
+# | 5|5|5|5|
+# | %
+# | %QPerange                        # [GW] QP generalized Kpoint/Energy indices
+# | 1|10| 0.000000|-1.000000|
+# | %

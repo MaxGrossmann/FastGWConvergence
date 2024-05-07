@@ -36,6 +36,7 @@ class conv_data:
     cut_max:            maximum cutoff
     ref_flag:           whether the point with maximum convergence parameters should be calculated
     write_npj:          enable npj style input files
+    flag_2d:            flag for 2D materials (adjusts RIM)
     """
 
     def __init__(
@@ -50,6 +51,7 @@ class conv_data:
         cut_max=46,
         ref_flag=False,
         write_npj=False,
+        flag_2d=False,
     ):
         """
         Function that initializes all important parameters for the CS convergence algorithm.
@@ -65,6 +67,7 @@ class conv_data:
         self.cut_max = cut_max
         self.ref_flag = ref_flag
         self.write_npj = write_npj
+        self.flag_2d = flag_2d
 
         # complete the path to r_setup
         self.rsetup = os.path.join(self.path_to_rsetup, "r_setup")
@@ -112,11 +115,11 @@ class conv_data:
                 return False, True  # conv_flag, bnd_increase_flag
             if self.write_npj:
                 f_name = yambo_write.write_g0w0_npj(
-                    self.bnd_start, self.cut_start, self.bnd_start, self.kpt_bnd_idx
+                    self.bnd_start, self.cut_start, self.bnd_start, self.kpt_bnd_idx, flag_2d=self.flag_2d,
                 )
             else:
                 f_name = yambo_write.write_g0w0(
-                    self.bnd_start, self.cut_start, self.bnd_start, self.kpt_bnd_idx
+                    self.bnd_start, self.cut_start, self.bnd_start, self.kpt_bnd_idx, flag_2d=self.flag_2d,
                 )
             self.fn.append(f_name)
             step_time = time.time()
@@ -144,11 +147,11 @@ class conv_data:
                 )
                 if self.write_npj:
                     f_name = yambo_write.write_g0w0_npj(
-                        self.bnd_max, self.cut_max, self.bnd_max, self.kpt_bnd_idx
+                        self.bnd_max, self.cut_max, self.bnd_max, self.kpt_bnd_idx, flag_2d=self.flag_2d,
                     )
                 else:
                     f_name = yambo_write.write_g0w0(
-                        self.bnd_max, self.cut_max, self.bnd_max, self.kpt_bnd_idx
+                        self.bnd_max, self.cut_max, self.bnd_max, self.kpt_bnd_idx, flag_2d=self.flag_2d,
                     )
                 self.fn.append(f_name)
                 step_time = time.time()
@@ -190,11 +193,11 @@ class conv_data:
                 self.bnd += self.bnd_step
                 if self.write_npj:
                     f_name = yambo_write.write_g0w0_npj(
-                        self.bnd, self.cut, self.bnd, self.kpt_bnd_idx
+                        self.bnd, self.cut, self.bnd, self.kpt_bnd_idx, flag_2d=self.flag_2d,
                     )
                 else:
                     f_name = yambo_write.write_g0w0(
-                        self.bnd, self.cut, self.bnd, self.kpt_bnd_idx
+                        self.bnd, self.cut, self.bnd, self.kpt_bnd_idx, flag_2d=self.flag_2d,
                     )
                 self.fn.append(f_name)
                 step_time = time.time()
@@ -226,11 +229,11 @@ class conv_data:
                 self.cut += self.cut_step
                 if self.write_npj:
                     f_name = yambo_write.write_g0w0_npj(
-                        self.bnd, self.cut, self.bnd, self.kpt_bnd_idx
+                        self.bnd, self.cut, self.bnd, self.kpt_bnd_idx, flag_2d=self.flag_2d,
                     )
                 else:
                     f_name = yambo_write.write_g0w0(
-                        self.bnd, self.cut, self.bnd, self.kpt_bnd_idx
+                        self.bnd, self.cut, self.bnd, self.kpt_bnd_idx, flag_2d=self.flag_2d,
                     )
                 self.fn.append(f_name)
                 step_time = time.time()
@@ -430,6 +433,7 @@ class conv_data_npj:
     max_grid_shift:     maximum number of allowed grid shifts
     write_npj:          enable npj style input files
     fftgvecs:           only used for C2 example
+    flag_2d:            flag for 2D materials (adjusts RIM)
     """
 
     def __init__(
@@ -447,6 +451,7 @@ class conv_data_npj:
         max_grid_shift=5,
         write_npj=False,
         fftgvecs=None,
+        flag_2d=False,
     ):
         """
         Function that initializes all important parameters for the NPJ convergence algorithm.
@@ -464,6 +469,10 @@ class conv_data_npj:
         self.conv_hessian = conv_hessian
         self.max_grid_shift = max_grid_shift
         self.write_npj = write_npj
+        self.fftgvecs = fftgvecs
+        self.flag_2d = flag_2d
+        
+        # initializations
         self.gap = np.array(0)
         self.iter = []
 
@@ -497,9 +506,6 @@ class conv_data_npj:
 
         # setup the array that contains the information for plotting
         self.grid_plot = np.array([])
-
-        # fftgvecs
-        self.fftgvecs = fftgvecs
 
     def create_grid(
         self,
@@ -573,6 +579,7 @@ class conv_data_npj:
                             p[0],
                             self.kpt_bnd_idx,
                             fftgvecs=self.fftgvecs,
+                            flag_2d=self.flag_2d,
                         )
                     else:
                         f_name = yambo_write.write_g0w0(
@@ -581,6 +588,7 @@ class conv_data_npj:
                             p[0],
                             self.kpt_bnd_idx,
                             fftgvecs=self.fftgvecs,
+                            flag_2d=self.flag_2d,
                         )
                     self.fn.append(f_name)
                     step_time = time.time()
@@ -603,6 +611,7 @@ class conv_data_npj:
                         p[0],
                         self.kpt_bnd_idx,
                         fftgvecs=self.fftgvecs,
+                        flag_2d=self.flag_2d,
                     )
                 else:
                     f_name = yambo_write.write_g0w0(
@@ -611,6 +620,7 @@ class conv_data_npj:
                         p[0],
                         self.kpt_bnd_idx,
                         fftgvecs=self.fftgvecs,
+                        flag_2d=self.flag_2d,
                     )
                 self.fn.append(f_name)
                 step_time = time.time()
@@ -668,6 +678,7 @@ class conv_data_npj:
                 point[0],
                 self.kpt_bnd_idx,
                 fftgvecs=self.fftgvecs,
+                flag_2d=self.flag_2d,
             )
         else:
             f_name = yambo_write.write_g0w0(
@@ -676,6 +687,7 @@ class conv_data_npj:
                 point[0],
                 self.kpt_bnd_idx,
                 fftgvecs=self.fftgvecs,
+                flag_2d=self.flag_2d,
             )
         self.fn.append(f_name)
         step_time = time.time()

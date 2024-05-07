@@ -1,0 +1,346 @@
+
+
+____    ____    ___      .___  ___.  .______     ______
+\   \  /   /   /   \     |   \/   |  |   _  \   /  __  \
+ \   \/   /   /  ^  \    |  \  /  |  |  |_)  | |  |  |  |
+  \_    _/   /  /_\  \   |  |\/|  |  |   _  <  |  |  |  |
+    |  |    /  _____  \  |  |  |  |  |  |_)  | |  `--"  |
+    |__|   /__/     \__\ |__|  |__|  |______/   \______/
+
+
+
+ <---> P1: [01] MPI/OPENMP structure, Files & I/O Directories
+ <---> P1: MPI Cores-Threads   : 20(CPU)-2(threads)
+ <---> P1: MPI Cores-Threads   : DIP(environment)-1 20 1(CPUs)-k c v(ROLEs)
+ <---> P1: MPI Cores-Threads   : X_and_IO(environment)-1 1 1 20 1(CPUs)-q k g c v(ROLEs)
+ <---> P1: MPI Cores-Threads   : SE(environment)-1 1 2 10(CPUs)-q g qp b(ROLEs)
+ <---> P1: [02] CORE Variables Setup
+ <---> P1: [02.01] Unit cells
+ <---> P1: [02.02] Symmetries
+ <---> P1: [02.03] Reciprocal space
+ <---> P1: [02.04] K-grid lattice
+ <---> P1: Grid dimensions      :  16  16
+ <---> P1: [02.05] Energies & Occupations
+ <---> P1: [03] Transferred momenta grid and indexing
+ <---> P1: [04] Coloumb potential Random Integration (RIM)
+ <---> P1: [04.01] RIM initialization
+ <---> P1: Random points |                                        | [000%] --(E) --(X)
+ <03s> P1: Random points |########################################| [100%] 02s(E) 02s(X)
+ <03s> P1: [04.02] RIM integrals
+ <03s> P1: Momenta loop |                                        | [000%] --(E) --(X)
+ <05s> P1: Momenta loop |########################################| [100%] 02s(E) 02s(X)
+ <05s> P1: [05] Coloumb potential CutOffslab
+ <05s> P1: [06] Dipoles
+ <05s> P1: [PARALLEL DIPOLES for K(ibz) on 1 CPU] Loaded/Total (Percentual):30/30(100%)
+ <05s> P1: [PARALLEL DIPOLES for CON bands on 20 CPU] Loaded/Total (Percentual):10/196(5%)
+ <05s> P1: [PARALLEL DIPOLES for VAL bands on 1 CPU] Loaded/Total (Percentual):4/4(100%)
+ <05s> P1: [DIP] Checking dipoles header
+ <06s> P1: [WARNING][DIP] Database not correct or missing. To be computed
+ <06s> P1: [x,Vnl] computed using 16 projectors
+ <06s> P1: Dipoles: P, V and iR (T) |                                        | [000%] --(E) --(X)
+ <06s> P1: [PARALLEL distribution for Wave-Function states] Loaded/Total(Percentual):14/200(7%)
+ <09s> P1: Dipoles: P, V and iR (T) |########################################| [100%] 02s(E) 02s(X)
+ <09s> P1: [DIP] Writing dipoles header
+ <09s> P1: [07] Dynamic Dielectric Matrix (PPA)
+ <10s> P1: [PARALLEL Response_G_space_and_IO for K(bz) on 1 CPU] Loaded/Total (Percentual):256/256(100%)
+ <10s> P1: [PARALLEL Response_G_space_and_IO for Q(ibz) on 1 CPU] Loaded/Total (Percentual):30/30(100%)
+ <10s> P1: [PARALLEL Response_G_space_and_IO for K-q(ibz) on 1 CPU] Loaded/Total (Percentual):30/30(100%)
+ <10s> P1: [LA] SERIAL linear algebra
+ <10s> P1: [PARALLEL Response_G_space_and_IO for K(ibz) on 1 CPU] Loaded/Total (Percentual):30/30(100%)
+ <10s> P1: [PARALLEL Response_G_space_and_IO for CON bands on 20 CPU] Loaded/Total (Percentual):10/196(5%)
+ <10s> P1: [PARALLEL Response_G_space_and_IO for VAL bands on 1 CPU] Loaded/Total (Percentual):4/4(100%)
+ <10s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <10s> P1: [DIP] Checking dipoles header
+ <10s> P1: [MEMORY] Alloc WF%c( 121.1960 [Mb]) TOTAL:  159.3860 [Mb] (traced)  48.60000 [Mb] (memstat)
+ <10s> P1: [PARALLEL distribution for Wave-Function states] Loaded/Total(Percentual):420/6000(7%)
+ <10s> P1: [FFT-X] Mesh size:   18   18  114
+ <10s> P1: [X-CG] R(p) Tot o/o(of R):   1166  10240    100
+ <10s> P1: Xo@q[1] |                                        | [000%] --(E) --(X)
+ <11s> P1: Xo@q[1] |########################################| [100%] --(E) --(X)
+ <11s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <11s> P1: X@q[1] |                                        | [000%] --(E) --(X)
+ <11s> P1: X@q[1] |########################################| [100%] --(E) --(X)
+ <11s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <11s> P1: [X-CG] R(p) Tot o/o(of R):   5079  10240    100
+ <11s> P1: Xo@q[2] |                                        | [000%] --(E) --(X)
+ <15s> P1: Xo@q[2] |########################################| [100%] 03s(E) 03s(X)
+ <18s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <18s> P1: X@q[2] |                                        | [000%] --(E) --(X)
+ <18s> P1: X@q[2] |########################################| [100%] --(E) --(X)
+ <18s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <18s> P1: [X-CG] R(p) Tot o/o(of R):   4986  10240    100
+ <18s> P1: Xo@q[3] |                                        | [000%] --(E) --(X)
+ <22s> P1: Xo@q[3] |########################################| [100%] 03s(E) 03s(X)
+ <24s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <24s> P1: X@q[3] |                                        | [000%] --(E) --(X)
+ <24s> P1: X@q[3] |########################################| [100%] --(E) --(X)
+ <24s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <24s> P1: [X-CG] R(p) Tot o/o(of R):   5077  10240    100
+ <24s> P1: Xo@q[4] |                                        | [000%] --(E) --(X)
+ <28s> P1: Xo@q[4] |########################################| [100%] 03s(E) 03s(X)
+ <31s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <31s> P1: X@q[4] |                                        | [000%] --(E) --(X)
+ <31s> P1: X@q[4] |########################################| [100%] --(E) --(X)
+ <31s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <31s> P1: [X-CG] R(p) Tot o/o(of R):   4908  10240    100
+ <31s> P1: Xo@q[5] |                                        | [000%] --(E) --(X)
+ <35s> P1: Xo@q[5] |########################################| [100%] 03s(E) 03s(X)
+ <38s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <38s> P1: X@q[5] |                                        | [000%] --(E) --(X)
+ <38s> P1: X@q[5] |########################################| [100%] --(E) --(X)
+ <38s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <38s> P1: [X-CG] R(p) Tot o/o(of R):   5068  10240    100
+ <38s> P1: Xo@q[6] |                                        | [000%] --(E) --(X)
+ <41s> P1: Xo@q[6] |########################################| [100%] 03s(E) 03s(X)
+ <44s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <44s> P1: X@q[6] |                                        | [000%] --(E) --(X)
+ <44s> P1: X@q[6] |########################################| [100%] --(E) --(X)
+ <44s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <44s> P1: [X-CG] R(p) Tot o/o(of R):   5005  10240    100
+ <44s> P1: Xo@q[7] |                                        | [000%] --(E) --(X)
+ <48s> P1: Xo@q[7] |########################################| [100%] 03s(E) 03s(X)
+ <51s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <51s> P1: X@q[7] |                                        | [000%] --(E) --(X)
+ <51s> P1: X@q[7] |########################################| [100%] --(E) --(X)
+ <51s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <51s> P1: [X-CG] R(p) Tot o/o(of R):   5065  10240    100
+ <51s> P1: Xo@q[8] |                                        | [000%] --(E) --(X)
+ <55s> P1: Xo@q[8] |########################################| [100%] 03s(E) 03s(X)
+ <57s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <57s> P1: X@q[8] |                                        | [000%] --(E) --(X)
+ <57s> P1: X@q[8] |########################################| [100%] --(E) --(X)
+ <57s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <57s> P1: [X-CG] R(p) Tot o/o(of R):   2813  10240    100
+ <57s> P1: Xo@q[9] |                                        | [000%] --(E) --(X)
+ <01m-01s> P1: Xo@q[9] |########################################| [100%] 03s(E) 03s(X)
+ <01m-04s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <01m-04s> P1: X@q[9] |                                        | [000%] --(E) --(X)
+ <01m-04s> P1: X@q[9] |########################################| [100%] --(E) --(X)
+ <01m-04s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <01m-04s> P1: [X-CG] R(p) Tot o/o(of R):   5093  10240    100
+ <01m-04s> P1: Xo@q[10] |                                        | [000%] --(E) --(X)
+ <01m-08s> P1: Xo@q[10] |########################################| [100%] 04s(E) 04s(X)
+ <01m-11s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <01m-11s> P1: X@q[10] |                                        | [000%] --(E) --(X)
+ <01m-11s> P1: X@q[10] |########################################| [100%] --(E) --(X)
+ <01m-11s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <01m-11s> P1: [X-CG] R(p) Tot o/o(of R):   8770  10240    100
+ <01m-11s> P1: Xo@q[11] |                                        | [000%] --(E) --(X)
+ <01m-15s> P1: Xo@q[11] |########################################| [100%] 04s(E) 04s(X)
+ <01m-18s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <01m-18s> P1: X@q[11] |                                        | [000%] --(E) --(X)
+ <01m-18s> P1: X@q[11] |########################################| [100%] --(E) --(X)
+ <01m-18s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <01m-18s> P1: [X-CG] R(p) Tot o/o(of R):   8727  10240    100
+ <01m-18s> P1: Xo@q[12] |                                        | [000%] --(E) --(X)
+ <01m-22s> P1: Xo@q[12] |########################################| [100%] 04s(E) 04s(X)
+ <01m-25s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <01m-25s> P1: X@q[12] |                                        | [000%] --(E) --(X)
+ <01m-25s> P1: X@q[12] |########################################| [100%] --(E) --(X)
+ <01m-25s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <01m-25s> P1: [X-CG] R(p) Tot o/o(of R):   8767  10240    100
+ <01m-25s> P1: Xo@q[13] |                                        | [000%] --(E) --(X)
+ <01m-29s> P1: Xo@q[13] |########################################| [100%] 04s(E) 04s(X)
+ <01m-32s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <01m-32s> P1: X@q[13] |                                        | [000%] --(E) --(X)
+ <01m-32s> P1: X@q[13] |########################################| [100%] --(E) --(X)
+ <01m-32s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <01m-32s> P1: [X-CG] R(p) Tot o/o(of R):   8802  10240    100
+ <01m-32s> P1: Xo@q[14] |                                        | [000%] --(E) --(X)
+ <01m-36s> P1: Xo@q[14] |########################################| [100%] 04s(E) 04s(X)
+ <01m-38s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <01m-38s> P1: X@q[14] |                                        | [000%] --(E) --(X)
+ <01m-38s> P1: X@q[14] |########################################| [100%] --(E) --(X)
+ <01m-38s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <01m-38s> P1: [X-CG] R(p) Tot o/o(of R):   8514  10240    100
+ <01m-38s> P1: Xo@q[15] |                                        | [000%] --(E) --(X)
+ <01m-43s> P1: Xo@q[15] |########################################| [100%] 04s(E) 04s(X)
+ <01m-45s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <01m-45s> P1: X@q[15] |                                        | [000%] --(E) --(X)
+ <01m-45s> P1: X@q[15] |########################################| [100%] --(E) --(X)
+ <01m-45s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <01m-45s> P1: [X-CG] R(p) Tot o/o(of R):   8529  10240    100
+ <01m-45s> P1: Xo@q[16] |                                        | [000%] --(E) --(X)
+ <01m-50s> P1: Xo@q[16] |########################################| [100%] 04s(E) 04s(X)
+ <01m-52s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <01m-52s> P1: X@q[16] |                                        | [000%] --(E) --(X)
+ <01m-52s> P1: X@q[16] |########################################| [100%] --(E) --(X)
+ <01m-52s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <01m-52s> P1: [X-CG] R(p) Tot o/o(of R):   5033  10240    100
+ <01m-52s> P1: Xo@q[17] |                                        | [000%] --(E) --(X)
+ <01m-56s> P1: Xo@q[17] |########################################| [100%] 04s(E) 04s(X)
+ <01m-59s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <01m-59s> P1: X@q[17] |                                        | [000%] --(E) --(X)
+ <01m-59s> P1: X@q[17] |########################################| [100%] --(E) --(X)
+ <01m-59s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <01m-59s> P1: [X-CG] R(p) Tot o/o(of R):   8500  10240    100
+ <01m-59s> P1: Xo@q[18] |                                        | [000%] --(E) --(X)
+ <02m-03s> P1: Xo@q[18] |########################################| [100%] 04s(E) 04s(X)
+ <02m-06s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <02m-06s> P1: X@q[18] |                                        | [000%] --(E) --(X)
+ <02m-06s> P1: X@q[18] |########################################| [100%] --(E) --(X)
+ <02m-06s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <02m-06s> P1: [X-CG] R(p) Tot o/o(of R):   8067  10240    100
+ <02m-06s> P1: Xo@q[19] |                                        | [000%] --(E) --(X)
+ <02m-10s> P1: Xo@q[19] |########################################| [100%] 04s(E) 04s(X)
+ <02m-12s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <02m-12s> P1: X@q[19] |                                        | [000%] --(E) --(X)
+ <02m-12s> P1: X@q[19] |########################################| [100%] --(E) --(X)
+ <02m-12s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <02m-12s> P1: [X-CG] R(p) Tot o/o(of R):   8737  10240    100
+ <02m-12s> P1: Xo@q[20] |                                        | [000%] --(E) --(X)
+ <02m-17s> P1: Xo@q[20] |########################################| [100%] 04s(E) 04s(X)
+ <02m-19s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <02m-19s> P1: X@q[20] |                                        | [000%] --(E) --(X)
+ <02m-19s> P1: X@q[20] |########################################| [100%] --(E) --(X)
+ <02m-19s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <02m-19s> P1: [X-CG] R(p) Tot o/o(of R):   8102  10240    100
+ <02m-19s> P1: Xo@q[21] |                                        | [000%] --(E) --(X)
+ <02m-23s> P1: Xo@q[21] |########################################| [100%] 04s(E) 04s(X)
+ <02m-26s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <02m-26s> P1: X@q[21] |                                        | [000%] --(E) --(X)
+ <02m-26s> P1: X@q[21] |########################################| [100%] --(E) --(X)
+ <02m-26s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <02m-26s> P1: [X-CG] R(p) Tot o/o(of R):   5057  10240    100
+ <02m-26s> P1: Xo@q[22] |                                        | [000%] --(E) --(X)
+ <02m-30s> P1: Xo@q[22] |########################################| [100%] 04s(E) 04s(X)
+ <02m-33s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <02m-33s> P1: X@q[22] |                                        | [000%] --(E) --(X)
+ <02m-33s> P1: X@q[22] |########################################| [100%] --(E) --(X)
+ <02m-33s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <02m-33s> P1: [X-CG] R(p) Tot o/o(of R):   5071  10240    100
+ <02m-33s> P1: Xo@q[23] |                                        | [000%] --(E) --(X)
+ <02m-37s> P1: Xo@q[23] |########################################| [100%] 04s(E) 04s(X)
+ <02m-39s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <02m-39s> P1: X@q[23] |                                        | [000%] --(E) --(X)
+ <02m-39s> P1: X@q[23] |########################################| [100%] --(E) --(X)
+ <02m-39s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <02m-39s> P1: [X-CG] R(p) Tot o/o(of R):   8719  10240    100
+ <02m-39s> P1: Xo@q[24] |                                        | [000%] --(E) --(X)
+ <02m-44s> P1: Xo@q[24] |########################################| [100%] 04s(E) 04s(X)
+ <02m-46s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <02m-46s> P1: X@q[24] |                                        | [000%] --(E) --(X)
+ <02m-46s> P1: X@q[24] |########################################| [100%] --(E) --(X)
+ <02m-46s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <02m-46s> P1: [X-CG] R(p) Tot o/o(of R):   8532  10240    100
+ <02m-46s> P1: Xo@q[25] |                                        | [000%] --(E) --(X)
+ <02m-50s> P1: Xo@q[25] |########################################| [100%] 04s(E) 04s(X)
+ <02m-53s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <02m-53s> P1: X@q[25] |                                        | [000%] --(E) --(X)
+ <02m-53s> P1: X@q[25] |########################################| [100%] --(E) --(X)
+ <02m-53s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <02m-53s> P1: [X-CG] R(p) Tot o/o(of R):   8711  10240    100
+ <02m-53s> P1: Xo@q[26] |                                        | [000%] --(E) --(X)
+ <02m-57s> P1: Xo@q[26] |########################################| [100%] 04s(E) 04s(X)
+ <02m-59s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <02m-59s> P1: X@q[26] |                                        | [000%] --(E) --(X)
+ <02m-59s> P1: X@q[26] |########################################| [100%] --(E) --(X)
+ <02m-59s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <02m-59s> P1: [X-CG] R(p) Tot o/o(of R):   4908  10240    100
+ <02m-59s> P1: Xo@q[27] |                                        | [000%] --(E) --(X)
+ <03m-03s> P1: Xo@q[27] |########################################| [100%] 04s(E) 04s(X)
+ <03m-03s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <03m-03s> P1: X@q[27] |                                        | [000%] --(E) --(X)
+ <03m-03s> P1: X@q[27] |########################################| [100%] --(E) --(X)
+ <03m-03s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <03m-04s> P1: [X-CG] R(p) Tot o/o(of R):   8734  10240    100
+ <03m-04s> P1: Xo@q[28] |                                        | [000%] --(E) --(X)
+ <03m-08s> P1: Xo@q[28] |########################################| [100%] 04s(E) 04s(X)
+ <03m-08s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <03m-08s> P1: X@q[28] |                                        | [000%] --(E) --(X)
+ <03m-08s> P1: X@q[28] |########################################| [100%] --(E) --(X)
+ <03m-08s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <03m-08s> P1: [X-CG] R(p) Tot o/o(of R):   4959  10240    100
+ <03m-08s> P1: Xo@q[29] |                                        | [000%] --(E) --(X)
+ <03m-12s> P1: Xo@q[29] |########################################| [100%] 04s(E) 04s(X)
+ <03m-12s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <03m-12s> P1: X@q[29] |                                        | [000%] --(E) --(X)
+ <03m-12s> P1: X@q[29] |########################################| [100%] --(E) --(X)
+ <03m-12s> P1: [PARALLEL distribution for RL vectors(X) on 1 CPU] Loaded/Total (Percentual):12321/12321(100%)
+ <03m-12s> P1: [X-CG] R(p) Tot o/o(of R):   5087  10240    100
+ <03m-12s> P1: Xo@q[30] |                                        | [000%] --(E) --(X)
+ <03m-16s> P1: Xo@q[30] |########################################| [100%] 04s(E) 04s(X)
+ <03m-16s> P1: [PARALLEL distribution for X Frequencies on 20 CPU] Loaded/Total (Percentual):1/2(50%)
+ <03m-16s> P1: X@q[30] |                                        | [000%] --(E) --(X)
+ <03m-16s> P1: X@q[30] |########################################| [100%] --(E) --(X)
+ <03m-16s> P1: [MEMORY]  Free WF%c( 121.1960 [Mb]) TOTAL:  36.41600 [Mb] (traced)  52.71200 [Mb] (memstat)
+ <03m-16s> P1: [08] Local Exchange-Correlation + Non-Local Fock
+ <03m-16s> P1: [PARALLEL Self_Energy for QPs on 2 CPU] Loaded/Total (Percentual):2/5(40%)
+ <03m-16s> P1: [PARALLEL Self_Energy for Q(ibz) on 1 CPU] Loaded/Total (Percentual):30/30(100%)
+ <03m-16s> P1: [PARALLEL Self_Energy for G bands on 10 CPU] Loaded/Total (Percentual):1/10(10%)
+ <03m-16s> P1: [PARALLEL distribution for Wave-Function states] Loaded/Total(Percentual):32/300(11%)
+ <03m-16s> P1: [FFT-HF/Rho] Mesh size:   33   33  228
+ <03m-17s> P1: EXS |                                        | [000%] --(E) --(X)
+ <03m-19s> P1: EXS |########################################| [100%] 02s(E) 02s(X)
+ <03m-20s> P1: [xc] Functional : Perdew, Burke & Ernzerhof(X)+Perdew, Burke & Ernzerhof(C)
+ <03m-20s> P1: [xc] LIBXC used to calculate xc functional
+ <03m-20s> P1: [08.01] Hartree-Fock occupations report
+ <03m-20s> P1: [09] Dyson equation: Newton solver
+ <03m-20s> P1: [WARNING] Response block size in GW reduced to 111     RL (2070    mHa)
+ <03m-20s> P1: [09.01] RIM-W interpolation
+ <03m-20s> P1: [WARNING]RIM-W works only for 2D semiconductors with slab cutoff
+ <03m-20s> P1: [09.01.01] RIM-W integrals
+ <03m-20s> P1: Random points |                                        | [000%] --(E) --(X)
+ <03m-23s> P1: Random points |########################################| [100%] 02s(E) 02s(X)
+ <03m-23s> P1: [09.01.02] RIM integrals
+ <03m-23s> P1: Momenta loop |                                        | [000%] --(E) --(X)
+ <03m-26s> P1: Momenta loop |########################################| [100%] 02s(E) 02s(X)
+ <03m-26s> P1: [09.02] G0W0 (W PPA)
+ <03m-26s> P1: [PARALLEL Self_Energy for QPs on 2 CPU] Loaded/Total (Percentual):2/5(40%)
+ <03m-26s> P1: [PARALLEL Self_Energy for Q(ibz) on 1 CPU] Loaded/Total (Percentual):30/30(100%)
+ <03m-26s> P1: [PARALLEL Self_Energy for G bands on 10 CPU] Loaded/Total (Percentual):20/200(10%)
+ <03m-26s> P1: [MEMORY] Alloc WF%c( 173.1370 [Mb]) TOTAL:  212.1300 [Mb] (traced)  53.14000 [Mb] (memstat)
+ <03m-26s> P1: [PARALLEL distribution for Wave-Function states] Loaded/Total(Percentual):600/6000(10%)
+ <03m-26s> P1: [FFT-GW] Mesh size:   18   18  114
+ <03m-27s> P1: G0W0 (W PPA) |                                        | [000%] --(E) --(X)
+ <03m-32s> P1: G0W0 (W PPA) |####################                    | [050%] 05s(E) 10s(X)
+ <03m-37s> P1: G0W0 (W PPA) |##################################      | [086%] 10s(E) 12s(X)
+ <03m-38s> P1: G0W0 (W PPA) |########################################| [100%] 11s(E) 11s(X)
+ <03m-39s> P1: [MEMORY]  Free WF%c( 173.1370 [Mb]) TOTAL:  41.45900 [Mb] (traced)  53.68400 [Mb] (memstat)
+ <03m-45s> P1: [09.03] QP properties and I/O
+ <03m-45s> P1: [10] Timing Overview
+ <03m-45s> P1: [TIMING]                               io_ATMPROJ_pwscf :      0.0000s CPU
+ <03m-45s> P1: [TIMING]                                   io_KB_abinit :      0.0001s CPU
+ <03m-45s> P1: [TIMING]                                          io_BS :      0.0001s CPU
+ <03m-45s> P1: [TIMING]     MATRIX transfer (X_G_finite_q_X_redux_2_1) :      0.0006s CPU ( 30 calls,   0.020 msec avg)
+ <03m-45s> P1: [TIMING]                        IO_and_Messaging_switch :      0.0007s CPU ( 73 calls,   0.009 msec avg)
+ <03m-45s> P1: [TIMING]     MATRIX transfer (X_G_finite_q_X_redux_1_1) :      0.0008s CPU ( 30 calls,   0.027 msec avg)
+ <03m-45s> P1: [TIMING]     MATRIX transfer (X_G_finite_q_X_redux_1_2) :      0.0012s CPU ( 30 calls,   0.041 msec avg)
+ <03m-45s> P1: [TIMING]     MATRIX transfer (X_G_finite_q_X_redux_2_2) :      0.0012s CPU ( 30 calls,   0.042 msec avg)
+ <03m-45s> P1: [TIMING]                                 io_Double_Grid :      0.0013s CPU
+ <03m-45s> P1: [TIMING]                                   PP_uspp_init :      0.0018s CPU ( 33 calls,   0.054 msec avg)
+ <03m-45s> P1: [TIMING]                                      X (REDUX) :      0.0097s CPU ( 30 calls,   0.322 msec avg)
+ <03m-45s> P1: [TIMING]                                       io_QINDX :      0.0171s CPU (  2 calls,   8.544 msec avg)
+ <03m-45s> P1: [TIMING]                                 eval_G_minus_G :      0.0176s CPU
+ <03m-45s> P1: [TIMING]                              SERIAL_lin_system :      0.0261s CPU ( 30 calls,   0.869 msec avg)
+ <03m-45s> P1: [TIMING]                                 LINEAR ALGEBRA :      0.0263s CPU ( 30 calls,   0.877 msec avg)
+ <03m-45s> P1: [TIMING]                                   io_QP_and_GF :      0.0411s CPU
+ <03m-45s> P1: [TIMING]                                          io_HF :      0.0491s CPU (  3 calls,  16.365 msec avg)
+ <03m-45s> P1: [TIMING]                                  X (procedure) :      0.0655s CPU ( 30 calls,   2.184 msec avg)
+ <03m-45s> P1: [TIMING]                                     io_COL_CUT :      0.0691s CPU (  4 calls,  17.280 msec avg)
+ <03m-45s> P1: [TIMING]                                 Coulomb Cutoff :      0.0796s CPU
+ <03m-45s> P1: [TIMING]                                        io_GROT :      0.0889s CPU (  2 calls,  44.474 msec avg)
+ <03m-45s> P1: [TIMING]                                    io_KB_pwscf :      0.1241s CPU ( 32 calls,   3.877 msec avg)
+ <03m-45s> P1: [TIMING]                                    RIM-W-coeff :      0.2418s CPU
+ <03m-45s> P1: [TIMING]                            XC_potential_driver :      0.2465s CPU (  2 calls, 123.262 msec avg)
+ <03m-45s> P1: [TIMING]                                      XCo_local :      0.2551s CPU
+ <03m-45s> P1: [TIMING]                                   scatter_Gamp :      0.2697s CPU ( 90 calls,   2.997 msec avg)
+ <03m-45s> P1: [TIMING]                                          io_WF :      0.5548s CPU (187 calls,   2.967 msec avg)
+ <03m-45s> P1: [TIMING]                                     io_DIPOLES :      0.6350s CPU ( 64 calls,   9.922 msec avg)
+ <03m-45s> P1: [TIMING]                                    io_fragment :      0.8648s CPU (301 calls,   2.873 msec avg)
+ <03m-45s> P1: [TIMING]                                      FFT_setup :      0.9311s CPU ( 32 calls,  29.098 msec avg)
+ <03m-45s> P1: [TIMING]                                           io_X :      0.9643s CPU ( 98 calls,   9.840 msec avg)
+ <03m-45s> P1: [TIMING]                                      HF(REDUX) :      1.0173s CPU
+ <03m-45s> P1: [TIMING]                                    WF_load_FFT :      1.2711s CPU ( 33 calls,   0.039 sec avg)
+ <03m-45s> P1: [TIMING]                                             HF :      2.0879s CPU
+ <03m-45s> P1: [TIMING]                              DIPOLE_transverse :      2.9334s CPU
+ <03m-45s> P1: [TIMING]                                        Dipoles :      4.5478s CPU
+ <03m-45s> P1: [TIMING]                                            RIM :      4.8768s CPU
+ <03m-45s> P1: [TIMING]                                          RIM-W :      5.5177s CPU
+ <03m-45s> P1: [TIMING]                                      GW(REDUX) :      5.9979s CPU
+ <03m-45s> P1: [TIMING]                                        GW(ppa) :     12.0817s CPU
+ <03m-45s> P1: [TIMING]                                     Xo (REDUX) :     65.0097s CPU ( 30 calls,   2.167 sec avg)
+ <03m-45s> P1: [TIMING]                                 Xo (procedure) :    119.5104s CPU ( 30 calls,   3.984 sec avg)
+ <03m-45s> P1: [11] Memory Overview
+ <03m-45s> P1: [12] Game Over & Game summary
+ <03m-45s> P1: [TIMING]            [Time-Profile]: 03m-45s

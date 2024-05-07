@@ -1,0 +1,40 @@
+&CONTROL
+  calculation = 'nscf',
+  disk_io = 'low',
+  outdir = 'out/',
+  prefix = 'mp-10182',
+  pseudo_dir = '/usr/scratch4/magr4985/FGWC/FGWC/pseudo/SG15',
+/
+&SYSTEM
+  celldm(1) = 10.77148360122797,
+  degauss = 0.0004593661607577953,
+  ecutwfc = 67,
+  force_symmorphic = .TRUE.,
+  ibrav = 2,
+  nbnd = 1200,
+  occupations = 'smearing',
+  smearing = 'gaussian',
+  nat = 3,
+  ntyp = 3,
+/
+&ELECTRONS
+  conv_thr = 1d-10,
+  diago_full_acc = .TRUE.,
+  diago_thr_init = 5d-06,
+  diagonalization = 'david',
+/
+&IONS
+/
+&CELL
+/
+ATOMIC_SPECIES
+  Li  6.9410 Li.upf
+  P  30.9738 P.upf
+  Zn  65.4090 Zn.upf
+ATOMIC_POSITIONS crystal
+  Li 0.74999998 0.75000006 0.74999998
+  Zn 0.25000002 0.25000010 0.24999994
+  P 0.00000000 0.00000000 0.00000000
+K_POINTS automatic
+  8 8 8 0 0 0
+

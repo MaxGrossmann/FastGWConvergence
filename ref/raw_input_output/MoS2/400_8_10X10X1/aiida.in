@@ -1,0 +1,44 @@
+
+#
+# Y88b    /   e           e    e      888~~\    ,88~-_
+#  Y88b  /   d8b         d8b  d8b     888   |  d888   #   Y88b/   /Y88b       d888bdY88b    888 _/  88888    |
+#    Y8Y   /  Y88b     / Y88Y Y888b   888  \  88888    |
+#     Y   /____Y88b   /   YY   Y888b  888   |  Y888   /
+#    /   /      Y88b /          Y888b 888__/    `88_-~
+#
+#             AIIDA input plugin.  YAMBO >4.0 compatible
+#               http://www.yambo-code.org
+#
+rim_cut
+dipoles
+gw0
+HF_and_locXC
+ppa
+NLCC
+RIM_W
+CUTGeo =   'slab Z'
+Chimod =  'hartree'
+% BndsRnXp
+ 1 | 400.0 |   
+%
+% GbndRnge
+ 1 | 400.0 |   
+%
+% LongDrXp
+ 1.0 | 1.0 | 0.0 |   
+%
+NGsBlkXp = 8.000000 Ry
+% QPkrange
+1 | 1 | 64 | 64 |  
+1 | 1 | 13 | 13 |  
+1 | 1 | 14 | 14 |  
+14 | 14 | 14 | 14 |  
+6 | 6 | 13 | 13 |  
+6 | 6 | 14 | 14 |  
+%
+RandGvec = 100 RL
+RandQpts = 5000000 
+DysSolver =        'n'
+GTermKind =       'BG'
+RandGvecW = 13 RL
+PAR_def_mode = 'balanced'

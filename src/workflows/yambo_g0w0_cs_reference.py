@@ -53,7 +53,12 @@ bnd_max = 1200
 cut_max = 46
 
 # main loop over different k-point grids
-kppa_grid = [0, 10, 50, 100, 500]
+aspect_ratio = max(structure.lattice.abc) / min(structure.lattice.abc)
+if structure.lattice.abc[2] > 15 and aspect_ratio > 5:
+    print("\n2D MATERIAL", flush=True)
+    kppa_grid = [0, 1, 2, 3, 4]
+else:  
+    kppa_grid = [0, 10, 50, 100, 500]
 
 # number of k-point grids
 nk = len(kppa_grid)
@@ -99,7 +104,10 @@ for k in range(nk):
     if len(kppa_grid) > 1:
         if np.sum(np.abs(k_grid[k + 1, :] - k_grid[k, :])) == 0:
             while np.sum(np.abs(k_grid[k + 1] - k_points_grid)) == 0:
-                kppa_grid[k] += 10
+                if structure.lattice.abc[2] > 15 and aspect_ratio > 5:
+                    kppa_grid[k] += 1
+                else:
+                    kppa_grid[k] += 10
                 k_points_grid = get_kpt_grid(structure, kppa_grid[k])
                 print(
                     f"Updating k-point grid density to kppa = {kppa_grid[k]:d}...", flush=True
@@ -108,7 +116,10 @@ for k in range(nk):
         # update the k-point grid array and increase the next k-point density accordingly
         k_grid[k + 1, :] = k_points_grid
         if k < nk - 1:
-            kppa_grid[k + 1] = kppa_grid[k] + 10
+            if structure.lattice.abc[2] > 15 and aspect_ratio > 5:
+                kppa_grid[k + 1] = kppa_grid[k] + 1
+            else:
+                kppa_grid[k + 1] = kppa_grid[k] + 10
 
     # for write out later on
     print(

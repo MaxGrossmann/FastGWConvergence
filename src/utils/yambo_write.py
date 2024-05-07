@@ -16,6 +16,7 @@ def write_g0w0(
     ppa_energy=27.21138,
     f_name=None,
     fftgvecs=None,
+    flag_2d=False,
 ):
     """
     Creates and adjusts the input file for a Yambo G0W0 calculation in the current directory.
@@ -28,6 +29,7 @@ def write_g0w0(
         ppa_energy:         Plasmon pole imaginary energy in eV
         f_name:             Variable file name
         fftgvecs:           Currently only used for the C2 reference calculations
+        flag_2d:            Flag for 2D materials (adjusts RIM)
     OUTPUT:
         f_name:             Name of the written input file
     """
@@ -43,9 +45,35 @@ def write_g0w0(
     with open(f"{f_name}.in", "r") as f:
         gw_str = f.read()
 
+    # RIM 
+    rim_str = dedent(
+        r"""
+        RandQpts=0 [ \t]+ \# \[RIM\] Number of random q-points in the BZ
+        RandGvec= 1 [ \t]+ RL [ \t]+ \# \[RIM\] Coulomb interaction RS components
+        CUTGeo= \"none\" [ \t]+ \# \[CUT\] Coulomb Cutoff geometry: box\/cylinder\/sphere\/ws\/slab X\/Y\/Z\/XY..
+        """
+    )
+    if flag_2d:
+        rim_rep_str = dedent(
+            """
+            RIM_W
+            RandQpts= 5000024                # [RIM] Number of random q-points in the BZ
+            RandGvec= 100 RL                 # [RIM] Coulomb interaction RS components
+            CUTGeo= "slab Z"                 # [CUT] Coulomb Cutoff geometry: box/cylinder/sphere/ws/slab X/Y/Z/XY..
+            RandGvecW= 15 RL
+            """
+        )
+    else:
+        rim_rep_str = dedent(
+            """
+            RandQpts= 5000024                # [RIM] Number of random q-points in the BZ
+            RandGvec= 100 RL                 # [RIM] Coulomb interaction RS components
+            CUTGeo= "none"                   # [CUT] Coulomb Cutoff geometry: box/cylinder/sphere/ws/slab X/Y/Z/XY..
+            """
+        )
+    
     # adjust the input file
-    gw_str = re.sub(r"RandGvec=[ \t]+\d+[ \t]+RL", r"RandGvec= 100 RL", gw_str)
-    gw_str = re.sub(r"RandQpts=0", r"RandQpts= 5000024", gw_str)
+    gw_str = re.sub(rim_str, rim_rep_str, gw_str)
     gw_str = re.sub("#UseNLCC", "UseNLCC", gw_str)
     gw_str = re.sub(
         r"BndsRnXp\n[ \t]+[0-9]+[ \t]+\|[ \t]+[0-9]+[ \t]+\|",
@@ -96,6 +124,7 @@ def write_g0w0_npj(
     bnd_g,
     kpt_bnd_idx,
     fftgvecs=None,
+    flag_2d=False,
 ):
     """
     Creates and adjusts the input file for a Yambo G0W0 calculation in the current directory.
@@ -107,6 +136,7 @@ def write_g0w0_npj(
         bnd_g:              Number of bands included in the greens function
         kpt_bnd_idx:        Range kpt1:kpt:2 & bnd1:bnd2 for which the qp energies are calculated (array of length 4)
         fftgvecs:           Currently only used for the C2 reference calculations
+        flag_2d:            Flag for 2D materials (adjusts RIM)
     OUTPUT:
         f_name:             Name of the written input file
     """
@@ -118,39 +148,77 @@ def write_g0w0_npj(
     print(f"\n{f_name:s}\n", flush=True)
 
     # create file string
-    gw_str = dedent(
-        f"""\
-    #
-    # HTDF by MG2.  
-    # YAMBO > 5.0 compatible
-    # http://www.yambo-code.org
-    #
-    rim_cut
-    dipoles
-    gw0
-    HF_and_locXC
-    ppa
-    NLCC
-    Chimod = 'hartree'
-    % BndsRnXp
-    1 | {bnd_x:d} |   
-    %
-    % GbndRnge
-    1 | {bnd_g:d} |   
-    %
-    % LongDrXp
-    1.0 | 1.0 | 1.0 |   
-    %
-    NGsBlkXp = {cutoff_screening:d} Ry
-    % QPkrange
-    {kpt_bnd_idx[0]:d} | {kpt_bnd_idx[1]:d} | {kpt_bnd_idx[2]:d} | {kpt_bnd_idx[3]:d} |   
-    %
-    RandGvec = 100 RL
-    RandQpts = 5000024 
-    DysSolver = 'n'
-    GTermKind = 'BG'
-    """
-    )
+    if flag_2d:
+        gw_str = dedent(
+            f"""\
+        #
+        # FGWC by MG2.  
+        # YAMBO > 5.0 compatible
+        # http://www.yambo-code.org
+        #
+        rim_cut
+        dipoles
+        gw0
+        HF_and_locXC
+        ppa
+        RIM_W
+        CUTGeo =   'slab Z'
+        NLCC
+        Chimod = 'hartree'
+        % BndsRnXp
+        1 | {bnd_x:d} |   
+        %
+        % GbndRnge
+        1 | {bnd_g:d} |   
+        %
+        % LongDrXp
+        1.0 | 1.0 | 1.0 |   
+        %
+        NGsBlkXp = {cutoff_screening:d} Ry
+        % QPkrange
+        {kpt_bnd_idx[0]:d} | {kpt_bnd_idx[1]:d} | {kpt_bnd_idx[2]:d} | {kpt_bnd_idx[3]:d} |   
+        %
+        RandGvec = 100 RL
+        RandQpts = 5000024
+        RandGvecW = 15 RL 
+        DysSolver = 'n'
+        GTermKind = 'BG'
+        """
+        )        
+    else:
+        gw_str = dedent(
+            f"""\
+        #
+        # FGWC by MG2.  
+        # YAMBO > 5.0 compatible
+        # http://www.yambo-code.org
+        #
+        rim_cut
+        dipoles
+        gw0
+        HF_and_locXC
+        ppa
+        NLCC
+        Chimod = 'hartree'
+        % BndsRnXp
+        1 | {bnd_x:d} |   
+        %
+        % GbndRnge
+        1 | {bnd_g:d} |   
+        %
+        % LongDrXp
+        1.0 | 1.0 | 1.0 |   
+        %
+        NGsBlkXp = {cutoff_screening:d} Ry
+        % QPkrange
+        {kpt_bnd_idx[0]:d} | {kpt_bnd_idx[1]:d} | {kpt_bnd_idx[2]:d} | {kpt_bnd_idx[3]:d} |   
+        %
+        RandGvec = 100 RL
+        RandQpts = 5000024 
+        DysSolver = 'n'
+        GTermKind = 'BG'
+        """
+        )
 
     # append the reduction of the fftgvecs if needed
     if fftgvecs is not None:
