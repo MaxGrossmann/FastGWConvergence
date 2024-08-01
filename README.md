@@ -10,7 +10,7 @@ You may need to customize the *start_calc* function in *src/utitls/basic_utils* 
 **REQUIREMENTS**
 
 - Python >= v3.9 (miniconda with the following packages installed into the base enviroment)
-    - ase
+    - ase version 3.22.1 (newer versions removed the function "ibrav_to_cell" from ase.io.espresso)
     - numpy
     - scipy
     - pymatgen
