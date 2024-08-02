@@ -8,15 +8,18 @@ If you just want to converge your material system, use the *yambo_g0w0_conv* wor
 You may need to customize the *start_calc* function in *src/utitls/basic_utils* for your supercomputing environment or set *calc_setup = "local"* in *main.py* to perform single calculations on the current interactive node.
 
 **REQUIREMENTS**
+We give the exact version we used because we found that newer versions of certain packages break the code. Please use them to make sure everything works as intended.
 
-- Python >= v3.9 (miniconda with the following packages installed into the base enviroment)
-    - ase version 3.22.1 (newer versions removed the function "ibrav_to_cell" from ase.io.espresso)
-    - numpy
-    - scipy
-    - pymatgen
-    - matplotlib
-- Quantum ESPRESSO >= v7.1 ("/bin" directory loaded into the path, compiled for MPI)
-- YAMBO >= v5.1 ("/bin" directory loaded into the path, compiled for MPI)
+- Python 3.10.13 (with the following packages installed into the base enviroment)
+    - ase 3.22.1
+    - mp-api 0.41.1
+    - numpy 1.26.4
+    - scipy 1.12.0
+    - pymatgen 2024.3.1
+    - ipython 8.20.0
+    - matplotlib 3.8.3
+- Quantum ESPRESSO 7.1 ("/bin" directory loaded into the path, compiled for MPI)
+- YAMBO 5.1 ("/bin" directory loaded into the path, compiled for MPI)
 
 **SETUP/USAGE**
 
