@@ -8,6 +8,7 @@ If you just want to converge your material system, use the *yambo_g0w0_conv* wor
 You may need to customize the *start_calc* function in *src/utitls/basic_utils* for your supercomputing environment or set *calc_setup = "local"* in *main.py* to perform single calculations on the current interactive node.
 
 **REQUIREMENTS**
+
 We give the exact version we used because we found that newer versions of certain packages break the code. Please use them to make sure everything works as intended.
 
 - Python 3.10.13 (with the following packages installed into the base enviroment)
