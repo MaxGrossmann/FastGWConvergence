@@ -1,6 +1,6 @@
 # Fast GW Convergence (FGWC)
 
-The code and data in this repository correspond to the research results published in the paper "[A robust, simple, and efficient convergence workflow for GW calculations](https://doi.org/10.1038/s41524-024-01311-9)". When using this repository, please cite the paper as: Großmann, M., Grunert, M. & Runge, E. A robust, simple, and efficient convergence workflow for GW calculations. npj Comput Mater 10, 135 (2024). https://doi.org/10.1038/s41524-024-01311-9
+The code and data in this repository correspond to the research results published in the paper "[A robust, simple, and efficient convergence workflow for GW calculations](https://doi.org/10.1038/s41524-024-01311-9)". When using this repository, please cite the paper as: Großmann, M., Grunert, M. & Runge, E. A robust, simple, and efficient convergence workflow for GW calculations. Npj Comput Mater 10, 135 (2024). https://doi.org/10.1038/s41524-024-01311-9
 
 This code base was created to converge G0W0 calculations in a robust, simple and efficient way. 
 These workflows are designed to analyze the convergence behavior. 
