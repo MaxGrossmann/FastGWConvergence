@@ -130,13 +130,11 @@ class qe_PWInput(PWInput):
         return "\n".join(out) + "\n\n"
 
 
-def qe_standardize_cell(structure, symprec=0.1):
+def qe_standardize_cell(structure):
     """
     Obtain the standard primitive structure from the input structure.
     INPUT:
         structure:      Structure that is supposed to be processed
-        symprec:        Precision for symmetry prediction. Lower the value to get more precision
-                        at a higher risk of not identifying symmetries
     OUTPUT:
         standard_structure: Standardized primitive structure
     """
@@ -146,7 +144,7 @@ def qe_standardize_cell(structure, symprec=0.1):
     numbers = [i.specie.Z for i in structure.sites]
     cell = (lattice, scaled_positions, numbers)
     lattice, scaled_positions, numbers = spglib.standardize_cell(
-        cell, to_primitive=True, symprec=symprec
+        cell, to_primitive=True, symprec=1e-5,
     )
     s = Structure(lattice, numbers, scaled_positions)
     standard_structure = s.get_sorted_structure()
@@ -465,7 +463,7 @@ def qe_init_structure(id, base_dir):
     f.close()
     
     # standardize the structure and get the ibrav
-    structure = qe_standardize_cell(structure, symprec=0.1)
+    structure = qe_standardize_cell(structure, symprec=1e-5)
     try:
         ibrav, structure = qe_get_ibrav(structure)
     except Exception:
