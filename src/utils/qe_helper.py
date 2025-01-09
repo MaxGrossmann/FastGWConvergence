@@ -463,7 +463,7 @@ def qe_init_structure(id, base_dir):
     f.close()
     
     # standardize the structure and get the ibrav
-    structure = qe_standardize_cell(structure, symprec=1e-5)
+    structure = qe_standardize_cell(structure)
     try:
         ibrav, structure = qe_get_ibrav(structure)
     except Exception:
